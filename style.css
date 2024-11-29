@@ -139,10 +139,8 @@ header {
 
 .profil {
     border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
-    -webkit-border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
-    -moz-border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
-    -ms-border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
-    -o-border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
+    transition: all 300ms;
+
 }
 
 .profil:hover {
