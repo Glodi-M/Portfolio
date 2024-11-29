@@ -88,6 +88,12 @@ a:hover {
     .nav-burger {
         display: block;
         margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        cursor: pointer;
+        margin-left: 180px;
     }
 
     nav h1 {
@@ -620,6 +626,10 @@ button:hover {
 .card:hover .card-title {
     transition: all 0.5s ease-out;
     color: #ffffff;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
 }
 
 
@@ -893,6 +903,10 @@ a, p:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .modal h2 {
@@ -967,6 +981,12 @@ li {
     right: 0;
 }
 
+.close-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
 
 /* BOUTTON SCROLL */
 

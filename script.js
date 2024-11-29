@@ -138,13 +138,25 @@ backTOTopButton.onclick = function () {
 
 //MENU BURGER 
 
+// Récupérer les éléments
+const burgerMenu = document.getElementById("nav-burger"); // Image pour ouvrir le menu
+const menu = document.getElementById("menu"); // Menu
+const closeMenuIcon = document.getElementById("closeMenu"); // Image pour fermer le menu
+const menuLinks = document.querySelectorAll("#menu a"); // Liens dans le menu
 
-const burgerMenu = document.getElementById('nav-burger');
-const menu = document.getElementById('menu');
+// Fonction pour ouvrir/fermer le menu
+function toggleMenu() {
+    menu.classList.toggle("open");
+}
 
-// ajout un évévnement au clic sur le boutton
-burgerMenu.addEventListener('click', () => {
-    //activer/ désactiver les classes "open"
-    burgerMenu.classList.toggle('open');
-    menu.classList.toggle('open');
+// Fonction pour fermer le menu
+function closeMenu() {
+    menu.classList.remove("open");
+}
+
+// Ajouter les événements
+burgerMenu.addEventListener("click", toggleMenu); // Ouvre le menu
+closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
+menuLinks.forEach(link => {
+    link.addEventListener("click", closeMenu); // Ferme le menu au clic sur un lien
 });
