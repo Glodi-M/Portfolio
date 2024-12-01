@@ -527,6 +527,7 @@ button:hover {
     border-radius: 1rem;
     font-family: 'Poppins';
     cursor: pointer;
+    width: 200px;
 }
 
 .card-titre {
@@ -712,6 +713,9 @@ button:hover {
     color: white;
 }
 
+#tech{
+    margin-top: 35px;
+}
 .icon {
     cursor: pointer;
 }
