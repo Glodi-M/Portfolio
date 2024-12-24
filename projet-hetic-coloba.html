@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Hetic-Collab</title>
+    <link rel="stylesheet" href="style-projet.css">
+    <script>
+
+        const images = ["Image-projet-hetic/collab1.png", "Image-projet-hetic/collab2.png", "Image-projet-hetic/collab2.png", "Image-projet-hetic/collab3.png", "Image-projet-hetic/collab4.png", "Image-projet-hetic/collab6.png"]
+        let index = 0;
+
+        // Fonction pour changer l'image
+
+        function changeImage() {
+            index = (index + 1) % images.length; // Passe à l'image suivante (revient au début à la fin)
+            const imageElement = document.getElementById("image-animate");
+            imageElement.style.opacity = 0; // Effet de disparition
+
+            setTimeout(() => {
+                imageElement.src = images[index]; // Change la source de l'image
+                imageElement.style.opacity = 1; // Effet de réapparition
+            }, 2500); // Correspond à la durée de l'effet de transition
+        }
+
+        // Lancer le changement d'image toutes les secondes
+        setInterval(changeImage, 5000);
+        
+    </script>
+
+</head>
+
+
+<body>
+
+    <nav>
+        <h1 id="title-icon">Mes Projets</h1>
+
+        <div class="onglet">
+            <a href="index.html#about">­Á propos</a>
+            <a href="index.html#Skills">Compétences</a>
+            <a href="index.html#Experiences">Expériences</a>
+            <a href="index.html#projet">Projets</a>
+            <a href="index.html#contact">Contact</a>
+
+        </div>
+        <img id="nav-burger" class="nav-burger" src="Svg/menu.png" width="35" height="30" alt="">
+    </nav>
+    <header>
+        
+        <div class="head-title">
+            <p>HETIC COLLAB</p>
+            <a href="https://yv-ru-go.glide.page/dl/6471c6 "> Cliquer ici pour acceder à l'application → </a>
+    
+        </div>
+        
+        <div class="image-contenaire">
+            <img id="image-animate" src="Image-projet-hetic/collab1.png" alt="">
+        </div>
+
+    </header>
+
+    <section>
+
+
+        <p> Bonjour, <br>
+            je vous présente le projet que nous avions réalisé dans le cadre du cours de No Code / Low code. <br>
+            Il s'agit d'un projet d'application web intitulé HETIC COLLAB.
+            L'objectif principal de ce projet était de réaliser une application qui permet aux étudiants la facilitation
+            de collaborer pour la réalisation des projets et de permettre à l’école de les suivres..
+        </p>
+        <br>
+
+        <p>Ce projet comprend plusieurs fonctionnalités telles que : </p>
+        <ul>
+            <li>S'inscrire </li>
+            <li>Modifier son profil</li>
+            <li>Recherche de groupe</li>
+            <li>intégrer le groupe</li>
+            <li>collaborer avec le membre du groupe</li>
+            <li>Ajouter les liens </li>
+            <li>Visionner les membre du groupe</li>
+
+        </ul>
+
+        <br>
+
+        <h3> Les outils et technologies utilisés : </h3>
+        <br>
+        <p> Nous avons utilisé:</p>
+        
+        <div class="tech">
+
+            <div class="tech-excalidraw">
+                <img src="Image_projet/escalidraw.png" alt="">
+                <p>un outil open source permettant de créer des dessins, des schémas et des diagrammes en ligne avec un style visuel manuel </p>
+            </div>
+            
+            <div class="tech-glide">
+                <img src="Svg/glide.png" alt="">
+                <p>une plateforme de développement d'applications no-code qui permet de créer facilement des applications mobiles ou web à partir de Google Sheets ou d'autres sources de données, sans nécessiter de compétences en programmation.</p>
+            </div>
+    
+        </div>
+        
+
+        <br>
+        <br>
+
+        <p>Ce projet est entièrement responsive/fonctionnel/optimisé pour les navigateurs modernes.</p>
+
+        <br>
+        <p>Ce projet m'a permis de développer plusieurs compétences importantes, notamment No Code avec l'usage de Glide, excalidraw et travail en équupe.</p>
+        <BR>
+        </BR><p>Je suis très satisfait du travail accompli et des connaissances acquises grâce à ce projet.</p>
+        
+        <p> À l'avenir, j'aimerais améliorer en ajoutant des nouvelles fonctionnalités, optimiser le code, ou intégrer de nouvelles technologies.</p>
+        <br>
+        <p>Merci pour votre attention.</p>
+
+    </section>
+
+
+    
+
+</body>
+
+</html>

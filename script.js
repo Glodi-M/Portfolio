@@ -160,3 +160,10 @@ closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
 menuLinks.forEach(link => {
     link.addEventListener("click", closeMenu); // Ferme le menu au clic sur un lien
 });
+
+// Boutton Ouvrir un projet dans une autre page 
+document.getElementById('btn-voir-plus').addEventListener("click",function() {
+
+    window.open("projet-hetic-coloba.html", "_bank");
+
+});

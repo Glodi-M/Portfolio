@@ -283,7 +283,7 @@ button:hover {
 }
 
 .about p a {
-    text-decoration: none;
+    text-decoration :underline;
     color: blue;
     font-weight: bold;
 }
@@ -396,6 +396,16 @@ button:hover {
     margin-bottom: 45px;
     margin-top: 20px;
     flex-wrap: wrap;
+}
+.formation .formation-box{
+    text-align: center;
+}
+.formation a {
+    text-decoration: none;
+
+}
+.formation .formation-box img {
+    width: 100px;
 }
 
 .formation-box:hover {
@@ -528,15 +538,12 @@ button:hover {
     font-family: 'Poppins';
     cursor: pointer;
     width: 200px;
+    height: 100px;
+
 }
 
 .card-titre {
     font-size: 18px;
-    margin-bottom: 9px;
-}
-
-.card-description {
-    font-size: 12px;
     margin-bottom: 9px;
 }
 
@@ -556,11 +563,9 @@ button:hover {
     font-weight: 400;
     line-height: 1.5em;
     color: #452c2c;
+    margin-bottom: 0.5em;
 }
 
-.small-desc {
-    font-size: 1em;
-}
 
 .go-corner {
     display: flex;
@@ -644,6 +649,7 @@ button:hover {
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
+
 }
 
 
@@ -658,6 +664,7 @@ button:hover {
 
 .projet-contenaire {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     margin-bottom: 60px;
@@ -712,6 +719,17 @@ button:hover {
     text-decoration: none;
     color: white;
 }
+
+.projet-card button{
+    padding: 15px;
+    width: 100%;
+    background-color: #012836;
+    color: white;
+    font-family: 'Poppins';
+    cursor: pointer;
+
+}
+
 
 #tech{
     margin-top: 35px;
@@ -961,7 +979,7 @@ li {
     position: fixed;
     top: 0;
     right: -100%;
-    height: 100%;
+    height: 100vh;
     width: 200px;
     background-color: #012836;
     list-style: none;
@@ -998,8 +1016,7 @@ li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
-    /* Caché par défaut */
+    display: none;/*Cachépardéfaut*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -1007,10 +1024,10 @@ li {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    /* Toujours au-dessus */
-    font-size: 18px;
+    z-index: 1000; /*Toujoursau-dessus*/
+    font-size: 20px;
     transition: opacity 0.3s ease-in-out;
+
 }
 
 #backToTop:hover {
