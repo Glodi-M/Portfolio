@@ -6,29 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Hetic-Collab</title>
     <link rel="stylesheet" href="style-projet.css">
-    <script>
-
-        const images = ["Image-projet-hetic/collab1.png", "Image-projet-hetic/collab2.png", "Image-projet-hetic/collab2.png", "Image-projet-hetic/collab3.png", "Image-projet-hetic/collab4.png", "Image-projet-hetic/collab6.png"]
-        let index = 0;
-
-        // Fonction pour changer l'image
-
-        function changeImage() {
-            index = (index + 1) % images.length; // Passe à l'image suivante (revient au début à la fin)
-            const imageElement = document.getElementById("image-animate");
-            imageElement.style.opacity = 0; // Effet de disparition
-
-            setTimeout(() => {
-                imageElement.src = images[index]; // Change la source de l'image
-                imageElement.style.opacity = 1; // Effet de réapparition
-            }, 2500); // Correspond à la durée de l'effet de transition
-        }
-
-        // Lancer le changement d'image toutes les secondes
-        setInterval(changeImage, 5000);
-        
-    </script>
-
+    <script src="script-projet.js" defer></script>
 </head>
 
 
@@ -55,8 +33,8 @@
     
         </div>
         
-        <div class="image-contenaire">
-            <img id="image-animate" src="Image-projet-hetic/collab1.png" alt="">
+        <div id="image-contenaire" class="image-contenaire">
+            <img id="image-animate" src="Image-projet-hetic/collab1.png" alt="capture d \' écran de l'application Hetic Collab">
         </div>
 
     </header>
@@ -80,7 +58,7 @@
             <li>intégrer le groupe</li>
             <li>collaborer avec le membre du groupe</li>
             <li>Ajouter les liens </li>
-            <li>Visionner les membre du groupe</li>
+            <li>Visionner les membres du groupe</li>
 
         </ul>
 
@@ -111,18 +89,34 @@
         <p>Ce projet est entièrement responsive/fonctionnel/optimisé pour les navigateurs modernes.</p>
 
         <br>
-        <p>Ce projet m'a permis de développer plusieurs compétences importantes, notamment No Code avec l'usage de Glide, excalidraw et travail en équupe.</p>
+        <p>Ce projet m'a permis de développer plusieurs compétences importantes, notamment dans le No Code avec l'usage de l'outil Glide, excalidraw et travail en équupe.</p>
         <BR>
         </BR><p>Je suis très satisfait du travail accompli et des connaissances acquises grâce à ce projet.</p>
         
-        <p> À l'avenir, j'aimerais améliorer en ajoutant des nouvelles fonctionnalités, optimiser le code, ou intégrer de nouvelles technologies.</p>
+        <p> À l'avenir, j'aimerais améliorer ce projet en ajoutant des nouvelles fonctionnalités, optimiser le code, ou intégrer de nouvelles technologies.</p>
         <br>
         <p>Merci pour votre attention.</p>
 
     </section>
 
 
-    
+    <!-- MENU BURGER -->
+
+    <div id="menu-burger" class="menu-burger">
+
+        <div class="menu-liste">
+
+            <ul id="menu" class="menu">
+                <img id="closeMenu" class="close-icon" src="Icon_contact/icons8-cancel-96.png" alt="Fermer">
+                <li> <a href="index.html#about" target="_self">­Á propos</a></li>
+                <li> <a href="index.html#Skills">Compétences</a></li>
+                <li> <a href="index.html#Experiences">Expériences</a></li>
+                <li> <a href="index.html#projet">Projets</a></li>
+                <li> <a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
 
 </body>
 
