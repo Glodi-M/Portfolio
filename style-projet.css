@@ -40,7 +40,6 @@ nav {
     background-size: cover;
     color: rgb(17, 4, 69);
     background-color: var(--colorwhite);
-    padding: 20px;
 }
 
 .onglet a {
@@ -57,12 +56,14 @@ nav {
 .onglet {
     margin-left: 60px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 nav h1 {
     font-size: 40px;
     margin-right: 250px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 a:hover {

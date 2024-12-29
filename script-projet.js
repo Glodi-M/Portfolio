@@ -20,13 +20,12 @@ setInterval(changeImage, 5000);
 
 
 
-// // Arret de l'animation lorsque on survole 
+// Arret de l'animation lorsque on survole 
 
-// const container = document.getElementById('image-container');
-// let intervalId = setInterval(changeImage, 3000);
-
-// container.addEventListener("mouseover", () => clearInterval(intervalId));
-// container.addEventListener("mouseout", () => intervalId = setInterval(changeImage, 3000));
+const container = document.getElementById('image-contenaire');
+let intervalId = setInterval(changeImage, 5000);
+container.addEventListener("mouseover", () => clearInterval(intervalId));
+container.addEventListener("mouseout", () => intervalId = setInterval(changeImage, 5000));
 
 
 
