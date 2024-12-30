@@ -86,7 +86,6 @@ a:hover {
 
     .nav-burger {
         display: block;
-        margin-bottom: 20px;
         cursor: pointer;
     }
 
@@ -103,7 +102,8 @@ a:hover {
 
     nav{
 
-        justify-content: initial;
+     justify-content: initial;
+     padding-left: 20px;
     }
 
 
@@ -182,6 +182,10 @@ section{
     .tech{
         flex-wrap: wrap;
     }
+    .tech img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -218,6 +222,7 @@ section{
 
 .menu li {
     margin: 15px 0;
+    padding: 5px;
 }
 
 .menu li a {
