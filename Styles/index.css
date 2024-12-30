@@ -26,7 +26,7 @@ body, p, h1, h2, h3 {
 
 
 section {
-    background: url('/Background-web/background-with-white-cubes.jpg');
+    background-image: url('../Background-web/background-with-white-cubes.jpg');
     background-size: cover;
     border-bottom: 1px solid var(--colorwhite);
 }
@@ -110,7 +110,7 @@ a:hover {
 
 
 header {
-    background: url("/Background-web/background-blue-dark.jpg");
+    background: url("../Background-web/background-blue-dark.jpg");
     background-size: cover;
     padding: 60px;
     height: 70vh;
