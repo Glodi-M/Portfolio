@@ -110,7 +110,7 @@ a:hover {
 
 
 header {
-    background: url("/Background-web/background-blue-dark.jpg");
+    background: url("../Background-web/background-blue-dark.jpg");
     background-size: cover;
     padding: 60px;
     height: 70vh;
