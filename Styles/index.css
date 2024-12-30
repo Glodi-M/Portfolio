@@ -26,7 +26,7 @@ body, p, h1, h2, h3 {
 
 
 section {
-    background: url('Background-web/3d-background-with-white-cubes (1).jpg');
+    background: url('/Background-web/background-with-white-cubes.jpg');
     background-size: cover;
     border-bottom: 1px solid var(--colorwhite);
 }
@@ -110,7 +110,7 @@ a:hover {
 
 
 header {
-    background: url('Background-web/3201272.jpg');
+    background: url("/Background-web/background-blue-dark.jpg");
     background-size: cover;
     padding: 60px;
     height: 70vh;
@@ -412,10 +412,6 @@ button:hover {
     border: 5px solid aquamarine;
     transform: scale(1.05);
     transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
 }
 
 .formation-box:active {
@@ -632,10 +628,7 @@ button:hover {
 .card:hover .card-title {
     transition: all 0.5s ease-out;
     color: #ffffff;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
+    
 }
 
 
@@ -1026,7 +1019,7 @@ li {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /*Toujoursau-dessus*/
+    z-index: 1000; /*Toujours au-dessus*/
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 

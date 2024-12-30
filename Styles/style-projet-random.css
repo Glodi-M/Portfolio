@@ -31,6 +31,7 @@ body{
 
 /* Barre de Navigation */
 
+
 nav {
     display: flex;
     align-items: center;
@@ -150,15 +151,18 @@ section{
 
 }
 
-.tech{
+.contenaire-tech{
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.tech img{
-    width: 200px;
-    height: auto 
+.contenaire-tech img{
+    width: 150px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
+
 
 @media (max-width: 768px) {
     .image-contenaire {
@@ -169,22 +173,29 @@ section{
     .head-title p{
         font-size: 20px;
         padding: 20px;
-        margin-left: 110px;
+        margin-left: 80px;
     
        
     }
     .head-title a {
-        margin-left: 30px;
+        margin-left: 40px;
         font-size: 16px;
         margin-bottom: 20px;
     }
 
-    .tech{
+    .contenaire-tech{
         flex-wrap: wrap;
     }
-    .tech img {
-        margin-top: 20px;
+
+    .contenaire-tech img{
+        width: 100px;
+        height: auto;
+        margin-top: 30px;
         margin-bottom: 20px;
+    }
+    
+    .image-tech {
+        text-align: center;
     }
 }
 
@@ -241,4 +252,29 @@ section{
     height: 30px;
     cursor: pointer;
     margin-bottom: 20px;
+}
+
+
+/* BOUTTON SCROLL */
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;/*Cachépardéfaut*/
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /*Toujoursau-dessus*/
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+#backToTop:hover {
+    background-color: #012836
 }

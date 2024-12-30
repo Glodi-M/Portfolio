@@ -164,6 +164,11 @@ menuLinks.forEach(link => {
 // Boutton Ouvrir un projet dans une autre page 
 document.getElementById('btn-voir-plus').addEventListener("click",function() {
 
-    window.open("projet-hetic-coloba.html", "_bank");
+    window.open("projet-hetic-collab.html", "_bank");
+
+});
+document.getElementById('btn-voir-plus1').addEventListener("click",function() {
+
+    window.open("projet-random-start-up.html", "_bank");
 
 });
