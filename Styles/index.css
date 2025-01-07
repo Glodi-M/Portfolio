@@ -239,8 +239,15 @@ button:hover {
 
 .section-apropo {
     font-family: 'Poppins';
+    opacity: 0; /* Invisibles au départ */
+    transform: translateY(50px); /* Décalées vers le bas */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.animate-on-scroll.visible {
+    opacity: 1; /* Deviens visible */
+    transform: translateY(0); /* Retourne à la position normale */
+  }
 
 .solft-skill img {
     width: 24px;
@@ -425,7 +432,6 @@ button:hover {
 
 /* Compétences */
 
-
 .skill-content .skill-box .skill-groupe .skill-data img {
     width: 30px;
     height: 30px;
@@ -473,7 +479,15 @@ button:hover {
     justify-content: center;
     gap: 40px;
     margin-bottom: 40px;
+    opacity: 0; /* Invisibles au départ */
+    transform: translateY(50px); /* Décalées vers le bas */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.animate-on-scroll.visible {
+    opacity: 1; /* Deviens visible */
+    transform: translateY(0); /* Retourne à la position normale */
+  }
 
 .bgd {
     background-color: white;
@@ -602,7 +616,18 @@ button:hover {
     overflow: hidden;
     background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
     font-family: 'Popins', Arial, Helvetica, sans-serif;
+    opacity: 0;/* Caché initialement */
+    transform: translateY(50px); /* Position décalée initiale */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+
+/* Classe d'animation lorsqu'elle apparaît */
+.card.show {
+    opacity: 1;
+    transform: translateY(0); /* Revient à sa position d'origine */
+  }
+
 
 .card:before {
     content: '';
@@ -655,7 +680,13 @@ button:hover {
 
 .Projets {
     padding: 10px;
+   
 }
+
+.animate-on-scroll.visible {
+    opacity: 1; /* Deviens visible */
+    transform: translateY(0); /* Retourne à la position normale */
+  }
 
 
 .projet-contenaire {
@@ -664,6 +695,9 @@ button:hover {
     justify-content: center;
     gap: 40px;
     margin-bottom: 60px;
+    opacity: 0; /* Invisibles au départ */
+    transform: translateY(50px); /* Décalées vers le bas */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .projet-card {
@@ -699,7 +733,8 @@ button:hover {
     padding: 10px;
     background-color: #012836;
 }
-.projet-card-icons img{
+
+.projet-card-icons img {
     margin-bottom: 10px;
 }
 
@@ -772,7 +807,15 @@ footer {
     align-items: center;
     justify-content: center;
     padding-top: 40px;
+    opacity: 0; /* Invisibles au départ */
+    transform: translateY(50px); /* Décalées vers le bas */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.animate-on-scroll.visible {
+    opacity: 1; /* Deviens visible */
+    transform: translateY(0); /* Retourne à la position normale */
+  }
 
 .footer-forme {
 
@@ -1024,7 +1067,8 @@ li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;/*Cachépardéfaut*/
+    display: none;
+    /*Cachépardéfaut*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -1032,7 +1076,8 @@ li {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /*Toujours au-dessus*/
+    z-index: 1000;
+    /*Toujours au-dessus*/
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 

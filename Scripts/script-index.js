@@ -172,3 +172,71 @@ document.getElementById('btn-voir-plus1').addEventListener("click",function() {
     window.open("projet-random-start-up.html", "_bank");
 
 });
+
+
+
+// script.js
+
+// Fonction pour vérifier si un élément est visible
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  // Ajout de l'animation au scroll
+  function handleScrollAnimation() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      if (isElementInViewport(card)) {
+        card.classList.add('show'); // Ajoute la classe pour révéler la carte
+      }
+    });
+  }
+  
+  // Écouteur d'événements pour le scroll
+  window.addEventListener('scroll', handleScrollAnimation);
+  
+  // Lancer l'animation au chargement de la page
+  handleScrollAnimation();
+  
+
+
+
+
+
+
+
+
+
+  // animations.js
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre d'affichage
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight && rect.bottom >= 0
+    );
+  }
+  
+  // Fonction pour gérer l'animation des sections
+  function animateSections() {
+    const sections = document.querySelectorAll('.animate-on-scroll');
+  
+    sections.forEach(section => {
+      if (isInViewport(section)) {
+        section.classList.add('visible'); // Ajoute la classe visible pour les animations
+      }
+    });
+  }
+  
+  // Ajout d'un écouteur pour détecter le défilement
+  window.addEventListener('scroll', animateSections);
+  
+  // Lancer l'animation au chargement initial de la page
+  document.addEventListener('DOMContentLoaded', animateSections);
+  
