@@ -765,6 +765,23 @@ button:hover {
 }
 
 
+#btn-voir-plus:hover {
+    background-color: aqua;
+    color: black;
+}
+
+#btn-voir-plus1:hover {
+    background-color: aqua;
+    color: black;
+}
+
+#btn-voir-plus2:hover{
+    background-color: aqua;
+    color: black;
+}
+
+
+
 #tech {
     margin-top: 10px;
 }

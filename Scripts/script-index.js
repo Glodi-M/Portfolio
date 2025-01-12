@@ -173,9 +173,14 @@ document.getElementById('btn-voir-plus1').addEventListener("click",function() {
 
 });
 
+document.getElementById('btn-voir-plus2').addEventListener("click",function() {
+    
+    window.open("https://github.com/Glodi-M/Portfolio.git", "_bank");
+
+});
 
 
-// script.js
+
 
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {
@@ -204,14 +209,6 @@ function isElementInViewport(el) {
   // Lancer l'animation au chargement de la page
   handleScrollAnimation();
   
-
-
-
-
-
-
-
-
 
   // animations.js
 
