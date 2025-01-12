@@ -181,7 +181,6 @@ document.getElementById('btn-voir-plus2').addEventListener("click",function() {
 
 
 
-
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();

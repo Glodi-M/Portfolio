@@ -768,16 +768,19 @@ button:hover {
 #btn-voir-plus:hover {
     background-color: aqua;
     color: black;
+    transition: 1s;
 }
 
 #btn-voir-plus1:hover {
     background-color: aqua;
     color: black;
+    transition: 1s;
 }
 
 #btn-voir-plus2:hover{
     background-color: aqua;
     color: black;
+    transition: 1s;
 }
 
 
@@ -1084,8 +1087,7 @@ li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
-    /*Cachépardéfaut*/
+    display: none; /*Cachépardéfaut*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -1093,8 +1095,7 @@ li {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    /*Toujours au-dessus*/
+    z-index: 1000; /*Toujours au-dessus*/
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 
