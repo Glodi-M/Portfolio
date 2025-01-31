@@ -1,18 +1,18 @@
-const texte="Développeur web"
-const textEement=document.getElementById('poste')
-let index =0
+const texte = "Développeur web"
+const textEement = document.getElementById('poste')
+let index = 0
 
-function typeWriter(){
-    if (index < texte.length){
-        textEement.innerHTML +=texte.charAt(index)
+function typeWriter() {
+    if (index < texte.length) {
+        textEement.innerHTML += texte.charAt(index)
         index++
         setTimeout(typeWriter, 200)
     }
-    else{
+    else {
         setTimeout(() => {
             textEement.innerHTML = ""
-            index=0
-            typeWriter()    
+            index = 0
+            typeWriter()
         }, 1000);
     }
 }
@@ -96,7 +96,7 @@ window.addEventListener('click', (event) => {
     else if (event.target === modal1) {
         modal1.style.display = 'none';
     }
-    
+
     else if (event.target === modal2) {
         modal2.style.display = 'none';
     }
@@ -162,19 +162,19 @@ menuLinks.forEach(link => {
 });
 
 // Boutton Ouvrir un projet dans une autre page 
-document.getElementById('btn-voir-plus').addEventListener("click",function() {
+document.getElementById('btn-voir-plus').addEventListener("click", function () {
 
     window.open("projet-hetic-collab.html", "_bank");
 
 });
-document.getElementById('btn-voir-plus1').addEventListener("click",function() {
+document.getElementById('btn-voir-plus1').addEventListener("click", function () {
 
     window.open("projet-random-start-up.html", "_bank");
 
 });
 
-document.getElementById('btn-voir-plus2').addEventListener("click",function() {
-    
+document.getElementById('btn-voir-plus2').addEventListener("click", function () {
+
     window.open("https://github.com/Glodi-M/Portfolio.git", "_bank");
 
 });
@@ -185,54 +185,80 @@ document.getElementById('btn-voir-plus2').addEventListener("click",function() {
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-  }
-  
-  // Ajout de l'animation au scroll
-  function handleScrollAnimation() {
+}
+
+// Ajout de l'animation au scroll
+function handleScrollAnimation() {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-      if (isElementInViewport(card)) {
-        card.classList.add('show'); // Ajoute la classe pour révéler la carte
-      }
+        if (isElementInViewport(card)) {
+            card.classList.add('show'); // Ajoute la classe pour révéler la carte
+        }
     });
-  }
-  
-  // Écouteur d'événements pour le scroll
-  window.addEventListener('scroll', handleScrollAnimation);
-  
-  // Lancer l'animation au chargement de la page
-  handleScrollAnimation();
-  
+}
 
-  // animations.js
+// Écouteur d'événements pour le scroll
+window.addEventListener('scroll', handleScrollAnimation);
+
+// Lancer l'animation au chargement de la page
+handleScrollAnimation();
+
+
+// animations.js
 
 // Fonction pour vérifier si un élément est visible dans la fenêtre d'affichage
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-      rect.top <= window.innerHeight && rect.bottom >= 0
+        rect.top <= window.innerHeight && rect.bottom >= 0
     );
-  }
-  
-  // Fonction pour gérer l'animation des sections
-  function animateSections() {
+}
+
+// Fonction pour gérer l'animation des sections
+function animateSections() {
     const sections = document.querySelectorAll('.animate-on-scroll');
-  
+
     sections.forEach(section => {
-      if (isInViewport(section)) {
-        section.classList.add('visible'); // Ajoute la classe visible pour les animations
-      }
+        if (isInViewport(section)) {
+            section.classList.add('visible'); // Ajoute la classe visible pour les animations
+        }
     });
-  }
-  
-  // Ajout d'un écouteur pour détecter le défilement
-  window.addEventListener('scroll', animateSections);
-  
-  // Lancer l'animation au chargement initial de la page
-  document.addEventListener('DOMContentLoaded', animateSections);
-  
+}
+
+// Ajout d'un écouteur pour détecter le défilement
+window.addEventListener('scroll', animateSections);
+
+// Lancer l'animation au chargement initial de la page
+document.addEventListener('DOMContentLoaded', animateSections);
+
+
+// Gestion du formulaire 
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('input-name').value;
+    const email = document.getElementById('input-email').value;
+    const message = document.getElementById('inputmessage').value;
+
+    if (!name || !email || !message) {
+        alert('Veuillez remplir tous les champs.');
+        return;
+    }
+
+    if (!email.includes('@')) {
+        alert('Veuillez entrer une adresse email valide.');
+        return;
+    }
+
+    // Envoyer le formulaire (à adapter avec Formspree ou autre)
+    alert('Message envoyé avec succès !');
+    form.reset();
+});
+

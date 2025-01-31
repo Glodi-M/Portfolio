@@ -239,15 +239,19 @@ button:hover {
 
 .section-apropo {
     font-family: 'Poppins';
-    opacity: 0; /* Invisibles au départ */
-    transform: translateY(50px); /* Décalées vers le bas */
+    opacity: 0;
+    /* Invisibles au départ */
+    transform: translateY(50px);
+    /* Décalées vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
-    opacity: 1; /* Deviens visible */
-    transform: translateY(0); /* Retourne à la position normale */
-  }
+    opacity: 1;
+    /* Deviens visible */
+    transform: translateY(0);
+    /* Retourne à la position normale */
+}
 
 .solft-skill img {
     width: 24px;
@@ -479,15 +483,19 @@ button:hover {
     justify-content: center;
     gap: 40px;
     margin-bottom: 40px;
-    opacity: 0; /* Invisibles au départ */
-    transform: translateY(50px); /* Décalées vers le bas */
+    opacity: 0;
+    /* Invisibles au départ */
+    transform: translateY(50px);
+    /* Décalées vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
-    opacity: 1; /* Deviens visible */
-    transform: translateY(0); /* Retourne à la position normale */
-  }
+    opacity: 1;
+    /* Deviens visible */
+    transform: translateY(0);
+    /* Retourne à la position normale */
+}
 
 .bgd {
     background-color: white;
@@ -616,8 +624,10 @@ button:hover {
     overflow: hidden;
     background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
     font-family: 'Popins', Arial, Helvetica, sans-serif;
-    opacity: 0;/* Caché initialement */
-    transform: translateY(50px); /* Position décalée initiale */
+    opacity: 0;
+    /* Caché initialement */
+    transform: translateY(50px);
+    /* Position décalée initiale */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -625,8 +635,9 @@ button:hover {
 /* Classe d'animation lorsqu'elle apparaît */
 .card.show {
     opacity: 1;
-    transform: translateY(0); /* Revient à sa position d'origine */
-  }
+    transform: translateY(0);
+    /* Revient à sa position d'origine */
+}
 
 
 .card:before {
@@ -678,124 +689,103 @@ button:hover {
 
 /* Mes Projets */
 
+/* Section Projet */
 .Projets {
-    padding: 10px;
-   
+    padding: 50px 10%;
+    background-color: #001a23;
+    text-align: center;
 }
 
-.animate-on-scroll.visible {
-    opacity: 1; /* Deviens visible */
-    transform: translateY(0); /* Retourne à la position normale */
-  }
-
+.titre {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
 
 .projet-contenaire {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    margin-bottom: 60px;
-    opacity: 0; /* Invisibles au départ */
-    transform: translateY(50px); /* Décalées vers le bas */
+    opacity: 0;
+    transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style des cartes projet */
 .projet-card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #012836;
+    background: #012836;
     color: #f5f7f7;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
 }
 
 .projet-card-image {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
-.projet-contenaire .projet-card-icons img {
-    width: 30px;
-    height: 30px;
+.projet-card-title {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: white;
 }
 
 .projet-card-description {
     padding: 15px;
-    background-color: #012836;
-    color: #f9f9f9;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
 }
 
+/* Icônes des technologies */
 .projet-card-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    background-color: #012836;
+    gap: 15px;
+    padding: 15px;
 }
 
 .projet-card-icons img {
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.projet-card-title {
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
+.projet-card-icons img:hover {
+    transform: scale(1.2);
 }
 
-.projet-card .projet-card-description p {
-    font-size: 14px;
-    text-align: center;
-}
-
-.projet-card a {
-    text-decoration: none;
-    color: white;
-}
-
+/* Boutons "Voir plus" */
 .projet-card button {
-    padding: 15px;
     width: 100%;
-    background-color: #012836;
+    padding: 15px;
+    background: linear-gradient(135deg, #012a32, #06557f);
     color: white;
-    font-family: 'Poppins';
+    font-size: 1rem;
+    border: none;
     cursor: pointer;
-
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-
-#btn-voir-plus:hover {
-    background-color: aqua;
-    color: black;
-    transition: 1s;
+.projet-card button:hover {
+    background: linear-gradient(135deg, #00a6ff, #0086ff);
+    transform: translateY(-3px);
 }
 
-#btn-voir-plus1:hover {
-    background-color: aqua;
-    color: black;
-    transition: 1s;
-}
-
-#btn-voir-plus2:hover{
-    background-color: aqua;
-    color: black;
-    transition: 1s;
-}
-
-
-
-#tech {
-    margin-top: 10px;
-}
-
-.icon {
-    cursor: pointer;
-}
-
-.projet-card :hover {
-    transform: scale(1.05);
-}
 
 @media screen and (max-width:768px) {
     .projet-contenaire {
@@ -827,15 +817,19 @@ footer {
     align-items: center;
     justify-content: center;
     padding-top: 40px;
-    opacity: 0; /* Invisibles au départ */
-    transform: translateY(50px); /* Décalées vers le bas */
+    opacity: 0;
+    /* Invisibles au départ */
+    transform: translateY(50px);
+    /* Décalées vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
-    opacity: 1; /* Deviens visible */
-    transform: translateY(0); /* Retourne à la position normale */
-  }
+    opacity: 1;
+    /* Deviens visible */
+    transform: translateY(0);
+    /* Retourne à la position normale */
+}
 
 .footer-forme {
 
@@ -958,17 +952,16 @@ a, p:hover {
 
 .modal {
     display: none;
-    /* Cachée par défaut */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Transparence du fond */
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: opacity 0.3s ease;
 }
 
 /* Contenu de la modale */
@@ -1087,7 +1080,8 @@ li {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none; /*Cachépardéfaut*/
+    display: none;
+    /*Cachépardéfaut*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -1095,7 +1089,8 @@ li {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000; /*Toujours au-dessus*/
+    z-index: 1000;
+    /*Toujours au-dessus*/
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 
