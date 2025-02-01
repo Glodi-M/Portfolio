@@ -138,26 +138,32 @@ backTOTopButton.onclick = function () {
 
 //MENU BURGER 
 
-// Ouvrir le menu
-document.getElementById('nav-burger').addEventListener('click', () => {
-    const menu = document.getElementById('menu');
-    menu.classList.remove('closing'); // Retirer la classe de fermeture
-    menu.classList.add('open'); // Ajouter la classe d'ouverture
+// Récupérer les éléments
+const burgerMenu = document.getElementById("nav-burger");
+const menu = document.getElementById("menu");
+const closeMenuIcon = document.getElementById("closeMenu");
+const menuLinks = document.querySelectorAll("#menu a");
+
+// Fonction pour ouvrir/fermer le menu
+function toggleMenu() {
+    menu.classList.toggle("open");
     document.body.classList.add('no-scroll'); // Désactiver le défilement
-});
+}
 
-// Fermer le menu
-document.getElementById('closeMenu').addEventListener('click', () => {
-    const menu = document.getElementById('menu');
-    menu.classList.remove('open'); // Retirer la classe d'ouverture
-    menu.classList.add('closing'); // Ajouter la classe de fermeture
+// Fonction pour fermer le menu
+function closeMenu() {
+    menu.classList.remove("open");
     document.body.classList.remove('no-scroll'); // Réactiver le défilement
+}
 
-    // Retirer la classe de fermeture après l'animation
-    setTimeout(() => {
-        menu.classList.remove('closing');
-    }, 500); // Correspond à la durée de l'animation
+// Ajouter les événements
+burgerMenu.addEventListener("click", toggleMenu); // Ouvre le menu
+closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
+menuLinks.forEach(link => {
+    link.addEventListener("click", closeMenu); // Ferme le menu au clic sur un lien
 });
+
+
 
 // Boutton Ouvrir un projet dans une autre page 
 document.getElementById('btn-voir-plus').addEventListener("click", function () {
