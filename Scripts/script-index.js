@@ -18,95 +18,53 @@ function typeWriter() {
 }
 typeWriter()
 
+// OUVERTURE MODALE
 
-// POP_UP
+// Sélectionner tous les éléments qui déclenchent l'ouverture des modales
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close]");
+const modals = document.querySelectorAll(".modal");
 
-// Références aux éléments
-const modal = document.getElementById('myModal');
-const modal1 = document.getElementById('myModal1');
-const modal2 = document.getElementById('myModal2');
-const modal3 = document.getElementById('myModal3');
-const modal4 = document.getElementById('myModal4');
-const modal5 = document.getElementById('myModal5');
-const openModal = document.getElementById('card_dgi');
-const openModa1 = document.getElementById('card_superviseur');
-const openModa2 = document.getElementById('card_jedam');
-const openModa3 = document.getElementById('card_ask');
-const openModa4 = document.getElementById('card_gsa');
-const openModa5 = document.getElementById('card_odc');
-const closeModal = document.getElementById('closeModal');
-const closeModal1 = document.getElementById('closeModal1');
-const closeModal2 = document.getElementById('closeModal2');
-const closeModal3 = document.getElementById('closeModal3');
-const closeModal4 = document.getElementById('closeModal4');
-const closeModal5 = document.getElementById('closeModal5');
+// Fonction pour ouvrir une modale
+function openModal(modal) {
+    if (modal) {
+        modal.classList.add("open");
+        modal.style.display = "flex";
+    }
+}
 
-// Afficher la modale
-openModal.addEventListener('click', () => {
-    modal.style.display = 'flex';
-});
+// Fonction pour fermer une modale
+function closeModal(modal) {
+    if (modal) {
+        modal.classList.remove("open");
+        setTimeout(() => { modal.style.display = "none"; }, 300)
+    }
+}
 
-openModa1.addEventListener('click', () => {
-    modal1.style.display = 'flex';
-});
-
-openModa2.addEventListener('click', () => {
-    modal2.style.display = 'flex';
-});
-openModa3.addEventListener('click', () => {
-    modal3.style.display = 'flex';
-});
-openModa4.addEventListener('click', () => {
-    modal4.style.display = 'flex';
+// Ajouter un événement à chaque bouton qui ouvre une modale
+openModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    });
 });
 
-openModa5.addEventListener('click', () => {
-    modal5.style.display = 'flex';
+// Ajouter un événement à chaque bouton de fermeture
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
+        closeModal(modal);
+    });
 });
-
-
-// Fermer la modale
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-closeModal1.addEventListener('click', () => {
-    modal1.style.display = 'none';
-});
-
-closeModal2.addEventListener('click', () => {
-    modal2.style.display = 'none';
-});
-closeModal3.addEventListener('click', () => {
-    modal3.style.display = 'none';
-});
-closeModal4.addEventListener('click', () => {
-    modal4.style.display = 'none';
-});
-closeModal5.addEventListener('click', () => {
-    modal5.style.display = 'none';
-});
-
 
 // Fermer en cliquant à l'extérieur de la modale
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-
-    else if (event.target === modal1) {
-        modal1.style.display = 'none';
-    }
-
-    else if (event.target === modal2) {
-        modal2.style.display = 'none';
-    }
-    else if (event.target === modal3) {
-        modal3.style.display = 'none';
-    }
-    else if (event.target === modal4) {
-        modal4.style.display = 'none';
-    }
-})
+window.addEventListener("click", (event) => {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            closeModal(modal);
+        }
+    });
+});
 
 
 
@@ -135,8 +93,7 @@ backTOTopButton.onclick = function () {
     );
 };
 
-
-//MENU BURGER 
+// MENU BURGER
 
 // Récupérer les éléments
 const burgerMenu = document.getElementById("nav-burger");
@@ -144,24 +101,38 @@ const menu = document.getElementById("menu");
 const closeMenuIcon = document.getElementById("closeMenu");
 const menuLinks = document.querySelectorAll("#menu a");
 
-// Fonction pour ouvrir/fermer le menu
-function toggleMenu() {
-    menu.classList.toggle("open");
-    document.body.classList.add('no-scroll'); // Désactiver le défilement
-}
+// Vérifier que les éléments existent avant d'ajouter des écouteurs d'événements
+if (burgerMenu && menu && closeMenuIcon) {
+    // Fonction pour ouvrir/fermer le menu
+    function toggleMenu() {
+        menu.classList.toggle("open");
+        document.body.classList.toggle("no-scroll"); // Désactive/réactive le défilement
+    }
 
-// Fonction pour fermer le menu
-function closeMenu() {
-    menu.classList.remove("open");
-    document.body.classList.remove('no-scroll'); // Réactiver le défilement
-}
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        if (menu.classList.contains("open")) {
+            menu.classList.remove("open");
+            document.body.classList.remove("no-scroll"); // Réactive le défilement
+        }
+    }
 
-// Ajouter les événements
-burgerMenu.addEventListener("click", toggleMenu); // Ouvre le menu
-closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
-menuLinks.forEach(link => {
-    link.addEventListener("click", closeMenu); // Ferme le menu au clic sur un lien
-});
+    // Ajouter les événements
+    burgerMenu.addEventListener("click", toggleMenu); // Ouvre le menu
+    closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
+
+    // Fermer le menu lorsqu'on clique sur un lien
+    menuLinks.forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    // Optionnel : Fermer le menu si on clique en dehors
+    document.addEventListener("click", (event) => {
+        if (!menu.contains(event.target) && !burgerMenu.contains(event.target)) {
+            closeMenu();
+        }
+    });
+}
 
 
 
