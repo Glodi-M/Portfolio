@@ -1129,6 +1129,10 @@ li {
     transform: rotate(90deg);
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 @media (max-width: 768px) {
     .menu {
         height: calc(100vh - 60px);
