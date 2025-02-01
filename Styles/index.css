@@ -226,31 +226,49 @@ button:hover {
 /* Titre */
 
 .titre {
-    font-family: 'Poppins';
-    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #012836;
-    padding: 40px;
+    padding: 20px 0;
+    margin: 0 auto 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #012836, #015f6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
 }
 
+.titre::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #015f6b;
+    margin: 10px auto 0;
+    transition: width 0.3s ease;
+}
+
+.titre:hover::after {
+    width: 100px;
+}
 
 /* Section à propos  */
 
 .section-apropo {
     font-family: 'Poppins';
     opacity: 0;
-    /* Invisibles au départ */
     transform: translateY(50px);
-    /* Décalées vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
-    /* Deviens visible */
     transform: translateY(0);
-    /* Retourne à la position normale */
 }
 
 .solft-skill img {
@@ -351,7 +369,6 @@ button:hover {
         margin-left: 0;
         text-align: center;
         font-size: 30px;
-        /* padding: 20px; */
     }
 
 
@@ -696,13 +713,6 @@ button:hover {
     text-align: center;
 }
 
-.titre {
-    font-size: 2.5rem;
-    color: black;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
 .projet-contenaire {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -791,15 +801,8 @@ button:hover {
     .projet-contenaire {
         flex-wrap: wrap;
     }
+
 }
-
-
-
-
-
-
-
-
 
 /* Footer  */
 
@@ -1034,44 +1037,102 @@ li {
 
 
 /* MENU BURGER */
-
-
 .menu {
-    display: none;
+    display: block;
     position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 339px;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 0px);
     background-color: #012836;
     list-style: none;
     padding: 20px;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    transition: right 0.5s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: left 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 1000;
+}
 
+.menu.open {
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+.menu.open {
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.menu.closing {
+    animation: slideOut 0.5s ease-in-out forwards;
 }
 
 .menu li {
     margin: 20px 0;
-    padding: 5px;
+    padding: 10px;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu.open li {
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.2s;
 }
 
 .menu li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-.menu.open {
-    display: block;
-    right: 0;
+.menu li a:hover {
+    color: #015f6b;
 }
 
 .close-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    margin-left: 0;
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-icon:hover {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        height: calc(100vh - 60px);
+    }
 }
 
 /* BOUTTON SCROLL */
@@ -1081,7 +1142,6 @@ li {
     bottom: 20px;
     right: 20px;
     display: none;
-    /*Cachépardéfaut*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -1090,7 +1150,6 @@ li {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    /*Toujours au-dessus*/
     font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 
