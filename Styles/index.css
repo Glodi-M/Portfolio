@@ -11,6 +11,11 @@ html {
     --bgdcolor: #012836;
     --bdrcolor: aqua;
     --colorwhite: white;
+    --primary-color: #012836;
+    --secondary-color: #f2f8f9;
+    --hover-color: #364a60;
+    --text-color: #262626;
+    --small-desc-color: #452c2c;
 
 
 }
@@ -106,7 +111,6 @@ a:hover {
 
 
 /* Header */
-
 
 
 header {
@@ -515,7 +519,8 @@ button:hover {
 }
 
 .bgd {
-    background-color: white;
+    background-color: var(--colorwhite);
+    ;
 }
 
 .skill-content:hover {
@@ -569,27 +574,24 @@ button:hover {
 }
 
 .card-experience {
-    background-color: #012836;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--colorwhite);
     padding: 40px;
     border-radius: 1rem;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     width: 200px;
     height: 100px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-titre {
-    font-size: 18px;
-    margin-bottom: 9px;
+.card-experience:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-
-/* New */
 
 .card-title {
-    color: #262626;
+    color: var(--text-color);
     font-size: 1.5em;
     line-height: normal;
     font-weight: 700;
@@ -600,10 +602,9 @@ button:hover {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5em;
-    color: #452c2c;
+    color: var(--small-desc-color);
     margin-bottom: 0.5em;
 }
-
 
 .go-corner {
     display: flex;
@@ -622,17 +623,16 @@ button:hover {
 .go-arrow {
     margin-top: -4px;
     margin-right: -4px;
-    color: white;
+    color: var(--colorwhite);
     font-family: courier, sans;
 }
-
 
 .card {
     display: block;
     position: relative;
     max-width: 300px;
     max-height: 320px;
-    background-color: #f2f8f9;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     padding: 2em 1.2em;
     margin: 12px;
@@ -640,22 +640,16 @@ button:hover {
     z-index: 0;
     overflow: hidden;
     background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
-    font-family: 'Popins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     opacity: 0;
-    /* Caché initialement */
     transform: translateY(50px);
-    /* Position décalée initiale */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-
-/* Classe d'animation lorsqu'elle apparaît */
 .card.show {
     opacity: 1;
     transform: translateY(0);
-    /* Revient à sa position d'origine */
 }
-
 
 .card:before {
     content: '';
@@ -663,7 +657,7 @@ button:hover {
     z-index: -1;
     top: -16px;
     right: -16px;
-    background: linear-gradient(135deg, #364a60, #384c6c);
+    background: linear-gradient(135deg, var(--hover-color), #384c6c);
     height: 32px;
     width: 32px;
     border-radius: 32px;
@@ -684,9 +678,7 @@ button:hover {
 .card:hover .card-title {
     transition: all 0.5s ease-out;
     color: #ffffff;
-
 }
-
 
 @media screen and (max-width:768px) {
     .experience-contenaire {
@@ -700,8 +692,6 @@ button:hover {
     }
 
 }
-
-
 
 
 /* Mes Projets */
@@ -730,7 +720,7 @@ button:hover {
 /* Style des cartes projet */
 .projet-card {
     background: #012836;
-    color: #f5f7f7;
+    color: var(--colorwhite);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
@@ -751,7 +741,7 @@ button:hover {
 .projet-card-title {
     font-size: 1.5rem;
     margin: 15px 0;
-    color: white;
+    color: var(--colorwhite);
 }
 
 .projet-card-description {
@@ -784,7 +774,7 @@ button:hover {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, #012a32, #06557f);
-    color: white;
+    color: var(--colorwhite);
     font-size: 1rem;
     border: none;
     cursor: pointer;
@@ -814,7 +804,7 @@ button:hover {
 
 footer {
     background-color: #012836;
-    color: #EFFFFF;
+    color: var(--colorwhite);
     border-top: 5px solid aqua;
     display: flex;
     align-items: center;
@@ -852,7 +842,7 @@ input, textarea {
     background-color: #012836;
     border: 2px solid #f5f7f7;
     border-radius: 10px;
-    color: #fcf7f8;
+    color: var(--colorwhite);
     font-size: 1rem;
     outline: none;
     padding: 0 .3rem;
@@ -870,7 +860,7 @@ textarea:hover {
 }
 
 label {
-    color: #fcf7f8;
+    color: var(--colorwhite);
     transition: 3s;
 }
 
@@ -971,7 +961,7 @@ a, p:hover {
 
 /* Contenu de la modale */
 .modal-content {
-    background: white;
+    background: var(--colorwhite);
     padding: 20px;
     width: 80%;
     max-width: 500px;
@@ -985,7 +975,7 @@ a, p:hover {
     margin-top: 15px;
     padding: 10px 20px;
     background: #ff4d4d;
-    color: white;
+    color: var(--colorwhite);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1128,7 +1118,7 @@ li {
 }
 
 .menu li a {
-    color: white;
+    color: var(--colorwhite);
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
@@ -1170,7 +1160,7 @@ li {
     right: 20px;
     display: none;
     background-color: #007bff;
-    color: white;
+    color: var(--colorwhite);
     border: none;
     padding: 10px 15px;
     border-radius: 50%;
@@ -1195,7 +1185,6 @@ li {
     width: 40px;
     height: 40px;
 }
-
 
 .copyright {
     margin-top: 10px;
