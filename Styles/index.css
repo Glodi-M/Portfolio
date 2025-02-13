@@ -154,11 +154,11 @@ header {
 }
 
 .profil:hover {
-    transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -361,9 +361,9 @@ button:hover {
 }
 
 .solft:hover>.solft-skill:not(:hover) {
+    -webkit-filter: blur(1px);
     filter: blur(1px);
     transform: scale(0.9, 0.9);
-    -webkit-filter: blur(1px);
 }
 
 
@@ -526,11 +526,11 @@ button:hover {
 .skill-content:hover {
     box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
     border-color: #0974f1;
-    transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .skill-data :hover {
