@@ -66,15 +66,14 @@ nav {
     margin-bottom: 20px;
 }
 
-nav h1 {
-    font-size: 40px;
-    margin-right: 250px;
-    margin-bottom: 20px;
-}
+
 
 .logo-nav {
     display: flex;
-    margin-left: 15px;
+    margin-left: 20px;
+    font-size: 30px;
+    margin-right: 200px;
+    margin-bottom: 20px;
 }
 
 .logo {
