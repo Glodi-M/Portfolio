@@ -62,7 +62,7 @@ nav {
 }
 
 .onglet {
-    margin-left: 60px;
+    margin-left: 50px;
     margin-bottom: 20px;
 }
 
@@ -70,7 +70,7 @@ nav {
 
 .logo-nav {
     display: flex;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 30px;
     margin-right: 200px;
     margin-bottom: 20px;
