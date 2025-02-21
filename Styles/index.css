@@ -72,11 +72,13 @@ nav h1 {
     margin-bottom: 20px;
 }
 
+.logo-nav {
+    display: flex;
+}
+
 .logo {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
-    margin-bottom: 15px;
 }
 
 a:hover {
@@ -84,7 +86,7 @@ a:hover {
     color: var(--bdrcolor);
 }
 
-#portfolio:hover {
+.logo-nav:hover {
     transform: scale(1.1, 1.1);
 }
 
