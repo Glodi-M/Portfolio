@@ -74,6 +74,7 @@ nav h1 {
 
 .logo-nav {
     display: flex;
+    margin-left: 15px;
 }
 
 .logo {
