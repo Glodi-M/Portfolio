@@ -840,7 +840,6 @@ footer {
 }
 
 .footer-forme {
-
     margin-left: 140px;
 }
 
@@ -849,6 +848,7 @@ footer {
     margin-top: 80px;
 }
 
+/* Styles pour les champs de formulaire */
 input, textarea {
     min-width: 300px;
     min-height: 53.7px;
@@ -860,25 +860,49 @@ input, textarea {
     color: var(--colorwhite);
     font-size: 1rem;
     outline: none;
-    padding: 0 .3rem;
-    transition: 3s;
+    padding: 0 0.3rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-input:hover {
+/* Style au survol */
+input:hover, textarea:hover {
     background-color: aquamarine;
-    color: black
+    color: black;
+    border-color: #012836;
 }
 
-textarea:hover {
+/* Style au focus */
+input:focus, textarea:focus {
     background-color: aquamarine;
-    color: black
+    color: black;
+    border-color: #012836;
 }
 
 label {
     color: var(--colorwhite);
-    transition: 3s;
+    transition: color 0.3s;
 }
 
+input:focus+label, textarea:focus+label {
+    color: aquamarine;
+}
+
+input[type="submit"] {
+    background-color: #012836;
+    color: var(--colorwhite);
+    border: 2px solid #f5f7f7;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: aquamarine;
+    color: black;
+    border-color: #012836;
+}
 
 
 .logo-mail {

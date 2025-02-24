@@ -220,7 +220,7 @@ form.addEventListener('submit', (e) => {
 
     const name = document.getElementById('input-name').value;
     const email = document.getElementById('input-email').value;
-    const message = document.getElementById('inputmessage').value;
+    const message = document.getElementById('input-message').value;
 
     if (!name || !email || !message) {
         alert('Veuillez remplir tous les champs.');
