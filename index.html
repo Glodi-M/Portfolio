@@ -545,32 +545,31 @@
 
         <div class="footer-forme">
 
-            <form action="https://formspree.io/f/xwpvdkal" method="POST">
+            <form action="https://formspree.io/f/xwpvdkal" method="POST" id="contact-form">
 
-
-                <label>Nom</label>
+                <label for="input-name">Nom</label>
                 <div>
-                    <label for="input-name"> </label>
                     <input type="text" name="name" id="input-name" required placeholder="Votre Nom">
-
                 </div>
 
-                <label>Adresse email</label>
+                <label for="input-email">Adresse email</label>
                 <div>
-                    <label for="input-email"></label>
-                    <input type="email" name="email" id="input-email" placeholder="abc@gmail" required>
-
+                    <input type="email" name="email" id="input-email" required placeholder="abc@gmail.com">
                 </div>
 
-                <label>Message</label>
+                <label for="input-message">Message</label>
                 <div>
-
-                    <textarea name="Message" id="inputmessage" placeholder="Votre Message"></textarea>
-                    <label for="inputmessage"></label>
-
+                    <textarea name="message" id="input-message" required placeholder="Votre Message"></textarea>
                 </div>
+
+                <!-- Champ caché pour la redirection -->
+                <input type="hidden" name="_next" value="https://glodi-m.github.io/Portfolio">
+
+                <!-- Champ caché pour le sujet de l'email -->
+                <input type="hidden" name="_subject" value="Nouveau message depuis votre site">
+
+                <!-- Bouton d'envoi -->
                 <input type="submit" value="Envoyer">
-
             </form>
 
         </div>
