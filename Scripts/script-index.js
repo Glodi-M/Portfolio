@@ -154,6 +154,23 @@ document.getElementById('btn-voir-plus2').addEventListener("click", function () 
 
 });
 
+document.getElementById('btn-voir-plus-cms').addEventListener("click", function () {
+
+    window.open("https://github.com/ahmvdd/CMS-Nodejs.git", "_bank");
+
+});
+document.getElementById('btn-voir-plus-java').addEventListener("click", function () {
+
+    window.open("https://github.com/Glodi-M/Gestion-etudiant.git", "_bank");
+
+});
+
+document.getElementById('btn-voir-plus-symfony').addEventListener("click", function () {
+
+    window.open("https://github.com/Glodi-M/Events-manager.git", "_bank");
+
+});
+
 
 
 // Fonction pour vérifier si un élément est visible
