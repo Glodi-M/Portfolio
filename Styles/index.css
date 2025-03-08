@@ -445,6 +445,10 @@ button:hover {
     flex-wrap: wrap;
 }
 
+.formation img {
+    border-radius: 10px;
+}
+
 .formation .formation-box {
     text-align: center;
 }
