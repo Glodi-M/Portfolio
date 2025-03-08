@@ -254,3 +254,53 @@ form.addEventListener('submit', (e) => {
     form.reset();
 });
 
+
+
+// ANIMATION EFFET SCROLL
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".experience-contenaire");
+    let lastScrollY = window.scrollY;
+
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+
+        // Détecter la direction du défilement
+        if (currentScrollY > lastScrollY) {
+            // Défilement vers le bas
+            cards.forEach((card) => {
+                if (isElementInViewport(card)) {
+                    card.classList.remove("card-hidden");
+                    card.classList.add("card-visible");
+                }
+            });
+        } else {
+            // Défilement vers le haut
+            cards.forEach((card) => {
+                if (isElementInViewport(card)) {
+                    card.classList.remove("card-visible");
+                    card.classList.add("card-hidden");
+                }
+            });
+        }
+
+        lastScrollY = currentScrollY;
+    }
+
+    // Vérifier si un élément est dans la vue
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Écouter l'événement de défilement
+    window.addEventListener("scroll", handleScroll);
+
+    // Appliquer l'effet au chargement de la page
+    handleScroll();
+});
