@@ -295,7 +295,7 @@ button:hover {
     height: 24px;
 }
 
-.solft-skill {
+/* .solft-skill {
     width: 115px;
     padding: .75rem .5rem;
     background-color: #012836;
@@ -306,6 +306,19 @@ button:hover {
     color: var(--colorwhite);
     text-align: center;
     font-family: 'Poppins';
+} */
+
+.solft-skill {
+    padding: 1rem;
+    background: linear-gradient(135deg, #012836, #001a22);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    margin-bottom: 15px;
 }
 
 .solft-rigth {
@@ -346,22 +359,6 @@ button:hover {
     margin-inline: 100px;
 }
 
-
-.section-apropo button {
-    padding: 10px 20px;
-    background-color: var(--colorwhite);
-    color: #000;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 10px;
-    opacity: 0.6;
-    transition: 0.3 ease;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
-
 .about-pa:hover {
     color: #012836;
 }
@@ -376,49 +373,60 @@ button:hover {
 }
 
 .solft:hover>.solft-skill:not(:hover) {
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
-    transform: scale(0.9, 0.9);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: #0974f1;
 }
 
 
 
-@media screen and (max-width:768px) {
-    .titre {
-        margin-left: 0;
-        text-align: center;
-        font-size: 30px;
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .about-solft {
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 20px;
+    }
+
+    .solft {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .solft-skill {
+        width: 120px;
+        padding: 0.75rem;
     }
 
     .about {
-        margin-top: 0;
-    }
-
-    .about-solft {
-        display: block;
-        margin-inline: 0;
+        margin-top: 20px;
+        margin-left: 0;
+        padding: 0 20px;
     }
 
     .about-pa {
-        text-align: start;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .solft-skill {
+        width: 100px;
+        padding: 0.5rem;
+    }
+
+    .solft-skill p {
+        font-size: 0.8rem;
+    }
+
+    .about-pa {
+        font-size: 0.8rem;
     }
 
     .solft {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .about {
-        font-weight: 300;
-        font-family: 'Poppins';
-        padding: 10px;
-        margin-left: 20px;
-        ;
-    }
-
-    .solft-skill {
-        margin-right: 20px;
     }
 }
 
