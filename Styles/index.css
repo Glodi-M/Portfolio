@@ -431,11 +431,12 @@ button:hover {
     margin-bottom: 60px;
     margin-top: 40px;
     flex-wrap: wrap;
+    text-decoration: none;
 }
 
 .formation-box {
     padding: 25px;
-    background: linear-gradient(135deg, #012836, #001a22);
+    background: var(--primary-color);
     width: 250px;
     border-radius: 15px;
     color: white;
@@ -464,6 +465,11 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.formation .logoiti {
+    width: 80px;
+    height: 80px;
+}
+
 .formation-box h3 {
     font-size: 1.25rem;
     margin-top: 20px;
@@ -478,6 +484,10 @@ button:hover {
     margin: 5px 0;
 }
 
+.formation a {
+    text-decoration: none;
+}
+
 .formation-box p:last-child {
     margin-bottom: 0;
 }
@@ -490,7 +500,7 @@ button:hover {
 
     .formation-box {
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
     }
 
     .formation-box h3 {
