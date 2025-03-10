@@ -390,10 +390,17 @@ button:hover {
         font-size: 30px;
     }
 
+    .about {
+        margin-top: 0;
+    }
 
     .about-solft {
         display: block;
         margin-inline: 0;
+    }
+
+    .about-pa {
+        text-align: start;
     }
 
     .solft {
