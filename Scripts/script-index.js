@@ -171,6 +171,12 @@ document.getElementById('btn-voir-plus-symfony').addEventListener("click", funct
 
 });
 
+document.getElementById('btn-voir-plus-apipokemon').addEventListener("click", function () {
+
+    window.open("https://github.com/Glodi-M/API_POKEMON.git", "_bank");
+
+});
+
 
 
 // Fonction pour vérifier si un élément est visible
