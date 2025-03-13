@@ -535,7 +535,7 @@ button:hover {
 
 @media screen and (max-width: 480px) {
     .formation {
-        gap: 15px;
+        gap: 20px;
     }
 
     .formation-box {
