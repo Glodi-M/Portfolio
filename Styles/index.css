@@ -962,17 +962,13 @@ footer {
     justify-content: center;
     padding-top: 40px;
     opacity: 0;
-    /* Invisibles au départ */
     transform: translateY(50px);
-    /* Décalées vers le bas */
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
-    /* Deviens visible */
     transform: translateY(0);
-    /* Retourne à la position normale */
 }
 
 .footer-forme {
@@ -1204,13 +1200,11 @@ li {
 
         .modal h2 {
             font-size: 18px;
-            /* Réduire la taille du titre */
         }
 
         .modal p,
         .modal ul {
             font-size: 14px;
-            /* Adapter le texte */
         }
 
         .close-btn {
@@ -1228,7 +1222,7 @@ li {
 .menu {
     display: block;
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: -100%;
     width: 100%;
     height: calc(100vh - 0px);
@@ -1351,18 +1345,9 @@ li {
     background-color: #012836
 }
 
-.logo-contact {
-    text-align: center;
-}
-
-.logo-contact img {
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-}
 
 .copyright {
-    margin-top: 10px;
     font-size: 0.9em;
     color: #555;
+    text-align: center;
 }
