@@ -173,7 +173,7 @@ header::before {
 
 .profil {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     height: auto;
     transition: all 300ms;
     border-radius: 10% 29% 20% 37% / 10% 23% 15% 25%;
