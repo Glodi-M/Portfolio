@@ -824,8 +824,6 @@ button:hover {
 
 }
 
-
-/* Mes Projets */
 /* Section Projet */
 .Projets {
     padding: 50px 10%;
@@ -847,7 +845,7 @@ button:hover {
     transform: translateY(0);
 }
 
-/* Style des cartes projet */
+
 .projet-card {
     background: #012836;
     color: var(--colorwhite);
@@ -863,7 +861,6 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
 }
 
-/* Image de la carte */
 .projet-card-image {
     width: 100%;
     height: 200px;
@@ -875,60 +872,51 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Titre de la carte */
 .projet-card-title {
-    font-size: 1.5rem;
-    margin: 15px 0;
+    font-size: 1.3rem;
+    margin-top: 10px;
     color: var(--colorwhite);
     transition: color 0.3s ease-in-out;
 }
 
 .projet-card:hover .projet-card-title {
     color: #00a6ff;
-    /* Changement de couleur au survol */
 }
 
-/* Description de la carte */
 .projet-card-description {
     padding: 15px;
     font-size: 1rem;
     line-height: 1.6;
     text-align: center;
     color: #b0b0b0;
-    /* Couleur de texte plus douce */
     transition: color 0.3s ease-in-out;
 }
 
 .projet-card:hover .projet-card-description {
     color: var(--colorwhite);
-    /* Texte plus visible au survol */
 }
 
-/* Icônes des technologies */
 .projet-card-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     padding: 15px;
     background: rgba(0, 0, 0, 0.1);
-    /* Fond légèrement sombre pour les icônes */
     border-radius: 10px;
     margin: 15px;
 }
 
 .projet-card-icons img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .projet-card-icons img:hover {
     transform: scale(1.2);
     filter: brightness(1.2);
-    /* Effet de luminosité au survol */
 }
 
-/* Boutons "Voir plus" */
 .projet-card button {
     width: 100%;
     padding: 15px;
@@ -992,7 +980,7 @@ button:hover {
 
 /* Footer  */
 
-.tt {
+.title-contact {
     text-align: center;
     margin-bottom: 20px;
 }
