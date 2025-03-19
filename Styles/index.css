@@ -826,7 +826,6 @@ button:hover {
 
 
 /* Mes Projets */
-
 /* Section Projet */
 .Projets {
     padding: 50px 10%;
@@ -856,6 +855,7 @@ button:hover {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
 }
 
 .projet-card:hover {
@@ -863,23 +863,45 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
 }
 
+/* Image de la carte */
 .projet-card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
+.projet-card:hover .projet-card-image {
+    transform: scale(1.1);
+}
+
+/* Titre de la carte */
 .projet-card-title {
     font-size: 1.5rem;
     margin: 15px 0;
     color: var(--colorwhite);
+    transition: color 0.3s ease-in-out;
 }
 
+.projet-card:hover .projet-card-title {
+    color: #00a6ff;
+    /* Changement de couleur au survol */
+}
+
+/* Description de la carte */
 .projet-card-description {
     padding: 15px;
     font-size: 1rem;
     line-height: 1.6;
     text-align: center;
+    color: #b0b0b0;
+    /* Couleur de texte plus douce */
+    transition: color 0.3s ease-in-out;
+}
+
+.projet-card:hover .projet-card-description {
+    color: var(--colorwhite);
+    /* Texte plus visible au survol */
 }
 
 /* Icônes des technologies */
@@ -888,16 +910,22 @@ button:hover {
     justify-content: center;
     gap: 15px;
     padding: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    /* Fond légèrement sombre pour les icônes */
+    border-radius: 10px;
+    margin: 15px;
 }
 
 .projet-card-icons img {
     width: 40px;
     height: 40px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .projet-card-icons img:hover {
     transform: scale(1.2);
+    filter: brightness(1.2);
+    /* Effet de luminosité au survol */
 }
 
 /* Boutons "Voir plus" */
@@ -910,6 +938,25 @@ button:hover {
     border: none;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.projet-card button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.projet-card button:hover::after {
+    opacity: 1;
 }
 
 .projet-card button:hover {
@@ -917,12 +964,24 @@ button:hover {
     transform: translateY(-3px);
 }
 
-
-@media screen and (max-width:768px) {
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .projet-contenaire {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
     }
 
+    .projet-card {
+        margin: 10px;
+    }
+
+    .projet-card-title {
+        font-size: 1.3rem;
+    }
+
+    .projet-card-description {
+        font-size: 0.9rem;
+    }
 }
 
 /* Footer  */
