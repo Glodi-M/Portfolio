@@ -699,8 +699,8 @@ button:hover {
     border-radius: 1rem;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
