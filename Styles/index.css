@@ -964,6 +964,12 @@ button:hover {
     transform: translateY(-3px);
 }
 
+.projet-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .projet-contenaire {

@@ -137,45 +137,13 @@ if (burgerMenu && menu && closeMenuIcon) {
 
 
 // Boutton Ouvrir un projet dans une autre page 
-document.getElementById('btn-voir-plus').addEventListener("click", function () {
 
-    window.open("projet-hetic-collab.html", "_bank");
 
-});
-document.getElementById('btn-voir-plus1').addEventListener("click", function () {
 
-    window.open("projet-random-start-up.html", "_bank");
 
-});
 
-document.getElementById('btn-voir-plus2').addEventListener("click", function () {
 
-    window.open("https://github.com/Glodi-M/Portfolio.git", "_bank");
 
-});
-
-document.getElementById('btn-voir-plus-cms').addEventListener("click", function () {
-
-    window.open("https://github.com/ahmvdd/CMS-Nodejs.git", "_bank");
-
-});
-document.getElementById('btn-voir-plus-java').addEventListener("click", function () {
-
-    window.open("https://github.com/Glodi-M/Gestion-etudiant.git", "_bank");
-
-});
-
-document.getElementById('btn-voir-plus-symfony').addEventListener("click", function () {
-
-    window.open("https://github.com/Glodi-M/Events-manager.git", "_bank");
-
-});
-
-document.getElementById('btn-voir-plus-apipokemon').addEventListener("click", function () {
-
-    window.open("https://github.com/Glodi-M/API_POKEMON.git", "_bank");
-
-});
 
 document.getElementById('btn-voir-plus-gecommande').addEventListener("click", function () {
 
