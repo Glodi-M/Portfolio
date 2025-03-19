@@ -136,22 +136,6 @@ if (burgerMenu && menu && closeMenuIcon) {
 
 
 
-// Boutton Ouvrir un projet dans une autre page 
-
-
-
-
-
-
-
-
-document.getElementById('btn-voir-plus-gecommande').addEventListener("click", function () {
-
-    window.open("https://github.com/Glodi-M/Gestion_de_commande.git", "_bank");
-
-});
-
-
 
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {
