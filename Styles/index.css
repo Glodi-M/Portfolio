@@ -824,20 +824,35 @@ button:hover {
 
 }
 
-/* Section Projet */
+/* Section Projet Améliorer */
+
 .Projets {
-    padding: 50px 10%;
     background-color: #001a23;
+    padding: 80px 5%;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Projets::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 30%);
+    pointer-events: none;
 }
 
 .projet-contenaire {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 30px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.visible {
@@ -849,85 +864,120 @@ button:hover {
 .projet-card {
     background: #012836;
     color: var(--colorwhite);
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    z-index: 1;
+}
+
+.projet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .projet-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.projet-card:hover::before {
+    opacity: 1;
 }
 
 .projet-card-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(0.9);
+
 }
 
 .projet-card:hover .projet-card-image {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    filter: brightness(1);
 }
 
 .projet-card-title {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    color: var(--colorwhite);
-    transition: color 0.3s ease-in-out;
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    padding: 0 20px;
 }
 
 .projet-card:hover .projet-card-title {
     color: #00a6ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .projet-card-description {
-    padding: 15px;
+    padding: 0 20px 15px;
     font-size: 1rem;
     line-height: 1.6;
-    text-align: center;
-    color: #b0b0b0;
-    transition: color 0.3s ease-in-out;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .projet-card:hover .projet-card-description {
     color: var(--colorwhite);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
 
 .projet-card-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 15px;
+    margin: 0 15px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .projet-card-icons img {
     width: 35px;
     height: 35px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(30%) brightness(0.9);
 }
 
 .projet-card-icons img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
+    transform: scale(1.2) translateY(-3px);
+    filter: grayscale(0%) brightness(1.2);
 }
 
 .projet-card button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #012a32, #06557f);
+    background: linear-gradient(135deg, #012a32, #06557f 100%);
     color: var(--colorwhite);
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
+    letter-spacing: 0.5px;
 }
 
 .projet-card button::after {
@@ -947,26 +997,81 @@ button:hover {
     opacity: 1;
 }
 
+.projet-card button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s ease;
+}
+
 .projet-card button:hover {
-    background: linear-gradient(135deg, #00a6ff, #0086ff);
+    background: linear-gradient(135deg, #00a6ff 0%, #0086ff 100%);
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+.projet-card button:hover::before {
+    left: 100%;
 }
 
 .projet-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
+}
+
+
+/* Animation au scroll */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
     .projet-contenaire {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Projets {
+        padding: 60px 5%;
+    }
+
+    .titre {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .projet-contenaire {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .projet-card {
-        margin: 10px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titre {
+        font-size: 1.8rem;
     }
 
     .projet-card-title {
@@ -974,9 +1079,15 @@ button:hover {
     }
 
     .projet-card-description {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .projet-card button {
+        padding: 14px;
     }
 }
+
+
 
 /* Footer  */
 
