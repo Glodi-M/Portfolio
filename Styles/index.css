@@ -913,7 +913,7 @@ button:hover {
 
 .projet-card-title {
     font-size: 1.4rem;
-    margin: 20px 0 10px;
+    /* margin: 20px 0 10px; */
     color: #fff;
     transition: color 0.3s ease;
     font-weight: 600;
@@ -927,7 +927,7 @@ button:hover {
 
 .projet-card-description {
     padding: 0 20px 15px;
-    font-size: 1rem;
+    font-size: 0, 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
