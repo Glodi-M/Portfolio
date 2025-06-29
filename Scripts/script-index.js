@@ -20,52 +20,77 @@ typeWriter()
 
 // OUVERTURE MODALE
 
-// Sélectionner tous les éléments qui déclenchent l'ouverture des modales
-const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close]");
-const modals = document.querySelectorAll(".modal");
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation des cartes au scroll
+    const experienceSection = document.getElementById('Experiences');
+    const cards = document.querySelectorAll('.card-experience');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('show');
+                    }, 150 * index);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    if (experienceSection) observer.observe(experienceSection);
 
-// Fonction pour ouvrir une modale
-function openModal(modal) {
-    if (modal) {
-        modal.classList.add("open");
-        modal.style.display = "flex";
+    // Gestion des modales
+    const openModalButtons = document.querySelectorAll('[data-modal-target]');
+    const closeModalButtons = document.querySelectorAll('.close-modal');
+    const modals = document.querySelectorAll('.modal');
+
+    function openModal(modal) {
+        if (modal) {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
     }
-}
 
-// Fonction pour fermer une modale
-function closeModal(modal) {
-    if (modal) {
-        modal.classList.remove("open");
-        setTimeout(() => { modal.style.display = "none"; }, 300)
+    function closeModal(modal) {
+        if (modal) {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
     }
-}
 
-// Ajouter un événement à chaque bouton qui ouvre une modale
-openModalButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const modal = document.querySelector(button.dataset.modalTarget);
-        openModal(modal);
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal-target');
+            const modal = document.querySelector(modalId);
+            openModal(modal);
+        });
     });
-});
 
-// Ajouter un événement à chaque bouton de fermeture
-closeModalButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const modal = button.closest(".modal");
-        closeModal(modal);
-    });
-});
-
-// Fermer en cliquant à l'extérieur de la modale
-window.addEventListener("click", (event) => {
-    modals.forEach(modal => {
-        if (event.target === modal) {
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
             closeModal(modal);
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            closeModal(e.target);
+        }
+    });
+
+    // Fermer avec la touche ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('open')) {
+                    closeModal(modal);
+                }
+            });
         }
     });
 });
-
 
 
 // BOUTTON SCROLL

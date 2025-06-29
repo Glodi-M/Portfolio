@@ -283,67 +283,68 @@
 
     <!-- Section Experiences  -->
 
+    <section id="Experiences" class="section-experiences">
+    <h1 class="titre">Mes expériences</h1>
 
-    <section id="Experiences" class="section-experiences ">
-
-        <h1 class="titre"> Mes expériences</h1>
-
-        <div class="experience-contenaire card-hidden">
-
-            <div id="card_dgi" class="card-experience card" data-modal-target="#myModal">
-                <h3 class="card-title">Stage</h3>
-                <p class="small-desc">Direction Urbaine d'impôt de Kinshasa</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
-            </div>
-
-            <div id="card_superviseur" class="card-experience card" data-modal-target="#myModal1">
-                <h3 class="card-title">Superviseur<br>Manager</h3>
-                <p class="small-desc">MJ5 Services ets</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
-            </div>
-            <div id="card_jedam" class="card-experience card" data-modal-target="#myModal2">
-                <h3 class="card-title">Stage informatique</h3>
-                <p class="small-desc">SARL JEDAM Services</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="experience-contenaire card-hidden">
-
-            <div id="card_ask" class="card-experience card" data-modal-target="#myModal3">
-                <h3 class="card-title">Service <br>Bénévolat</h3>
-                <p class="small-desc">Association Provinciale <br>de Scouts de Kinshasa</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
-            </div>
-            <div id="card_gsa" class="card-experience card" data-modal-target="#myModal4">
-                <h3 class="card-title">Sécretaire <br>Bénévolat</h3>
-                <p class="small-desc">Groupe Scout Alpha</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
-            </div>
-
-            <div id="card_odc" class="card-experience card" data-modal-target="#myModal5">
-                <h3 class="card-title">Stage en <br>apprentissage</h3>
-                <p class="small-desc">Orange Digital Center</p>
-                <div class="go-corner">
-                    <div class="go-arrow">→</div>
-                </div>
+    <div class="experience-contenaire">
+        <!-- Carte DGI -->
+        <div id="card_dgi" class="card-experience card slide-left" data-modal-target="#modal_dgi">
+            <h3 class="card-title">Stage</h3>
+            <p class="small-desc">Direction Urbaine d'impôt de Kinshasa</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
             </div>
         </div>
 
+        <!-- Carte Superviseur -->
+        <div id="card_superviseur" class="card-experience card slide-right" data-modal-target="#modal_superviseur">
+            <h3 class="card-title">Superviseur<br>Manager</h3>
+            <p class="small-desc">MJ5 Services ets</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
+            </div>
+        </div>
 
+        <!-- Carte JEDAM -->
+        <div id="card_jedam" class="card-experience card slide-left" data-modal-target="#modal_jedam">
+            <h3 class="card-title">Stage informatique</h3>
+            <p class="small-desc">SARL JEDAM Services</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
+            </div>
+        </div>
+    </div>
 
-    </section>
+    <div class="experience-contenaire">
+        <!-- Carte ASK -->
+        <div id="card_ask" class="card-experience card slide-right" data-modal-target="#modal_ask">
+            <h3 class="card-title">Service <br>Bénévolat</h3>
+            <p class="small-desc">Association Provinciale <br>de Scouts de Kinshasa</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
+            </div>
+        </div>
+
+        <!-- Carte GSA -->
+        <div id="card_gsa" class="card-experience card slide-left" data-modal-target="#modal_gsa">
+            <h3 class="card-title">Sécretaire <br>Bénévolat</h3>
+            <p class="small-desc">Groupe Scout Alpha</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
+            </div>
+        </div>
+
+        <!-- Carte ODC -->
+        <div id="card_odc" class="card-experience card slide-right" data-modal-target="#modal_odc">
+            <h3 class="card-title">Stage en <br>apprentissage</h3>
+            <p class="small-desc">Orange Digital Center</p>
+            <div class="go-corner">
+                <div class="go-arrow">→</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Mes projets -->
 
@@ -669,101 +670,99 @@
 
     </footer>
 
+ <!-- Modale -->
 
-    <!-- POP_UP -->
-
-    <!-- Modale générique -->
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <h2>Informaticien - Stage</h2>
-            <p class="modal-titre">Direction Urbaine d'Impôt de Kinshasa.</p>
-            <p class="modal-date">Août 2021 - Octobre 2021</p>
-            <ul>
-                <li>Assistance à la mise en réseau et à la connectivité des postes</li>
-                <li>postesClassification des dossiers & gestion des répertoires NIF</li>
-                <li>Opérateur de saisie et suivi des opérations d'assiette fiscale</li>
-                <li>Réfactorisation du code applicatif</li>
-                <li>Mise à jour de logiciels et équipements</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+ <!-- Modale DGI -->
+<div id="modal_dgi" class="modal" role="dialog" aria-labelledby="modal_dgi_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_dgi_title">Informaticien - Stage</h2>
+        <p class="modal-titre">Direction Urbaine d'Impôt de Kinshasa</p>
+        <p class="modal-date">Août 2021 - Octobre 2021</p>
+        <ul>
+            <li>Assistance à la mise en réseau et à la connectivité des postes</li>
+            <li>Classification des dossiers & gestion des répertoires NIF</li>
+            <li>Opérateur de saisie et suivi des opérations d'assiette fiscale</li>
+            <li>Réfactorisation du code applicatif</li>
+            <li>Mise à jour de logiciels et équipements</li>
+        </ul>
     </div>
+</div>
 
-    <!-- Superviseur -->
-    <div id="myModal1" class="modal">
-        <div class="modal-content">
-            <h2>Superviseur -- Manager</h2>
-            <p class="modal-titre">MJ5 Services ETS.</p>
-            <p class="modal-date">Avril 2021 - Juillet 2023</p>
-            <ul>
-                <li>Gestion et suivi des recettes (ventes de bois, rendement machine) dans Excel</li>
-                <li>Coordination des activités d'exploitation forestière</li>
-                <li>Élaboration de rapports globaux</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+<!-- Modale Superviseur -->
+<div id="modal_superviseur" class="modal" role="dialog" aria-labelledby="modal_superviseur_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_superviseur_title">Superviseur - Manager</h2>
+        <p class="modal-titre">MJ5 Services ETS</p>
+        <p class="modal-date">Avril 2021 - Juillet 2023</p>
+        <ul>
+            <li>Gestion et suivi des recettes (ventes de bois, rendement machine) dans Excel</li>
+            <li>Coordination des activités d'exploitation forestière</li>
+            <li>Élaboration de rapports globaux</li>
+        </ul>
     </div>
+</div>
 
-    <!-- Stage JEDAM -->
-    <div id="myModal2" class="modal">
-        <div class="modal-content">
-            <h2>Stage en Informatique</h2>
-            <p class="modal-titre">SARL JEDAM Services.</p>
-            <p class="modal-date">Décembre 2022 - Juin 2023</p>
-            <ul>
-                <li>Installation et mise à jour des logiciels</li>
-                <li>Gestion de la base de données</li>
-                <li>Mise à jour des contenus du site web</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+<!-- Modale Stage JEDAM -->
+<div id="modal_jedam" class="modal" role="dialog" aria-labelledby="modal_jedam_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_jedam_title">Stage en Informatique</h2>
+        <p class="modal-titre">SARL JEDAM Services</p>
+        <p class="modal-date">Décembre 2022 - Juin 2023</p>
+        <ul>
+            <li>Installation et mise à jour des logiciels</li>
+            <li>Gestion de la base de données</li>
+            <li>Mise à jour des contenus du site web</li>
+        </ul>
     </div>
+</div>
 
-    <!-- Service ASK -->
-    <div id="myModal3" class="modal">
-        <div class="modal-content">
-            <h2>Informaticien junior (Bénévolat)</h2>
-            <p class="modal-titre">Association Provinciale des Scouts de Kinshasa.</p>
-            <p class="modal-date">Octobre 2023 - Avril 2024</p>
-            <ul>
-                <li>Assistance utilisateurs (fichier,messagerie,burautique)</li>
-                <li>Admnistration de canaux numériques</li>
-                <li>Gestion de données</li>
-                <li>Veille et dépannage informatique</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+<!-- Modale Scouts Kinshasa -->
+<div id="modal_ask" class="modal" role="dialog" aria-labelledby="modal_scouts_kinshasa_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_scouts_kinshasa_title">Informaticien junior (Bénévolat)</h2>
+        <p class="modal-titre">Association Provinciale des Scouts de Kinshasa</p>
+        <p class="modal-date">Octobre 2023 - Avril 2024</p>
+        <ul>
+            <li>Assistance utilisateurs (fichier, messagerie, bureautique)</li>
+            <li>Administration de canaux numériques</li>
+            <li>Gestion de données</li>
+            <li>Veille et dépannage informatique</li>
+        </ul>
     </div>
+</div>
 
-    <!-- Secrétaire GSA -->
-    <div id="myModal4" class="modal">
-        <div class="modal-content">
-            <h2>Secrétaire Administratif (Bénévolat)</h2>
-            <p class="modal-titre">Groupe Scout Alpha.</p>
-            <p class="modal-date">Janvier 2024 - Septembre 2024</p>
-            <ul>
-                <li>Gestion des documents</li>
-                <li>Élaboration de rapports</li>
-                <li>Gestion des emails</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+<!-- Modale Groupe Scout Alpha -->
+<div id="modal_gsa" class="modal" role="dialog" aria-labelledby="modal_gsa_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_gsa_title">Secrétaire Administratif (Bénévolat)</h2>
+        <p class="modal-titre">Groupe Scout Alpha</p>
+        <p class="modal-date">Janvier 2024 - Septembre 2024</p>
+        <ul>
+            <li>Gestion des documents</li>
+            <li>Élaboration de rapports</li>
+            <li>Gestion des emails</li>
+        </ul>
     </div>
+</div>
 
-    <!-- ORANGE DIGITAL CENTER -->
-    <div id="myModal5" class="modal">
-        <div class="modal-content">
-            <h2>Stage en apprentissage</h2>
-            <p class="modal-titre">Orange Digital Center.</p>
-            <p class="modal-date">Septembre 2022</p>
-            <ul>
-                <li>Apprentissage du langage PHP</li>
-                <li>Développement d'une application CRUD (site de visite)</li>
-            </ul>
-            <button class="close-btn" data-close>Fermer</button>
-        </div>
+<!-- Modale Orange Digital Center -->
+<div id="modal_odc" class="modal" role="dialog" aria-labelledby="modal_orange_digital_title">
+    <div class="modal-content">
+        <span class="close-modal" aria-label="Fermer la modale">×</span>
+        <h2 id="modal_orange_digital_title">Stage en apprentissage</h2>
+        <p class="modal-titre">Orange Digital Center</p>
+        <p class="modal-date">Septembre 2022 - Septembre 2022</p>
+        <ul>
+            <li>Apprentissage du langage PHP</li>
+            <li>Développement d'une application CRUD (site de visite)</li>
+        </ul>
     </div>
+</div>
 
     <!-- MENU BURGER -->
 
