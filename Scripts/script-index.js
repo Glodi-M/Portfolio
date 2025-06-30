@@ -1,22 +1,42 @@
-const texte = "Développeur & Support Informatique Polyvalent"
-const textEement = document.getElementById('poste')
-let index = 0
+const textElement = document.getElementById('poste');
+const phrases = ["Développeur Web", "Support Informatique"];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
 
 function typeWriter() {
-    if (index < texte.length) {
-        textEement.innerHTML += texte.charAt(index)
-        index++
-        setTimeout(typeWriter, 200)
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        // Effacer le texte
+        textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+    } else {
+        // Écrire le texte
+        textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 150;
     }
-    else {
-        setTimeout(() => {
-            textEement.innerHTML = ""
-            index = 0
-            typeWriter()
-        }, 1000);
+    
+    // Vérifier si on a fini d'écrire
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typingSpeed = 2000; // Pause à la fin de la phrase
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length; // Passer à la phrase suivante
+        typingSpeed = 500; // Pause avant de commencer la nouvelle phrase
     }
+    
+    setTimeout(typeWriter, typingSpeed);
 }
-typeWriter()
+
+// Démarrer l'animation
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeWriter, 1000);
+});
 
 // OUVERTURE MODALE
 
