@@ -1,4 +1,4 @@
-const texte = "Développeur Web"
+const texte = "Développeur & Support Informatique Polyvalent"
 const textEement = document.getElementById('poste')
 let index = 0
 
