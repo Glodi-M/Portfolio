@@ -131,7 +131,6 @@ backTOTopButton.onclick = function () {
         if (burgerButton && menu && closeMenuIcon && menuContainer) {
             // Fonction pour ouvrir le menu
             function openMenu() {
-                menu.classList.remove("closing");
                 menu.classList.add("open");
                 menuContainer.classList.add("open");
                 document.body.classList.add("no-scroll");
@@ -142,18 +141,11 @@ backTOTopButton.onclick = function () {
 
             // Fonction pour fermer le menu
             function closeMenu() {
-                if (menu.classList.contains("open")) {
-                    menu.classList.add("closing");
-                    menu.classList.remove("open");
-                    menuContainer.classList.remove("open");
-                    document.body.classList.remove("no-scroll");
-                    burgerButton.setAttribute("aria-expanded", "false");
-                    // Remove closing class after animation
-                    setTimeout(() => {
-                        menu.classList.remove("closing");
-                    }, 500); // Match CSS animation duration
-                    burgerButton.focus();
-                }
+                menu.classList.remove("open");
+                menuContainer.classList.remove("open");
+                document.body.classList.remove("no-scroll");
+                burgerButton.setAttribute("aria-expanded", "false");
+                burgerButton.focus();
             }
 
             // Événements
@@ -196,7 +188,6 @@ backTOTopButton.onclick = function () {
                 }
             });
         }
-
 // SCROLL ANIMATION
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {
