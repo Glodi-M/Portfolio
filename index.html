@@ -38,9 +38,11 @@
             <a href="#Experiences">Expériences</a>
             <a href="#projet">Projets</a>
             <a href="#contact">Contact</a>
-
         </div>
-        <img id="nav-burger" class="nav-burger" src="Svg/menu.png" width="35" height="30" alt="">
+        <button id="nav-burger" class="nav-burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+        <img src="Svg/menu.png" width="35" height="30" alt="Icône de menu burger">
+    </button>
+        
     </nav>
 
 
@@ -764,33 +766,20 @@
     </div>
 </div>
 
-    <!-- MENU BURGER -->
-
+    <!-- Menu Burger -->
     <div id="menu-burger" class="menu-burger">
-
         <div class="menu-liste">
-
-            <ul id="menu" class="menu">
-                <img id="closeMenu" class="close-icon" src="Icon_contact/icons8-cancel-96.png" alt="Fermer">
-                <li> <a href="index.html">Accueil</a></li>
-                <hr>
-                <li> <a href="#about">­Á propos</a></li>
-                <hr>
-                <li> <a href="#Skills">Compétences</a></li>
-                <hr>
-                <li> <a href="#Experiences">Expériences</a></li>
-                <hr>
-                <li> <a href="#projet">Projets</a></li>
-                <hr>
-                <li> <a href="#contact">Contact</a></li>
-
-                <p class="copyright"> &copy; 2024 Glodi. Tous droits réservés.</p>
-
-
+            <img id="closeMenu" class="close-icon" src="Icon_contact/icons8-cancel-96.png" alt="Fermer le menu">
+            <ul id="menu" class="menu" role="navigation" aria-label="Menu principal">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#Skills">Compétences</a></li>
+                <li><a href="#Experiences">Expériences</a></li>
+                <li><a href="#projet">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
+            <p class="copyright">© 2024 Glodi. Tous droits réservés.</p>
         </div>
-
     </div>
 
     <!-- BOUTTON SCROLL -->

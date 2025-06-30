@@ -120,48 +120,84 @@ backTOTopButton.onclick = function () {
 
 // MENU BURGER
 
-// Récupérer les éléments
-const burgerMenu = document.getElementById("nav-burger");
-const menu = document.getElementById("menu");
-const closeMenuIcon = document.getElementById("closeMenu");
-const menuLinks = document.querySelectorAll("#menu a");
+ // Récupérer les éléments
+        const burgerButton = document.getElementById("nav-burger");
+        const menu = document.getElementById("menu");
+        const closeMenuIcon = document.getElementById("closeMenu");
+        const menuLinks = document.querySelectorAll("#menu a");
+        const menuContainer = document.getElementById("menu-burger");
 
-// Vérifier que les éléments existent avant d'ajouter des écouteurs d'événements
-if (burgerMenu && menu && closeMenuIcon) {
-    // Fonction pour ouvrir/fermer le menu
-    function toggleMenu() {
-        menu.classList.toggle("open");
-        document.body.classList.toggle("no-scroll"); // Désactive/réactive le défilement
-    }
+        // Vérifier que les éléments existent
+        if (burgerButton && menu && closeMenuIcon && menuContainer) {
+            // Fonction pour ouvrir le menu
+            function openMenu() {
+                menu.classList.remove("closing");
+                menu.classList.add("open");
+                menuContainer.classList.add("open");
+                document.body.classList.add("no-scroll");
+                burgerButton.setAttribute("aria-expanded", "true");
+                // Focus on first menu item
+                menuLinks[0].focus();
+            }
 
-    // Fonction pour fermer le menu
-    function closeMenu() {
-        if (menu.classList.contains("open")) {
-            menu.classList.remove("open");
-            document.body.classList.remove("no-scroll"); // Réactive le défilement
+            // Fonction pour fermer le menu
+            function closeMenu() {
+                if (menu.classList.contains("open")) {
+                    menu.classList.add("closing");
+                    menu.classList.remove("open");
+                    menuContainer.classList.remove("open");
+                    document.body.classList.remove("no-scroll");
+                    burgerButton.setAttribute("aria-expanded", "false");
+                    // Remove closing class after animation
+                    setTimeout(() => {
+                        menu.classList.remove("closing");
+                    }, 500); // Match CSS animation duration
+                    burgerButton.focus();
+                }
+            }
+
+            // Événements
+            burgerButton.addEventListener("click", openMenu);
+            closeMenuIcon.addEventListener("click", closeMenu);
+
+            // Fermer le menu lorsqu'on clique sur un lien
+            menuLinks.forEach(link => {
+                link.addEventListener("click", closeMenu);
+            });
+
+            // Fermer le menu si on clique en dehors
+            document.addEventListener("click", (event) => {
+                if (!menuContainer.contains(event.target) && !burgerButton.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Fermer le menu avec la touche Échap
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && menu.classList.contains("open")) {
+                    closeMenu();
+                }
+            });
+
+            // Gestion du focus pour l'accessibilité
+            const focusableElements = menu.querySelectorAll('a, img.close-icon');
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+
+            menuContainer.addEventListener("keydown", (event) => {
+                if (event.key === "Tab") {
+                    if (event.shiftKey && document.activeElement === firstFocusable) {
+                        event.preventDefault();
+                        lastFocusable.focus();
+                    } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+                        event.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            });
         }
-    }
 
-    // Ajouter les événements
-    burgerMenu.addEventListener("click", toggleMenu); // Ouvre le menu
-    closeMenuIcon.addEventListener("click", closeMenu); // Ferme le menu
-
-    // Fermer le menu lorsqu'on clique sur un lien
-    menuLinks.forEach(link => {
-        link.addEventListener("click", closeMenu);
-    });
-
-    // Optionnel : Fermer le menu si on clique en dehors
-    document.addEventListener("click", (event) => {
-        if (!menu.contains(event.target) && !burgerMenu.contains(event.target)) {
-            closeMenu();
-        }
-    });
-}
-
-
-
-
+// SCROLL ANIMATION
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
