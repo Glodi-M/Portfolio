@@ -1294,6 +1294,11 @@ a, p:hover {
     transition: opacity 0.3s ease-in-out;
 }
 
+.modal-title-center{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .modal.open {
     display: flex;
     opacity: 1;
