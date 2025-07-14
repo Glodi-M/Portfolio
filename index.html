@@ -1,977 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Styles/index.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon_io/site.webmanifest" />
-    <script src="Scripts/script-index.js" defer></script>
-    <title>Portofolio - Glodi Mietete</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QE38KY42JN"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Styles/index.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="favicon_io/site.webmanifest" />
+  <script src="Scripts/script-index.js" defer></script>
+  <title>Portofolio - Glodi Mietete</title>
 
-      gtag("config", "G-QE38KY42JN");
-    </script>
-  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE38KY42JN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <nav>
-      <div class="logo-nav">
-        <a href="./index.html"
-          ><img
-            src="favicon_io/android-chrome-512x512.png"
-            alt="Logo GM"
-            class="logo"
-        /></a>
-        <h1 id="Portfolio">MonPortfolio</h1>
+    gtag("config", "G-QE38KY42JN");
+  </script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo-nav">
+      <a href="./index.html"><img src="favicon_io/android-chrome-512x512.png" alt="Logo GM" class="logo" /></a>
+      <h1 id="Portfolio">MonPortfolio</h1>
+    </div>
+
+    <div class="onglet">
+      <a href="#about">­Á propos</a>
+      <a href="#Skills">Compétences</a>
+      <a href="#Experiences">Expériences</a>
+      <a href="#projet">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="nav-burger" class="nav-burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+      <img src="Svg/menu.png" width="35" height="30" alt="Icône de menu burger" />
+    </button>
+  </nav>
+
+  <!-- Header -->
+
+  <header id="home">
+    <div class="header-home">
+      <div>
+        <p class="header-name gm">Glodi Mietete</p>
+        <p class="header-post" id="poste"></p>
+        <p class="header-desc">Où professionalisme s'allie avec passion.</p>
+        <a href="#contact"> <button>Contacter-moi</button> </a>
       </div>
+      <img class="profil" src="Image_projet/Glodi (2).jpg" alt="photo de glodi" width="430 " height="310" />
+    </div>
+  </header>
 
-      <div class="onglet">
-        <a href="#about">­Á propos</a>
-        <a href="#Skills">Compétences</a>
-        <a href="#Experiences">Expériences</a>
-        <a href="#projet">Projets</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button
-        id="nav-burger"
-        class="nav-burger"
-        aria-label="Ouvrir le menu de navigation"
-        aria-expanded="false"
-      >
-        <img
-          src="Svg/menu.png"
-          width="35"
-          height="30"
-          alt="Icône de menu burger"
-        />
-      </button>
-    </nav>
+  <!--  a propos -->
 
-    <!-- Header -->
+  <section id="about" class="section-apropo animate-on-scroll">
+    <h1 class="titre">­Á propos de moi</h1>
 
-    <header id="home">
-      <div class="header-home">
-        <div>
-          <p class="header-name gm">Glodi Mietete</p>
-          <p class="header-post" id="poste"></p>
-          <p class="header-desc">Où professionalisme s'allie avec passion.</p>
-          <a href="#contact"> <button>Contacter-moi</button> </a>
-        </div>
-        <img
-          class="profil"
-          src="Image_projet/Glodi (2).jpg"
-          alt="photo de glodi"
-          width="430 "
-          height="310"
-        />
-      </div>
-    </header>
-
-    <!--  a propos -->
-
-    <section id="about" class="section-apropo animate-on-scroll">
-      <h1 class="titre">­Á propos de moi</h1>
-
-      <div class="about-solft">
-        <div class="solft">
-          <div class="solft-skill">
-            <img
-              src="Icon/icons8-nombreuses-batteries-30.png"
-              alt="icone d'autonome"
-            />
-            <p>Autonome</p>
-          </div>
-
-          <div class="solft-skill">
-            <img
-              src="Icon/icons8-pensée-critique-50.png"
-              alt="icone de cretivité"
-            />
-            <p>Créativité</p>
-          </div>
+    <div class="about-solft">
+      <div class="solft">
+        <div class="solft-skill">
+          <img src="Icon/icons8-nombreuses-batteries-30.png" alt="icone d'autonome" />
+          <p>Autonome</p>
         </div>
 
-        <div class="about">
-          <p class="about-pa">
-            Passionné par <span>l’informatique au sens large</span>, je me
-            spécialise à la fois dans le <strong>développement web</strong> et
-            le <strong>support informatique</strong>. J'aime créer des
-            applications performantes tout en garantissant un environnement
-            technique stable et fonctionnel.
-          </p>
-          <br />
-          <p class="about-pa">
-            Formé à l’<a
-              href="https://www.unikin.ac.cd"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Université de Kinshasa</a
-            >
-            et actuellement en
-            <a
-              href="https://www.hetic.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Prépa Master Digital à HETIC</a
-            >, j’ai mené plusieurs projets en développement full stack (HTML,
-            CSS, JavaScript, PHP, Symfony, React, Node.js) et en administration
-            de bases de données (MySQL, MariaDB).
-          </p>
-          <br />
-          <p class="about-pa">
-            En parallèle, j’ai acquis une expérience concrète en
-            <strong>support technique</strong> : maintenance de postes,
-            assistance utilisateurs, gestion de réseau local (Windows / Linux),
-            dépannage et configuration de systèmes.
-          </p>
-          <br />
-          <p class="about-pa">
-            Je suis actuellement à la recherche d’une
-            <strong>alternance ou d’un stage</strong> dans le développement ou
-            le support informatique, pour continuer à apprendre, à évoluer, et à
-            contribuer activement à des projets concrets.
-          </p>
-        </div>
-
-        <div class="solft solft-rigth">
-          <div class="solft-skill">
-            <img src="Icon/icons8-curiosity-64.png" alt="icone de Curiosité" />
-            <p>Curiosité</p>
-          </div>
-
-          <div class="solft-skill">
-            <img
-              src="Icon/icons8-travail-en-équipe-50.png"
-              alt="icone du travaille en équipe"
-            />
-            <p>Travail en équipe</p>
-          </div>
+        <div class="solft-skill">
+          <img src="Icon/icons8-pensée-critique-50.png" alt="icone de cretivité" />
+          <p>Créativité</p>
         </div>
       </div>
 
-      <div class="formation">
-        <a href="#">
-          <div class="formation-box">
-            <img
-              src="Svg/electronic logo_.jpg"
-              alt="logo iti ndjili"
-              class="logoiti"
-            />
-            <h3>Bac éléctronique</h3>
+      <div class="about">
+        <p class="about-pa">
+          Passionné par <span>l’informatique au sens large</span>, je me
+          spécialise à la fois dans le <strong>développement web</strong> et
+          le <strong>support informatique</strong>. J'aime créer des
+          applications performantes tout en garantissant un environnement
+          technique stable et fonctionnel.
+        </p>
+        <br />
+        <p class="about-pa">
+          Formé à l’<a href="https://www.unikin.ac.cd" target="_blank" rel="noopener noreferrer">Université de
+            Kinshasa</a>
+          et actuellement en
+          <a href="https://www.hetic.net/" target="_blank" rel="noopener noreferrer">Prépa Master Digital à HETIC</a>,
+          j’ai mené plusieurs projets en développement full stack (HTML,
+          CSS, JavaScript, PHP, Symfony, React, Node.js) et en administration
+          de bases de données (MySQL, MariaDB).
+        </p>
+        <br />
+        <p class="about-pa">
+          En parallèle, j’ai acquis une expérience concrète en
+          <strong>support technique</strong> : maintenance de postes,
+          assistance utilisateurs, gestion de réseau local (Windows / Linux),
+          dépannage et configuration de systèmes.
+        </p>
+        <br />
+        <p class="about-pa">
+          Je suis actuellement à la recherche d’une
+          <strong>alternance ou d’un stage</strong> dans le développement ou
+          le support informatique, pour continuer à apprendre, à évoluer, et à
+          contribuer activement à des projets concrets.
+        </p>
+      </div>
+
+      <div class="solft solft-rigth">
+        <div class="solft-skill">
+          <img src="Icon/icons8-curiosity-64.png" alt="icone de Curiosité" />
+          <p>Curiosité</p>
+        </div>
+
+        <div class="solft-skill">
+          <img src="Icon/icons8-travail-en-équipe-50.png" alt="icone du travaille en équipe" />
+          <p>Travail en équipe</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formation">
+      <a href="#">
+        <div class="formation-box">
+          <img src="Svg/electronic logo_.jpg" alt="logo iti ndjili" class="logoiti" />
+          <h3>Bac éléctronique</h3>
+          <p>
+            Institut Technique Industrielle<br />
+            de Ndjli
+          </p>
+          <p>2015</p>
+        </div>
+      </a>
+      <a href=" https://www.unikin.ac.cd" target="_blank" rel="noopener noreferrer">
+        <div class="formation-box">
+          <img src="Svg/unikin.jpg" alt="logo d'univerisité de kinshasa" />
+          <h3>Licence Informatique</h3>
+          <p>Université de Kinshasa</p>
+          <p>2021</p>
+        </div>
+      </a>
+
+      <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" target="_blank"
+        rel="noopener noreferrer">
+        <div class="formation-box">
+          <img src="Svg/heticc.png" alt="logo hetic" />
+          <h3>Prépa Master Digital</h3>
+          <p>HETIC</p>
+          <p>2024</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Competences  -->
+
+  <section id="Skills" class="Skills">
+    <h1 class="titre">Mes compétences</h1>
+
+    <div class="Skill-contenaire animate-on-scroll">
+      <div class="skill-content">
+        <h3 class="skill-title">Développement</h3>
+        <div class="skill-box">
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/html5-original.svg" alt="icon html" />
+              <h3 class="skill-name">HTML</h3>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/css3-original.svg" alt="icon css" />
+              <h3 class="skill-name">CSS</h3>
+              <span class="skill-level">Intermédiaire</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/javascript-original.svg" alt="icon javascript" />
+              <h3 class="skill-name">JavaScript</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/azuresqldatabase-original.svg" alt="icon sql" />
+              <h3 class="skill-name">SQL</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/mysql-original-wordmark.svg" alt="icon mysql" />
+              <h3 class="skill-name">MySQL</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/php-original.svg" alt="icon php" />
+              <h3 class="skill-name">PHP</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/java-original.svg" alt="icon java" />
+              <h3 class="skill-name">Java</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/unifiedmodelinglanguage-original.svg" alt="icon uml" />
+              <h3 class="skill-name">UML</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img class="bgd" src="Svg/icons8-python-48.png" alt="icon python" />
+              <h3 class="skill-name">Python</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-content">
+        <h3 class="skill-title">Technologies</h3>
+        <div class="skill-box">
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/figma-original.svg" alt="icon figma" />
+              <h3 class="skill-name">Figma</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/canva-original.svg" alt="icon canva" />
+              <h3 class="skill-name">Canva</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/file_type_git_icon_130581.png" alt="icon git" />
+              <h3 class="skill-name">Git/GitHub</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/react-1-logo-png-transparent.png" alt="icon react" />
+              <h3 class="skill-name">React</h3>
+              <span class="skill-level">Débutant</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/file_type_node_icon_130301.png" alt="icon nodejs" />
+              <h3 class="skill-name">Node.js</h3>
+              <span class="skill-level">Débutant</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/icons8-symfony-48.png" alt="icon Symfony" />
+              <h3 class="skill-name">Symfony</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/file_type_tailwind_icon_130128.png" alt="icon tailwind" />
+              <h3 class="skill-name">Tailwind</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/icons8-bootstrap-48.png" alt="icon Bootstrap" />
+              <h3 class="skill-name">Bootstrap</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/notion_logo_icon_145025.png" alt="icon notion" />
+              <h3 class="skill-name">Notion</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-content">
+        <h3 class="skill-title">Systèmes et Réseaux</h3>
+        <div class="skill-box">
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/linux-original.svg" alt="icon linux" />
+              <h3 class="skill-name">Linux</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/windows-original.svg" alt="icon windows" />
+              <h3 class="skill-name">Windows Server</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/cisco.svg" alt="icon cisco" />
+              <h3 class="skill-name">Cisco</h3>
+              <span class="skill-level">Débutant</span>
+            </div>
+          </div>
+
+          <div class="skill-groupe">
+            <div class="skill-data">
+              <img src="Svg/docker-original.svg" alt="icon docker" />
+              <h3 class="skill-name">Docker</h3>
+              <span class="skill-level">Débutant</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/network-wired.svg" alt="icon networking" />
+              <h3 class="skill-name">Réseaux</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+            <div class="skill-data">
+              <img src="Svg/virtualbox.svg" alt="icon virtualbox" />
+              <h3 class="skill-name">VirtualBox</h3>
+              <span class="skill-level">Les bases</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Experiences  -->
+
+  <section id="Experiences" class="section-experiences">
+    <h1 class="titre">Mes expériences</h1>
+
+    <div class="experience-contenaire">
+      <!-- Carte DGI -->
+      <div id="card_dgi" class="card-experience card slide-left" data-modal-target="#modal_dgi">
+        <h3 class="card-title">Stage</h3>
+        <p class="small-desc">Direction Urbaine d'impôt de Kinshasa</p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+
+      <!-- Carte Superviseur -->
+      <div id="card_superviseur" class="card-experience card slide-right" data-modal-target="#modal_superviseur">
+        <h3 class="card-title">Superviseur<br />Manager</h3>
+        <p class="small-desc">MJ5 Services ets</p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+
+      <!-- Carte JEDAM -->
+      <div id="card_jedam" class="card-experience card slide-left" data-modal-target="#modal_jedam">
+        <h3 class="card-title">Stage informatique</h3>
+        <p class="small-desc">SARL JEDAM Services</p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-contenaire">
+      <!-- Carte ASK -->
+      <div id="card_ask" class="card-experience card slide-right" data-modal-target="#modal_ask">
+        <h3 class="card-title">Service <br />Bénévolat</h3>
+        <p class="small-desc">
+          Association Provinciale <br />de Scouts de Kinshasa
+        </p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+
+      <!-- Carte GSA -->
+      <div id="card_gsa" class="card-experience card slide-left" data-modal-target="#modal_gsa">
+        <h3 class="card-title">Sécretaire <br />Bénévolat</h3>
+        <p class="small-desc">Groupe Scout Alpha</p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+
+      <!-- Carte ODC -->
+      <div id="card_odc" class="card-experience card slide-right" data-modal-target="#modal_odc">
+        <h3 class="card-title">Stage en <br />apprentissage</h3>
+        <p class="small-desc">Orange Digital Center</p>
+        <div class="go-corner">
+          <div class="go-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mes projets -->
+
+  <section id="projet" class="Projets">
+    <h1 class="titre">Mes Projets</h1>
+
+    <div class="projet-contenaire animate-on-scroll">
+      <!-- CARDE 1 HETIC COLLAB -->
+
+      <a href="projet-hetic-collab.html" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir plus</button>
+          <img src="Image_projet/HETIC COLABO.png" alt="Description de l'image" class="projet-card-image" />
+          <h2 class="projet-card-title">Hetic Collab</h2>
+
+          <div class="projet-card-description">
             <p>
-              Institut Technique Industrielle<br />
-              de Ndjli
+              Une application web No code facilitant la collaboration pour la
+              réalisation des projets.
             </p>
-            <p>2015</p>
           </div>
-        </a>
-        <a
-          href=" https://www.unikin.ac.cd"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="formation-box">
-            <img src="Svg/unikin.jpg" alt="logo d'univerisité de kinshasa" />
-            <h3>Licence Informatique</h3>
-            <p>Université de Kinshasa</p>
-            <p>2021</p>
-          </div>
-        </a>
 
-        <a
-          href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="formation-box">
-            <img src="Svg/heticc.png" alt="logo hetic" />
-            <h3>Prépa Master Digital</h3>
-            <p>HETIC</p>
-            <p>2024</p>
+          <h2 class="projet-card-title">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Image_projet/escalidraw.png" alt="" />
+            <img class="icon" src="Svg/glide.png" alt="" />
           </div>
+        </div>
+      </a>
+
+      <!-- CARD 2 RANDOM START UP-->
+
+      <a href="projet-random-start-up.html" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir plus</button>
+          <img src="Image_projet/projetpmd.png" alt="Description de l'image" class="projet-card-image" />
+          <h2 class="projet-card-title">Random Start-up</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Intégration d’une maquette version Desktop et Mobile
+              (responsif).
+            </p>
+          </div>
+
+          <h2 class="projet-card-title">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/html5-original.svg" alt="" />
+            <img class="icon" src="Svg/css3-original.svg" alt="" />
+            <img class="icon" src="Svg/figma-original.svg" alt="" />
+            <img class="icon" src="Svg/vscode-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+      <!-- CARDE 3 PORTFOLIO -->
+
+      <a href="https://github.com/Glodi-M/Portfolio.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/gm.png" alt="capture de la page d'accueil de MonPortfolio" class="projet-card-image" />
+          <h2 class="projet-card-title">Mon Portfolio</h2>
+
+          <div class="projet-card-description">
+            <p>Réalisation de mon PortFolio.</p>
+            <p>version Desktop et Mobile (responsif).</p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/html5-original.svg" alt="" />
+            <img class="icon" src="Svg/css3-original.svg" alt="" />
+            <img class="icon" src="Svg/figma-original.svg" alt="" />
+            <img class="icon" src="Svg/vscode-original.svg" alt="" />
+            <img class="icon" src="Svg/javascript-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+      <!-- CARDE 4 CMS -->
+
+      <a href="https://github.com/ahmvdd/CMS-Nodejs.git" class="projet-card-link">
+        <div class="projet-card">
+          <button id="btn-voir-plus-cms">Voir sur GitHub</button>
+          <img src="Image_projet/cms.png" alt="l'image da page cms" class="projet-card-image" />
+          <h2 class="projet-card-title">Gestion des articles</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application CMS. Les Users se connectent pour ajouter,
+              modifier et supprimer un article.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/react-1-logo-png-transparent.png" alt="" />
+            <img class="icon" src="Svg/file_type_node_icon_130301.png" alt="" />
+            <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
+            <img class="icon" src="Svg/vscode-original.svg" alt="" />
+            <img class="icon" src="Svg/javascript-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 5 GESTION ETUDIANT -->
+
+      <a href="https://github.com/Glodi-M/Gestion-etudiant.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/Interface_java.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Gestion étudiant</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application Desktop développé en Java pour la gestion des
+              étudiants dans la base de données.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/java-original.svg" alt="" />
+            <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
+            <img class="icon" src="Svg/netbeans_94416.png" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 6 PLATEFORME D'EVENEMENT -->
+
+      <a href="https://github.com/Glodi-M/Events-manager.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/evento.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Plateforme Evento</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application web en Symfony permettant aux utilisateurs de
+              créer, gérer et participer à des événements.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
+            <img class="icon" src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png" alt="" />
+            <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
+            <img class="icon" src="Svg/file_type_tailwind_icon_130128.png" alt="" />
+            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 7 GESTION DE L'API POKEMON -->
+      <a href="https://github.com/Glodi-M/API_POKEMON.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/Api-pokemon.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">API POKÉMON</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une minie application interactive web qui permet de récupérer et
+              afficher les données issues de l'API Pokémon.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/html5-original.svg" alt="" />
+            <img class="icon" src="Svg/css3-original.svg" alt="" />
+            <img class="icon" src="Svg/javascript-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 8 GESTION DES COMMANDES -->
+      <a href="https://github.com/Glodi-M/Gestion_de_commande.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/Ge-commande.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Gestion des commandes</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application web interactive pour gérer les commandes
+              d'articles, offrant des fonctionnalités de gestion.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/php-original.svg" alt="" />
+            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+            <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-jquery-50.png" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 9 GESTION DES EMPLOYES -->
+      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/Ge-employe.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Gestion des employés</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application web interactive pour la gestion des employés,
+              offrant des fonctionnalités de gestion.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/php-original.svg" alt="" />
+            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+            <img class="icon" src="Svg/html5-original.svg" alt="" />
+            <img class="icon" src="Svg/css3-original.svg" alt="" />
+            <img class="icon" src="Svg/javascript-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 10 TRANSLATE -->
+      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link">
+        <div class="projet-card">
+          <button>Voir sur GitHub</button>
+          <img src="Image_projet/Ge-employe.png" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Gestion des employés</h2>
+
+          <div class="projet-card-description">
+            <p>
+              Une application web interactive pour la gestion des employés,
+              offrant des fonctionnalités de gestion.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/php-original.svg" alt="" />
+            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+            <img class="icon" src="Svg/html5-original.svg" alt="" />
+            <img class="icon" src="Svg/css3-original.svg" alt="" />
+            <img class="icon" src="Svg/javascript-original.svg" alt="" />
+          </div>
+        </div>
+      </a>
+
+      <!-- CARDE 11 AUDIT WEB -->
+      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link">
+        <div class="projet-card">
+          <button></button>
+          <img src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).jpeg" alt="capture de la page d'accueil" class="projet-card-image" />
+          <h2 class="projet-card-title">Audit Web</h2>
+
+          <div class="projet-card-description">
+            <p>
+               Analyse de vulnérabilités, Tests d’injection, falsification de requêtes, contournement de sécurité.
+            </p>
+          </div>
+
+          <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
+
+          <div class="projet-card-icons">
+            <img class="icon" src="Svg/icons8-linux-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer id="contact" class="animate-on-scroll">
+    <div class="logo-contact">
+      <h1 class="title-contact">Me contacter</h1>
+      <div class="logo-mail">
+        <a href="mailto:glodimietete@gmail.com ">
+          <img src="Icon_contact/icons8-nouveau-message-50.png" alt="" />
+          <p>glodimietete@gmail.com</p>
         </a>
       </div>
-    </section>
-
-    <!-- Competences  -->
-
-<section id="Skills" class="Skills">
-  <h1 class="titre">Mes compétences</h1>
-
-  <div class="Skill-contenaire animate-on-scroll">
-    <div class="skill-content">
-      <h3 class="skill-title">Développement</h3>
-      <div class="skill-box">
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/html5-original.svg" alt="icon html" />
-            <h3 class="skill-name">HTML</h3>
-            <span class="skill-level">Intermédiaire</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/css3-original.svg" alt="icon css" />
-            <h3 class="skill-name">CSS</h3>
-            <span class="skill-level">Intermédiaire</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/javascript-original.svg" alt="icon javascript" />
-            <h3 class="skill-name">JavaScript</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-        </div>
-
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/azuresqldatabase-original.svg" alt="icon sql" />
-            <h3 class="skill-name">SQL</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/mysql-original-wordmark.svg" alt="icon mysql" />
-            <h3 class="skill-name">MySQL</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/php-original.svg" alt="icon php" />
-            <h3 class="skill-name">PHP</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-        </div>
-
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/java-original.svg" alt="icon java" />
-            <h3 class="skill-name">Java</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/unifiedmodelinglanguage-original.svg" alt="icon uml" />
-            <h3 class="skill-name">UML</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img class="bgd" src="Svg/icons8-python-48.png" alt="icon python" />
-            <h3 class="skill-name">Python</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-        </div>
+      <div class="logo-mail">
+        <img src="Icon_contact/icons8-téléphone-50.png" alt="" />
+        <p>06 51 78 09 48</p>
       </div>
+      <div class="logo-mail">
+        <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer">
+          <img src="Icon_contact/icons8-accueil-50.png" alt="" />
+          <p>75010 Paris</p>
+        </a>
+      </div>
+
+      <div class="logo-mail glo">
+        <a href="https://github.com/Glodi-M" target="_blank" rel="noopener noreferrer">
+          <img src="Icon_contact/icons8-github-30 (1).png" alt="icon github" />
+        </a>
+        <a href="https://www.linkedin.com/in/glodi-mietete-35379b245" target="_blank" rel="noopener noreferrer">
+          <img src="Icon_contact/icons8-linkedin-50 (1).png" alt="Icône LinkedIn" />
+        </a>
+      </div>
+      <p class="copyright">&copy; 2024 Glodi. Tous droits réservés.</p>
     </div>
 
-    <div class="skill-content">
-      <h3 class="skill-title">Technologies</h3>
-      <div class="skill-box">
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/figma-original.svg" alt="icon figma" />
-            <h3 class="skill-name">Figma</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/canva-original.svg" alt="icon canva" />
-            <h3 class="skill-name">Canva</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/file_type_git_icon_130581.png" alt="icon git" />
-            <h3 class="skill-name">Git/GitHub</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
+    <div class="footer-forme">
+      <form action="https://formspree.io/f/xnnjkyvq" method="POST">
+        <label for="input-name">Nom</label>
+        <div>
+          <input type="text" name="name" id="input-name" required placeholder="Votre Nom" />
         </div>
 
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/react-1-logo-png-transparent.png" alt="icon react" />
-            <h3 class="skill-name">React</h3>
-            <span class="skill-level">Débutant</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/file_type_node_icon_130301.png" alt="icon nodejs" />
-            <h3 class="skill-name">Node.js</h3>
-            <span class="skill-level">Débutant</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/icons8-symfony-48.png" alt="icon Symfony" />
-            <h3 class="skill-name">Symfony</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
+        <label for="input-email">Adresse email</label>
+        <div>
+          <input type="email" name="email" id="input-email" required placeholder="abc@gmail.com" />
         </div>
 
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/file_type_tailwind_icon_130128.png" alt="icon tailwind" />
-            <h3 class="skill-name">Tailwind</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/icons8-bootstrap-48.png" alt="icon Bootstrap" />
-            <h3 class="skill-name">Bootstrap</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/notion_logo_icon_145025.png" alt="icon notion" />
-            <h3 class="skill-name">Notion</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
+        <label for="input-message">Message</label>
+        <div>
+          <textarea name="message" id="input-message" required placeholder="Votre Message"></textarea>
         </div>
-      </div>
+
+        <input type="submit" value="Envoyer" />
+      </form>
     </div>
+  </footer>
 
-    <div class="skill-content">
-      <h3 class="skill-title">Systèmes et Réseaux</h3>
-      <div class="skill-box">
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/linux-original.svg" alt="icon linux" />
-            <h3 class="skill-name">Linux</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/windows-original.svg" alt="icon windows" />
-            <h3 class="skill-name">Windows Server</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/cisco.svg" alt="icon cisco" />
-            <h3 class="skill-name">Cisco</h3>
-            <span class="skill-level">Débutant</span>
-          </div>
-        </div>
+  <!-- Modale -->
 
-        <div class="skill-groupe">
-          <div class="skill-data">
-            <img src="Svg/docker-original.svg" alt="icon docker" />
-            <h3 class="skill-name">Docker</h3>
-            <span class="skill-level">Débutant</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/network-wired.svg" alt="icon networking" />
-            <h3 class="skill-name">Réseaux</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-          <div class="skill-data">
-            <img src="Svg/virtualbox.svg" alt="icon virtualbox" />
-            <h3 class="skill-name">VirtualBox</h3>
-            <span class="skill-level">Les bases</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Section Experiences  -->
-
-    <section id="Experiences" class="section-experiences">
-      <h1 class="titre">Mes expériences</h1>
-
-      <div class="experience-contenaire">
-        <!-- Carte DGI -->
-        <div
-          id="card_dgi"
-          class="card-experience card slide-left"
-          data-modal-target="#modal_dgi"
-        >
-          <h3 class="card-title">Stage</h3>
-          <p class="small-desc">Direction Urbaine d'impôt de Kinshasa</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-
-        <!-- Carte Superviseur -->
-        <div
-          id="card_superviseur"
-          class="card-experience card slide-right"
-          data-modal-target="#modal_superviseur"
-        >
-          <h3 class="card-title">Superviseur<br />Manager</h3>
-          <p class="small-desc">MJ5 Services ets</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-
-        <!-- Carte JEDAM -->
-        <div
-          id="card_jedam"
-          class="card-experience card slide-left"
-          data-modal-target="#modal_jedam"
-        >
-          <h3 class="card-title">Stage informatique</h3>
-          <p class="small-desc">SARL JEDAM Services</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="experience-contenaire">
-        <!-- Carte ASK -->
-        <div
-          id="card_ask"
-          class="card-experience card slide-right"
-          data-modal-target="#modal_ask"
-        >
-          <h3 class="card-title">Service <br />Bénévolat</h3>
-          <p class="small-desc">
-            Association Provinciale <br />de Scouts de Kinshasa
-          </p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-
-        <!-- Carte GSA -->
-        <div
-          id="card_gsa"
-          class="card-experience card slide-left"
-          data-modal-target="#modal_gsa"
-        >
-          <h3 class="card-title">Sécretaire <br />Bénévolat</h3>
-          <p class="small-desc">Groupe Scout Alpha</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-
-        <!-- Carte ODC -->
-        <div
-          id="card_odc"
-          class="card-experience card slide-right"
-          data-modal-target="#modal_odc"
-        >
-          <h3 class="card-title">Stage en <br />apprentissage</h3>
-          <p class="small-desc">Orange Digital Center</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mes projets -->
-
-    <section id="projet" class="Projets">
-      <h1 class="titre">Mes Projets</h1>
-
-      <div class="projet-contenaire animate-on-scroll">
-        <!-- CARDE 1 HETIC COLLAB -->
-
-        <a href="projet-hetic-collab.html" class="projet-card-link">
-          <div class="projet-card">
-            <button>Voir plus</button>
-            <img
-              src="Image_projet/HETIC COLABO.png"
-              alt="Description de l'image"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Hetic Collab</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application web No code facilitant la collaboration pour la
-                réalisation des projets.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Image_projet/escalidraw.png" alt="" />
-              <img class="icon" src="Svg/glide.png" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARD 2 RANDOM START UP-->
-
-        <a href="projet-random-start-up.html" class="projet-card-link">
-          <div class="projet-card">
-            <button>Voir plus</button>
-            <img
-              src="Image_projet/projetpmd.png"
-              alt="Description de l'image"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Random Start-up</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Intégration d’une maquette version Desktop et Mobile
-                (responsif).
-              </p>
-            </div>
-
-            <h2 class="projet-card-title">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/html5-original.svg" alt="" />
-              <img class="icon" src="Svg/css3-original.svg" alt="" />
-              <img class="icon" src="Svg/figma-original.svg" alt="" />
-              <img class="icon" src="Svg/vscode-original.svg" alt="" />
-            </div>
-          </div>
-        </a>
-        <!-- CARDE 3 PORTFOLIO -->
-
-        <a
-          href="https://github.com/Glodi-M/Portfolio.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/gm.png"
-              alt="capture de la page d'accueil de MonPortfolio"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Mon Portfolio</h2>
-
-            <div class="projet-card-description">
-              <p>Réalisation de mon PortFolio.</p>
-              <p>version Desktop et Mobile (responsif).</p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/html5-original.svg" alt="" />
-              <img class="icon" src="Svg/css3-original.svg" alt="" />
-              <img class="icon" src="Svg/figma-original.svg" alt="" />
-              <img class="icon" src="Svg/vscode-original.svg" alt="" />
-              <img class="icon" src="Svg/javascript-original.svg" alt="" />
-            </div>
-          </div>
-        </a>
-        <!-- CARDE 4 CMS -->
-
-        <a
-          href="https://github.com/ahmvdd/CMS-Nodejs.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button id="btn-voir-plus-cms">Voir sur GitHub</button>
-            <img
-              src="Image_projet/cms.png"
-              alt="l'image da page cms"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Gestion des articles</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application CMS. Les Users se connectent pour ajouter,
-                modifier et supprimer un article.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img
-                class="icon"
-                src="Svg/react-1-logo-png-transparent.png"
-                alt=""
-              />
-              <img
-                class="icon"
-                src="Svg/file_type_node_icon_130301.png"
-                alt=""
-              />
-              <img
-                class="icon"
-                src="Svg/mysql_original_wordmark_logo_icon_146417.png"
-                alt=""
-              />
-              <img class="icon" src="Svg/vscode-original.svg" alt="" />
-              <img class="icon" src="Svg/javascript-original.svg" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARDE 5 GESTION ETUDIANT -->
-
-        <a
-          href="https://github.com/Glodi-M/Gestion-etudiant.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/Interface_java.png"
-              alt="capture de la page d'accueil"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Gestion étudiant</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application Desktop développé en Java pour la gestion des
-                étudiants dans la base de données.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/java-original.svg" alt="" />
-              <img
-                class="icon"
-                src="Svg/mysql_original_wordmark_logo_icon_146417.png"
-                alt=""
-              />
-              <img class="icon" src="Svg/netbeans_94416.png" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARDE 6 PLATEFORME D'EVENEMENT -->
-
-        <a
-          href="https://github.com/Glodi-M/Events-manager.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/evento.png"
-              alt="capture de la page d'accueil"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Plateforme des événements</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application web en Symfony permettant aux utilisateurs de
-                créer, gérer et participer à des événements.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
-              <img
-                class="icon"
-                src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png"
-                alt=""
-              />
-              <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
-              <img
-                class="icon"
-                src="Svg/file_type_tailwind_icon_130128.png"
-                alt=""
-              />
-              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARDE 7 GESTION DE L'API POKEMON -->
-        <a
-          href="https://github.com/Glodi-M/API_POKEMON.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/Api-pokemon.png"
-              alt="capture de la page d'accueil"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">API POKÉMON</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une minie application interactive web qui permet de récupérer et
-                afficher les données issues de l'API Pokémon.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/html5-original.svg" alt="" />
-              <img class="icon" src="Svg/css3-original.svg" alt="" />
-              <img class="icon" src="Svg/javascript-original.svg" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARDE 8 GESTION DES COMMANDES -->
-        <a
-          href="https://github.com/Glodi-M/Gestion_de_commande.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/Ge-commande.png"
-              alt="capture de la page d'accueil"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Gestion des commandes</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application web interactive pour gérer les commandes
-                d'articles, offrant des fonctionnalités de gestion.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/php-original.svg" alt="" />
-              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-              <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
-              <img class="icon" src="Svg/icons8-jquery-50.png" alt="" />
-            </div>
-          </div>
-        </a>
-
-        <!-- CARDE 9 GESTION DES EMPLOYES -->
-        <a
-          href="https://github.com/Glodi-M/Gestion_des_employes.git"
-          class="projet-card-link"
-        >
-          <div class="projet-card">
-            <button>Voir sur GitHub</button>
-            <img
-              src="Image_projet/Ge-employe.png"
-              alt="capture de la page d'accueil"
-              class="projet-card-image"
-            />
-            <h2 class="projet-card-title">Gestion des employés</h2>
-
-            <div class="projet-card-description">
-              <p>
-                Une application web interactive pour la gestion des employés,
-                offrant des fonctionnalités de gestion.
-              </p>
-            </div>
-
-            <h2 class="projet-card-title" id="tech">Technologies utilisées</h2>
-
-            <div class="projet-card-icons">
-              <img class="icon" src="Svg/php-original.svg" alt="" />
-              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-              <img class="icon" src="Svg/html5-original.svg" alt="" />
-              <img class="icon" src="Svg/css3-original.svg" alt="" />
-              <img class="icon" src="Svg/javascript-original.svg" alt="" />
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-
-    <footer id="contact" class="animate-on-scroll">
-      <div class="logo-contact">
-        <h1 class="title-contact">Me contacter</h1>
-        <div class="logo-mail">
-          <a href="mailto:glodimietete@gmail.com ">
-            <img src="Icon_contact/icons8-nouveau-message-50.png" alt="" />
-            <p>glodimietete@gmail.com</p>
-          </a>
-        </div>
-        <div class="logo-mail">
-          <img src="Icon_contact/icons8-téléphone-50.png" alt="" />
-          <p>06 51 78 09 48</p>
-        </div>
-        <div class="logo-mail">
-          <a
-            href="https://www.google.com/maps/place/75010+Paris"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="Icon_contact/icons8-accueil-50.png" alt="" />
-            <p>75010 Paris</p>
-          </a>
-        </div>
-
-        <div class="logo-mail glo">
-          <a
-            href="https://github.com/Glodi-M"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="Icon_contact/icons8-github-30 (1).png"
-              alt="icon github"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/glodi-mietete-35379b245"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="Icon_contact/icons8-linkedin-50 (1).png"
-              alt="Icône LinkedIn"
-            />
-          </a>
-        </div>
-        <p class="copyright">&copy; 2024 Glodi. Tous droits réservés.</p>
-      </div>
-
-      <div class="footer-forme">
-        <form action="https://formspree.io/f/xnnjkyvq" method="POST">
-          <label for="input-name">Nom</label>
-          <div>
-            <input
-              type="text"
-              name="name"
-              id="input-name"
-              required
-              placeholder="Votre Nom"
-            />
-          </div>
-
-          <label for="input-email">Adresse email</label>
-          <div>
-            <input
-              type="email"
-              name="email"
-              id="input-email"
-              required
-              placeholder="abc@gmail.com"
-            />
-          </div>
-
-          <label for="input-message">Message</label>
-          <div>
-            <textarea
-              name="message"
-              id="input-message"
-              required
-              placeholder="Votre Message"
-            ></textarea>
-          </div>
-
-          <input type="submit" value="Envoyer" />
-        </form>
-      </div>
-    </footer>
-
-    <!-- Modale -->
-
-    <!-- Modale DGI -->
-    <div
-      id="modal_dgi"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_dgi_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center"> 
-            <h2 id="modal_dgi_title">Informaticien - Stage</h2>
+  <!-- Modale DGI -->
+  <div id="modal_dgi" class="modal" role="dialog" aria-labelledby="modal_dgi_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
+        <h2 id="modal_dgi_title">Informaticien - Stage</h2>
         <p class="modal-titre">Direction Urbaine d'Impôt de Kinshasa</p>
         <p class="modal-date">Août 2021 - Octobre 2021</p>
-        </div>
-        
-        <ul>
-          <li>
-            Assistance à la mise en réseau et à la connectivité des postes
-          </li>
-          <li>Classification des dossiers & gestion des répertoires NIF</li>
-          <li>
-            Opérateur de saisie et suivi des opérations d'assiette fiscale
-          </li>
-          <li>Réfactorisation du code applicatif</li>
-          <li>Mise à jour de logiciels et équipements</li>
-        </ul>
       </div>
-    </div>
 
-    <!-- Modale Superviseur -->
-    <div
-      id="modal_superviseur"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_superviseur_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center"> 
+      <ul>
+        <li>
+          Assistance à la mise en réseau et à la connectivité des postes
+        </li>
+        <li>Classification des dossiers & gestion des répertoires NIF</li>
+        <li>
+          Opérateur de saisie et suivi des opérations d'assiette fiscale
+        </li>
+        <li>Réfactorisation du code applicatif</li>
+        <li>Mise à jour de logiciels et équipements</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modale Superviseur -->
+  <div id="modal_superviseur" class="modal" role="dialog" aria-labelledby="modal_superviseur_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
         <h2 id="modal_superviseur_title">Superviseur - Manager</h2>
         <p class="modal-titre">MJ5 Services ETS</p>
         <p class="modal-date">Avril 2021 - Juillet 2023</p>
-        </div>
-        <ul>
-          <li>
-            Gestion et suivi des recettes (ventes de bois, rendement machine)
-            dans Excel
-          </li>
-          <li>Coordination des activités d'exploitation forestière</li>
-          <li>Élaboration de rapports globaux</li>
-        </ul>
       </div>
+      <ul>
+        <li>
+          Gestion et suivi des recettes (ventes de bois, rendement machine)
+          dans Excel
+        </li>
+        <li>Coordination des activités d'exploitation forestière</li>
+        <li>Élaboration de rapports globaux</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Modale Stage JEDAM -->
-    <div
-      id="modal_jedam"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_jedam_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center"> 
+  <!-- Modale Stage JEDAM -->
+  <div id="modal_jedam" class="modal" role="dialog" aria-labelledby="modal_jedam_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
         <h2 id="modal_jedam_title">Stage en Informatique</h2>
         <p class="modal-titre">SARL JEDAM Services</p>
         <p class="modal-date">Décembre 2022 - Juin 2023</p>
-        </div>
-        <ul>
-          <li>Installation et mise à jour des logiciels</li>
-          <li>Gestion de la base de données</li>
-          <li>Mise à jour des contenus du site web</li>
-        </ul>
       </div>
+      <ul>
+        <li>Installation et mise à jour des logiciels</li>
+        <li>Gestion de la base de données</li>
+        <li>Mise à jour des contenus du site web</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Modale Scouts Kinshasa -->
-    <div
-      id="modal_ask"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_scouts_kinshasa_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center"> 
+  <!-- Modale Scouts Kinshasa -->
+  <div id="modal_ask" class="modal" role="dialog" aria-labelledby="modal_scouts_kinshasa_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
         <h2 id="modal_scouts_kinshasa_title">
           Informaticien junior (Bénévolat)
         </h2>
@@ -979,87 +804,68 @@
           Association Provinciale des Scouts de Kinshasa
         </p>
         <p class="modal-date">Octobre 2023 - Avril 2024</p>
-        </div>
-        <ul>
-          <li>Assistance utilisateurs (fichier, messagerie, bureautique)</li>
-          <li>Administration de canaux numériques</li>
-          <li>Gestion de données</li>
-          <li>Veille et dépannage informatique</li>
-        </ul>
       </div>
+      <ul>
+        <li>Assistance utilisateurs (fichier, messagerie, bureautique)</li>
+        <li>Administration de canaux numériques</li>
+        <li>Gestion de données</li>
+        <li>Veille et dépannage informatique</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Modale Groupe Scout Alpha -->
-    <div
-      id="modal_gsa"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_gsa_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center">
+  <!-- Modale Groupe Scout Alpha -->
+  <div id="modal_gsa" class="modal" role="dialog" aria-labelledby="modal_gsa_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
         <h2 id="modal_gsa_title">Secrétaire Administratif (Bénévolat)</h2>
         <p class="modal-titre">Groupe Scout Alpha</p>
         <p class="modal-date">Janvier 2024 - Septembre 2024</p>
-        </div>
-        <ul>
-          <li>Gestion des documents</li>
-          <li>Élaboration de rapports</li>
-          <li>Gestion des emails</li>
-        </ul>
       </div>
+      <ul>
+        <li>Gestion des documents</li>
+        <li>Élaboration de rapports</li>
+        <li>Gestion des emails</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Modale Orange Digital Center -->
-    <div
-      id="modal_odc"
-      class="modal"
-      role="dialog"
-      aria-labelledby="modal_orange_digital_title"
-    >
-      <div class="modal-content">
-        <span class="close-modal" aria-label="Fermer la modale">×</span>
-        <div class="modal-title-center">
+  <!-- Modale Orange Digital Center -->
+  <div id="modal_odc" class="modal" role="dialog" aria-labelledby="modal_orange_digital_title">
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Fermer la modale">×</span>
+      <div class="modal-title-center">
         <h2 id="modal_orange_digital_title">Stage en apprentissage</h2>
         <p class="modal-titre">Orange Digital Center</p>
         <p class="modal-date">Septembre 2022 - Septembre 2022</p>
-        </div>
-        <ul>
-          <li>Apprentissage du langage PHP</li>
-          <li>Développement d'une application CRUD (site de visite)</li>
-        </ul>
       </div>
+      <ul>
+        <li>Apprentissage du langage PHP</li>
+        <li>Développement d'une application CRUD (site de visite)</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Menu Burger -->
-    <div id="menu-burger" class="menu-burger">
-      <div class="menu-liste">
-        <img
-          id="closeMenu"
-          class="close-icon"
-          src="Icon_contact/icons8-cancel-96.png"
-          alt="Fermer le menu"
-        />
-        <ul
-          id="menu"
-          class="menu"
-          role="navigation"
-          aria-label="Menu principal"
-        >
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#Skills">Compétences</a></li>
-          <li><a href="#Experiences">Expériences</a></li>
-          <li><a href="#projet">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <p class="copyright">© 2024 Glodi. Tous droits réservés.</p>
-      </div>
+  <!-- Menu Burger -->
+  <div id="menu-burger" class="menu-burger">
+    <div class="menu-liste">
+      <img id="closeMenu" class="close-icon" src="Icon_contact/icons8-cancel-96.png" alt="Fermer le menu" />
+      <ul id="menu" class="menu" role="navigation" aria-label="Menu principal">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#Skills">Compétences</a></li>
+        <li><a href="#Experiences">Expériences</a></li>
+        <li><a href="#projet">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">© 2024 Glodi. Tous droits réservés.</p>
     </div>
+  </div>
 
-    <!-- BOUTTON SCROLL -->
+  <!-- BOUTTON SCROLL -->
 
-    <button id="backToTop" class="bac-boutton" title="Retour en haut">↑</button>
-  </body>
+  <button id="backToTop" class="bac-boutton" title="Retour en haut">↑</button>
+</body>
+
 </html>
