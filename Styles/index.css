@@ -33,9 +33,10 @@ body, p, h1, h2, h3 {
 
 
 section {
-    background-image: url('../Background-web/background-with-white-cubes.jpg');
-    background-size: cover;
-    border-bottom: 1px solid var(--colorwhite);
+background-color: var(--secondary-color);
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Barre de Navigation */
@@ -163,6 +164,7 @@ header::before {
     font-style: normal;
     font-size: 2rem;
     margin: 0;
+    position: static;
 }
 
 .header-desc {
@@ -245,7 +247,6 @@ button:hover {
     text-align: center;
     font-size: 2.5rem;
     color: #012836;
-    padding: 20px 0;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
@@ -830,7 +831,7 @@ button:hover {
 /* Section Projet Améliorer */
 
 .Projets {
-    background-color: #001a23;
+    background-color: var(--secondary-color);
     padding: 80px 5%;
     text-align: center;
     position: relative;
