@@ -7,7 +7,7 @@ let typingSpeed = 150;
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex];
-    
+
     if (isDeleting) {
         // Effacer le texte
         textElement.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -19,7 +19,7 @@ function typeWriter() {
         charIndex++;
         typingSpeed = 150;
     }
-    
+
     // Vérifier si on a fini d'écrire
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
@@ -29,7 +29,7 @@ function typeWriter() {
         phraseIndex = (phraseIndex + 1) % phrases.length; // Passer à la phrase suivante
         typingSpeed = 500; // Pause avant de commencer la nouvelle phrase
     }
-    
+
     setTimeout(typeWriter, typingSpeed);
 }
 
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 1000);
 });
 
-// OUVERTURE MODALE
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Animation des cartes au scroll
+// GESTION MODAL ET ANIMATION DES CARTES
+document.addEventListener('DOMContentLoaded', () => {
+    // Card Animation
     const experienceSection = document.getElementById('Experiences');
     const cards = document.querySelectorAll('.card-experience');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -57,32 +57,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, { threshold: 0.1 });
-    
+
     if (experienceSection) observer.observe(experienceSection);
 
-    // Gestion des modales
+    // Modal Management
     const openModalButtons = document.querySelectorAll('[data-modal-target]');
     const closeModalButtons = document.querySelectorAll('.close-modal');
     const modals = document.querySelectorAll('.modal');
 
     function openModal(modal) {
-        if (modal) {
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden';
+        if (!modal) {
+            console.error('Modal not found');
+            return;
         }
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        // Focus first focusable element in modal
+        const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable) focusable.focus();
     }
 
     function closeModal(modal) {
-        if (modal) {
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
-        }
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
     }
 
     openModalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal-target');
             const modal = document.querySelector(modalId);
+            if (!modal) {
+                console.error(`Modal with selector ${modalId} not found`);
+                return;
+            }
             openModal(modal);
         });
     });
@@ -100,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Fermer avec la touche ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
@@ -111,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 // BOUTTON SCROLL
 
@@ -140,74 +148,74 @@ backTOTopButton.onclick = function () {
 
 // MENU BURGER
 
- // Récupérer les éléments
-        const burgerButton = document.getElementById("nav-burger");
-        const menu = document.getElementById("menu");
-        const closeMenuIcon = document.getElementById("closeMenu");
-        const menuLinks = document.querySelectorAll("#menu a");
-        const menuContainer = document.getElementById("menu-burger");
+// Récupérer les éléments
+const burgerButton = document.getElementById("nav-burger");
+const menu = document.getElementById("menu");
+const closeMenuIcon = document.getElementById("closeMenu");
+const menuLinks = document.querySelectorAll("#menu a");
+const menuContainer = document.getElementById("menu-burger");
 
-        // Vérifier que les éléments existent
-        if (burgerButton && menu && closeMenuIcon && menuContainer) {
-            // Fonction pour ouvrir le menu
-            function openMenu() {
-                menu.classList.add("open");
-                menuContainer.classList.add("open");
-                document.body.classList.add("no-scroll");
-                burgerButton.setAttribute("aria-expanded", "true");
-                // Focus on first menu item
-                menuLinks[0].focus();
-            }
+// Vérifier que les éléments existent
+if (burgerButton && menu && closeMenuIcon && menuContainer) {
+    // Fonction pour ouvrir le menu
+    function openMenu() {
+        menu.classList.add("open");
+        menuContainer.classList.add("open");
+        document.body.classList.add("no-scroll");
+        burgerButton.setAttribute("aria-expanded", "true");
+        // Focus on first menu item
+        menuLinks[0].focus();
+    }
 
-            // Fonction pour fermer le menu
-            function closeMenu() {
-                menu.classList.remove("open");
-                menuContainer.classList.remove("open");
-                document.body.classList.remove("no-scroll");
-                burgerButton.setAttribute("aria-expanded", "false");
-                burgerButton.focus();
-            }
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        menu.classList.remove("open");
+        menuContainer.classList.remove("open");
+        document.body.classList.remove("no-scroll");
+        burgerButton.setAttribute("aria-expanded", "false");
+        burgerButton.focus();
+    }
 
-            // Événements
-            burgerButton.addEventListener("click", openMenu);
-            closeMenuIcon.addEventListener("click", closeMenu);
+    // Événements
+    burgerButton.addEventListener("click", openMenu);
+    closeMenuIcon.addEventListener("click", closeMenu);
 
-            // Fermer le menu lorsqu'on clique sur un lien
-            menuLinks.forEach(link => {
-                link.addEventListener("click", closeMenu);
-            });
+    // Fermer le menu lorsqu'on clique sur un lien
+    menuLinks.forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
 
-            // Fermer le menu si on clique en dehors
-            document.addEventListener("click", (event) => {
-                if (!menuContainer.contains(event.target) && !burgerButton.contains(event.target)) {
-                    closeMenu();
-                }
-            });
-
-            // Fermer le menu avec la touche Échap
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "Escape" && menu.classList.contains("open")) {
-                    closeMenu();
-                }
-            });
-
-            // Gestion du focus pour l'accessibilité
-            const focusableElements = menu.querySelectorAll('a, img.close-icon');
-            const firstFocusable = focusableElements[0];
-            const lastFocusable = focusableElements[focusableElements.length - 1];
-
-            menuContainer.addEventListener("keydown", (event) => {
-                if (event.key === "Tab") {
-                    if (event.shiftKey && document.activeElement === firstFocusable) {
-                        event.preventDefault();
-                        lastFocusable.focus();
-                    } else if (!event.shiftKey && document.activeElement === lastFocusable) {
-                        event.preventDefault();
-                        firstFocusable.focus();
-                    }
-                }
-            });
+    // Fermer le menu si on clique en dehors
+    document.addEventListener("click", (event) => {
+        if (!menuContainer.contains(event.target) && !burgerButton.contains(event.target)) {
+            closeMenu();
         }
+    });
+
+    // Fermer le menu avec la touche Échap
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && menu.classList.contains("open")) {
+            closeMenu();
+        }
+    });
+
+    // Gestion du focus pour l'accessibilité
+    const focusableElements = menu.querySelectorAll('a, img.close-icon');
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    menuContainer.addEventListener("keydown", (event) => {
+        if (event.key === "Tab") {
+            if (event.shiftKey && document.activeElement === firstFocusable) {
+                event.preventDefault();
+                lastFocusable.focus();
+            } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+                event.preventDefault();
+                firstFocusable.focus();
+            }
+        }
+    });
+}
 // SCROLL ANIMATION
 // Fonction pour vérifier si un élément est visible
 function isElementInViewport(el) {

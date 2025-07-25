@@ -33,7 +33,7 @@ body, p, h1, h2, h3 {
 
 
 section {
-background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
     padding: 40px;
     margin: 0 auto;
     max-width: 1200px;
@@ -687,6 +687,25 @@ button:hover {
 .section-experiences {
     padding: 80px 20px;
     background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-experiences .titre {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-experiences .titre::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
 
 .experience-contenaire {
@@ -804,6 +823,98 @@ button:hover {
     color: #ffffff;
 }
 
+/* Modales */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-title-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal.open {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal.open .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.2s ease-in-out;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #ff0000;
+}
+
+.close-modal:focus {
+    outline: 2px solid #015f6b;
+    outline-offset: 2px;
+}
+
+.modal-titre {
+    font-size: 1.3rem;
+    color: #384c6c;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.modal-date {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+}
+
+.modal-content li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .experience-contenaire {
@@ -811,14 +922,30 @@ button:hover {
         align-items: center;
         gap: 30px;
     }
-    
+
     .card-experience {
         width: 100%;
         max-width: 300px;
     }
-    
+
     .slide-left, .slide-right {
         transform: translateY(30px);
+    }
+
+    .section-experiences .titre {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 1.2rem;
     }
 }
 
@@ -1272,84 +1399,7 @@ a, p:hover {
     transform: translateX(0);
 }
 
-/* Modales */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px); /* Adds subtle blur to background */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.modal-title-center{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.modal.open {
-    display: flex;
-    opacity: 1;
-}
-
-.modal-content {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 700px;
-    max-height: 85vh;
-    overflow-y: auto;
-    position: relative;
-    border: 1px solid #e0e0e0; /* Subtle border for distinction */
-    transform: scale(0.95);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.modal.open .modal-content {
-    transform: scale(1);
-    opacity: 1;
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    transition: color 0.2s ease-in-out;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-    color: #ff0000; /* Red color on hover */
-}
-
-.close-modal:focus {
-    outline: 2px solid #015f6b; /* Focus style for accessibility */
-    outline-offset: 2px;
-}
-
-/* Effet hover sur les cartes */
-.card-experience {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card-experience:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
-
- /* Menu styles */
+/* Menu styles */
 .menu-burger {
     display: none;
     position: fixed;
@@ -1384,6 +1434,7 @@ a, p:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1393,7 +1444,8 @@ a, p:hover {
 .menu {
     background: #ffffff;
     border-radius: 16px;
-    padding: 3rem 2rem 2rem; /* Plus d'espace en haut pour le bouton */
+    padding: 3rem 2rem 2rem;
+    /* Plus d'espace en haut pour le bouton */
     list-style: none;
     margin: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -1542,7 +1594,8 @@ a, p:hover {
         right: 0.8rem;
     }
 }
-/* BOUTTON SCROLL */ 
+
+/* BOUTTON SCROLL */
 
 #backToTop {
     position: fixed;
