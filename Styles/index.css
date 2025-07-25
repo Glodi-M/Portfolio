@@ -173,6 +173,12 @@ header::before {
     margin-bottom: 40px;
 }
 
+.profil-container {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+}
+
 .profil {
     width: 100%;
     max-width: 480px;
@@ -185,31 +191,65 @@ header::before {
 }
 
 .profil:hover {
-    transform: scale(1.1);
+    transform: perspective(800px) rotateY(0) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Button */
-header button {
-    padding: 10px 20px;
-    background-color: var(--colorwhite);
-    color: var(--textcolor);
-    border: 2px solid var(--bdrcolor);
-    margin-bottom: 30px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    border-radius: 10px;
-    opacity: 1;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    background-color: var(--bdrcolor);
+.header-btn {
+    padding: 12px 30px;
+    background-color: transparent;
     color: var(--colorwhite);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+    border: 2px solid var(--bdrcolor);
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
+.header-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bdrcolor);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.header-btn:hover {
+    color: var(--colorwhite);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(98, 147, 200, 0.4);
+}
+
+.header-btn:hover::before {
+    width: 100%;
+}
+
+/* Animation cursor */
+.header-post::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: var(--bdrcolor);
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .header-home {
