@@ -3,7 +3,7 @@ const phrases = ["Développeur Web", "Support Informatique"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingSpeed = 150;
+let typingSpeed = 200;
 
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex];
@@ -12,12 +12,12 @@ function typeWriter() {
         // Effacer le texte
         textElement.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
-        typingSpeed = 50;
+        typingSpeed = 70;
     } else {
         // Écrire le texte
         textElement.textContent = currentPhrase.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 150;
+        typingSpeed = 250;
     }
 
     // Vérifier si on a fini d'écrire
