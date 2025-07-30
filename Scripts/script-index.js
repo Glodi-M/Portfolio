@@ -272,34 +272,6 @@ window.addEventListener('scroll', animateSections);
 // Lancer l'animation au chargement initial de la page
 document.addEventListener('DOMContentLoaded', animateSections);
 
-
-// Gestion du formulaire 
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('input-name').value;
-    const email = document.getElementById('input-email').value;
-    const message = document.getElementById('input-message').value;
-
-    if (!name || !email || !message) {
-        alert('Veuillez remplir tous les champs.');
-        return;
-    }
-
-    if (!email.includes('@')) {
-        alert('Veuillez entrer une adresse email valide.');
-        return;
-    }
-
-    // Envoyer le formulaire (à adapter avec Formspree ou autre)
-    alert('Message envoyé avec succès !');
-    form.reset();
-});
-
-
-
 // ANIMATION EFFET SCROLL
 
 document.addEventListener("DOMContentLoaded", function () {

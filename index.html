@@ -757,22 +757,20 @@
     </div>
 
     <div class="footer-forme">
-      <form action="https://formspree.io/f/xnnjkyvq" method="POST">
+      <form method="POST" id="contact-form">
+        <div id="form-message" class="hidden"></div>
         <label for="input-name">Nom</label>
         <div>
           <input type="text" name="name" id="input-name" required placeholder="Votre Nom" />
         </div>
-
         <label for="input-email">Adresse email</label>
         <div>
           <input type="email" name="email" id="input-email" required placeholder="abc@gmail.com" />
         </div>
-
         <label for="input-message">Message</label>
         <div>
           <textarea name="message" id="input-message" required placeholder="Votre Message"></textarea>
         </div>
-
         <input type="submit" value="Envoyer" />
       </form>
     </div>
@@ -960,6 +958,9 @@
   <!-- BOUTTON SCROLL -->
 
   <button id="backToTop" class="bac-boutton" title="Retour en haut">↑</button>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="Scripts/script-form.js"></script>
 </body>
 
 </html>
