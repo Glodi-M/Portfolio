@@ -1,5 +1,5 @@
 const textElement = document.getElementById('poste');
-const phrases = ["Développeur Web", "Support Informatique"];
+const phrases = ["Web & IT", "Cybersécurité", "Support & Réseaux"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
