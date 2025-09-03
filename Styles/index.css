@@ -212,6 +212,21 @@ header::before {
     z-index: 1;
 }
 
+.header-cv {
+    margin-top: 40px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-cv a {
+    text-decoration: none;
+    color: var(--colorwhite);
+}
+
+.header-cv a:hover {
+    color: var(--bdrcolor);
+}
+
 .header-btn::before {
     content: '';
     position: absolute;
