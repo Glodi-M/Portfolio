@@ -21,6 +21,31 @@ function updateScrollProgress() {
 
 window.addEventListener('scroll', updateScrollProgress);
 
+// ========== EFFET PARALLAXE ==========
+function updateParallax() {
+    const scrollY = window.scrollY;
+
+    // Parallaxe sur le header
+    const header = document.querySelector('header');
+    if (header) {
+        header.style.backgroundPositionY = scrollY * 0.5 + 'px';
+    }
+
+    // Parallaxe sur les éléments décoratifs
+    document.querySelectorAll('.parallax-element').forEach(el => {
+        const speed = el.dataset.speed || 0.3;
+        const yPos = -(scrollY * speed);
+        el.style.transform = `translateY(${yPos}px)`;
+    });
+}
+
+// Vérifier si l'utilisateur n'a pas désactivé les animations
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(updateParallax);
+    });
+}
+
 // ========== DARK MODE TOGGLE ==========
 const themeToggle = document.getElementById('theme-toggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');

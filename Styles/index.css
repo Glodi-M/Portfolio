@@ -17,6 +17,77 @@ img {
     will-change: transform;
 }
 
+/* ========== ACCESSIBILITÉ ========== */
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bgdcolor);
+    color: #00d4ff;
+    padding: 15px 30px;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 10002;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
+/* Focus States Améliorés */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #00d4ff;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Reduced Motion - Respecte les préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .page-loader {
+        display: none !important;
+    }
+}
+
+/* ========== EFFET PARALLAXE ========== */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    will-change: transform;
+}
+
 :root {
     /* Couleurs principales - Thème Clair */
     --bgdcolor: #012836;
