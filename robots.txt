@@ -1,0 +1,10 @@
+# Robots.txt for Portfolio Glodi Mietete
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://glodi-m.github.io/Portfolio/sitemap.xml
+
+# Disallow admin or private folders
+Disallow: /.git/
+Disallow: /node_modules/
