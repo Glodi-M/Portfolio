@@ -1196,7 +1196,8 @@ button:hover {
     height: 90px;
     object-fit: cover;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    /* Centrage + marge bas */
     transition: transform var(--transition-smooth);
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
 }
@@ -1779,16 +1780,7 @@ button:hover {
     font-size: 2rem;
 }
 
-.projet-cyber {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-}
-
-.projet-cyber .projet-card {
-    max-width: 350px;
-}
+/* .projet-cyber styles removed to match generic grid layout */
 
 .projet-contenaire {
     display: grid;
@@ -2181,23 +2173,40 @@ input[type="submit"]:hover {
 }
 
 
-.logo-mail {
+.logo-contact a {
+    text-decoration: none;
+    color: inherit;
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 100%;
+}
+
+.logo-mail {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
+    width: 100%;
 }
 
-.logo-mail a {
-    text-decoration: none;
-    color: inherit;
-    display: contents;
+.logo-mail p {
+    font-size: 1.1rem;
+    word-break: break-all;
+    /* Pour éviter que l'email ne dépasse */
 }
 
-
+/* Social icons container */
 .glo {
-    margin-top: 80px;
-    margin-left: 60px;
+    margin-top: 60px;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 0;
+}
+
+.glo a {
+    width: auto;
+    /* Les icônes sociales ne doivent pas prendre 100% */
 }
 
 .logo-contact .logo-mail img {
@@ -2509,6 +2518,80 @@ a:hover {
         padding: 12px 15px;
         font-size: 14px;
     }
+
+    /* Footer Layout Mobile */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-forme {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .logo-contact,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo-mail {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Cible le lien à l'intérieur s'il existe (Email, Adresse) */
+    .logo-mail a {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: auto;
+    }
+
+    /* Cible directement le contenu pour le téléphone (pas de lien) */
+    .logo-mail img,
+    .logo-mail p {
+        margin: 0 5px;
+    }
+
+    .logo-mail.glo {
+        flex-direction: row !important;
+        gap: 30px;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    /* S'assurer que les icônes sociales ne prennent pas toute la largeur */
+    .glo a {
+        width: auto;
+        display: block;
+    }
+
+    /* Skills Mobile Adjustment */
+    .skill-content {
+        padding: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        flex: 0 0 auto;
+    }
+
+    .skill-box {
+        gap: 10px;
+    }
+
+
 
     /* Back to top button */
     #backToTop {
