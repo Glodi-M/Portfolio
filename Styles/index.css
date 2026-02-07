@@ -2065,7 +2065,7 @@ footer::before {
 input,
 textarea {
     width: 100%;
-    min-width: 300px;
+    max-width: 100%;
     padding: 15px 20px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -2077,6 +2077,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     outline: none;
     transition: all var(--transition-smooth);
+    box-sizing: border-box;
 }
 
 input::placeholder,
