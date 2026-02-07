@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://glodi-m.github.io/Portfolio/sitemap.xml
+Sitemap: https://glodimietete.com/sitemap.xml
 
 # Disallow admin or private folders
 Disallow: /.git/
