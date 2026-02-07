@@ -1668,11 +1668,14 @@ button:hover {
 
 .modal-content ul {
     padding-left: 20px;
+    color: #333;
+    list-style-type: disc;
 }
 
 .modal-content li {
     margin-bottom: 10px;
     line-height: 1.6;
+    color: #333;
 }
 
 /* Responsive */
