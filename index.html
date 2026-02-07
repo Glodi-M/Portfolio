@@ -31,6 +31,17 @@
 </head>
 
 <body>
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <span class="loader-text">Chargement...</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
   <nav>
     <div class="logo-nav">
       <a href="./index.html"><img src="favicon_io/android-chrome-512x512.png" alt="Logo GM" class="logo" /></a>
@@ -44,8 +55,18 @@
       <a href="#projet">Projets</a>
       <a href="#contact">Contact</a>
     </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+      <span class="theme-icon sun">☀️</span>
+      <span class="theme-icon moon">🌙</span>
+    </button>
+
+    <!-- Menu Burger Amélioré -->
     <button id="nav-burger" class="nav-burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
-      <img src="Svg/menu.png" width="35" height="30" alt="Icône de menu burger" />
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
     </button>
   </nav>
 
@@ -433,6 +454,14 @@
   <section id="projet" class="Projets">
     <h1 class="titre">Mes Projets</h1>
 
+    <!-- Catégorie Développement -->
+    <div class="projet-category">
+      <h2 class="category-title">
+        <span class="category-icon">💻</span>
+        Développement
+      </h2>
+    </div>
+
     <div class="projet-contenaire animate-on-scroll">
       <!-- CARDE 1 HETIC COLLAB -->
 
@@ -684,28 +713,38 @@
           </div>
         </div>
       </a>
+    </div>
 
-      <!-- CARDE 11 AUDIT WEB -->
+    <!-- Catégorie Cybersécurité -->
+    <div class="projet-category">
+      <h2 class="category-title">
+        <span class="category-icon">🔐</span>
+        Cybersécurité
+      </h2>
+    </div>
+
+    <div class="projet-contenaire projet-cyber animate-on-scroll">
+      <!-- PROJET AUDIT WEB -->
       <a href="" class="projet-card-link">
         <div class="projet-card">
-          <button>Projet de La Cybersécurité </button>
+          <button>Voir le projet</button>
           <img src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).jpeg" alt="capture de la page d'accueil"
             class="projet-card-image" />
           <h2 class="projet-card-title">Audit Web</h2>
 
           <div class="projet-card-description">
             <p>
-              Analyse de vulnérabilités, Tests d’injection, falsification de requêtes, contournement de sécurité.
+              Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.
             </p>
           </div>
 
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
 
           <div class="projet-card-icons">
-            <img class="icon" src="Svg/icons8-linux-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
+            <img class="icon" src="Svg/icons8-linux-48.png" alt="Linux" />
+            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="Kali Linux" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
+            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
           </div>
         </div>
       </a>

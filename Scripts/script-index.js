@@ -1,3 +1,53 @@
+// ========== PAGE LOADER ==========
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 800);
+    }
+});
+
+// ========== SCROLL PROGRESS INDICATOR ==========
+function updateScrollProgress() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (!scrollProgress) return;
+
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+
+// ========== DARK MODE TOGGLE ==========
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Charger le thème sauvegardé ou détecter la préférence système
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDark.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+}
+
+loadTheme();
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
+
+// ========== TYPING ANIMATION ==========
 const textElement = document.getElementById('poste');
 const phrases = ["Web & IT", "Cybersécurité", "Support & Réseaux", "Analyste IAM & SOC"];
 let phraseIndex = 0;
@@ -42,7 +92,7 @@ function isElementInViewport(el) {
 // Throttle pour optimiser les événements scroll
 function throttle(func, limit) {
     let inThrottle;
-    return function(...args) {
+    return function (...args) {
         if (!inThrottle) {
             func.apply(this, args);
             inThrottle = true;
@@ -177,6 +227,7 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
     function openMenu() {
         menu.classList.add("open");
         menuContainer.classList.add("open");
+        burgerButton.classList.add("active");
         document.body.classList.add("no-scroll");
         burgerButton.setAttribute("aria-expanded", "true");
         menuLinks[0]?.focus();
@@ -185,6 +236,7 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
     function closeMenu() {
         menu.classList.remove("open");
         menuContainer.classList.remove("open");
+        burgerButton.classList.remove("active");
         document.body.classList.remove("no-scroll");
         burgerButton.setAttribute("aria-expanded", "false");
         burgerButton.focus();
