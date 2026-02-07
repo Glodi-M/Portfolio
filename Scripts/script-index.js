@@ -5,43 +5,75 @@ let charIndex = 0;
 let isDeleting = false;
 let typingSpeed = 200;
 
+// Animation de frappe
 function typeWriter() {
     const currentPhrase = phrases[phraseIndex];
 
     if (isDeleting) {
-        // Effacer le texte
         textElement.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
         typingSpeed = 70;
     } else {
-        // Écrire le texte
         textElement.textContent = currentPhrase.substring(0, charIndex + 1);
         charIndex++;
         typingSpeed = 250;
     }
 
-    // Vérifier si on a fini d'écrire
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        typingSpeed = 2000; // Pause à la fin de la phrase
+        typingSpeed = 2000;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length; // Passer à la phrase suivante
-        typingSpeed = 500; // Pause avant de commencer la nouvelle phrase
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingSpeed = 500;
     }
 
     setTimeout(typeWriter, typingSpeed);
 }
 
-// Démarrer l'animation
+// Fonction utilitaire pour vérifier si un élément est visible
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= window.innerHeight && rect.bottom >= 0
+    );
+}
+
+// Throttle pour optimiser les événements scroll
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+// Gestion des animations au scroll
+function handleScrollAnimations() {
+    // Animations des sections
+    document.querySelectorAll('.animate-on-scroll').forEach(section => {
+        if (isElementInViewport(section)) {
+            section.classList.add('visible');
+        }
+    });
+
+    // Animations des cartes
+    document.querySelectorAll('.card').forEach(card => {
+        if (isElementInViewport(card)) {
+            card.classList.add('show');
+        }
+    });
+}
+
+// Initialisation au chargement du DOM
 document.addEventListener('DOMContentLoaded', () => {
+    // Démarrer l'animation de frappe
     setTimeout(typeWriter, 1000);
-});
 
-
-// GESTION MODAL ET ANIMATION DES CARTES
-document.addEventListener('DOMContentLoaded', () => {
-    // Card Animation
+    // Animation des cartes d'expérience
     const experienceSection = document.getElementById('Experiences');
     const cards = document.querySelectorAll('.card-experience');
 
@@ -60,20 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (experienceSection) observer.observe(experienceSection);
 
-    // Modal Management
-    const openModalButtons = document.querySelectorAll('[data-modal-target]');
-    const closeModalButtons = document.querySelectorAll('.close-modal');
+    // Gestion des modales
     const modals = document.querySelectorAll('.modal');
 
     function openModal(modal) {
-        if (!modal) {
-            console.error('Modal not found');
-            return;
-        }
+        if (!modal) return;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
-        // Focus first focusable element in modal
         const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         if (focusable) focusable.focus();
     }
@@ -85,22 +111,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    openModalButtons.forEach(button => {
+    document.querySelectorAll('[data-modal-target]').forEach(button => {
         button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal-target');
-            const modal = document.querySelector(modalId);
-            if (!modal) {
-                console.error(`Modal with selector ${modalId} not found`);
-                return;
-            }
+            const modal = document.querySelector(button.getAttribute('data-modal-target'));
             openModal(modal);
         });
     });
 
-    closeModalButtons.forEach(button => {
+    document.querySelectorAll('.close-modal').forEach(button => {
         button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            closeModal(modal);
+            closeModal(button.closest('.modal'));
         });
     });
 
@@ -119,55 +139,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Lancer les animations au scroll au chargement
+    handleScrollAnimations();
 });
 
-// BOUTTON SCROLL
+// Bouton retour en haut
+const backToTopButton = document.getElementById("backToTop");
 
-// récupèere le boutton 
-const backTOTopButton = document.getElementById("backToTop");
-
-// afficher ou masquer le boutton au defillement
-window.onscroll = function () {
+window.addEventListener('scroll', throttle(() => {
+    // Bouton retour en haut
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backTOTopButton.style.display = "block";
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
     }
-    else {
-        backTOTopButton.style.display = "none";
-    }
-};
 
-// Remonter en haut lorsque on clique sur le boutton
-backTOTopButton.onclick = function () {
-    window.scrollTo(
-        {
-            top: 0,
-            behavior: "smooth" // defilement fluide
-        }
-    );
-};
+    // Animations au scroll
+    handleScrollAnimations();
+}, 100));
 
-// MENU BURGER
+backToTopButton?.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
 
-// Récupérer les éléments
+// Menu Burger
 const burgerButton = document.getElementById("nav-burger");
 const menu = document.getElementById("menu");
 const closeMenuIcon = document.getElementById("closeMenu");
 const menuLinks = document.querySelectorAll("#menu a");
 const menuContainer = document.getElementById("menu-burger");
 
-// Vérifier que les éléments existent
 if (burgerButton && menu && closeMenuIcon && menuContainer) {
-    // Fonction pour ouvrir le menu
     function openMenu() {
         menu.classList.add("open");
         menuContainer.classList.add("open");
         document.body.classList.add("no-scroll");
         burgerButton.setAttribute("aria-expanded", "true");
-        // Focus on first menu item
-        menuLinks[0].focus();
+        menuLinks[0]?.focus();
     }
 
-    // Fonction pour fermer le menu
     function closeMenu() {
         menu.classList.remove("open");
         menuContainer.classList.remove("open");
@@ -176,23 +190,19 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         burgerButton.focus();
     }
 
-    // Événements
     burgerButton.addEventListener("click", openMenu);
     closeMenuIcon.addEventListener("click", closeMenu);
 
-    // Fermer le menu lorsqu'on clique sur un lien
     menuLinks.forEach(link => {
         link.addEventListener("click", closeMenu);
     });
 
-    // Fermer le menu si on clique en dehors
     document.addEventListener("click", (event) => {
         if (!menuContainer.contains(event.target) && !burgerButton.contains(event.target)) {
             closeMenu();
         }
     });
 
-    // Fermer le menu avec la touche Échap
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && menu.classList.contains("open")) {
             closeMenu();
@@ -216,107 +226,3 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         }
     });
 }
-// SCROLL ANIMATION
-// Fonction pour vérifier si un élément est visible
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Ajout de l'animation au scroll
-function handleScrollAnimation() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        if (isElementInViewport(card)) {
-            card.classList.add('show'); // Ajoute la classe pour révéler la carte
-        }
-    });
-}
-
-// Écouteur d'événements pour le scroll
-window.addEventListener('scroll', handleScrollAnimation);
-
-// Lancer l'animation au chargement de la page
-handleScrollAnimation();
-
-
-// animations.js
-
-// Fonction pour vérifier si un élément est visible dans la fenêtre d'affichage
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top <= window.innerHeight && rect.bottom >= 0
-    );
-}
-
-// Fonction pour gérer l'animation des sections
-function animateSections() {
-    const sections = document.querySelectorAll('.animate-on-scroll');
-
-    sections.forEach(section => {
-        if (isInViewport(section)) {
-            section.classList.add('visible'); // Ajoute la classe visible pour les animations
-        }
-    });
-}
-
-// Ajout d'un écouteur pour détecter le défilement
-window.addEventListener('scroll', animateSections);
-
-// Lancer l'animation au chargement initial de la page
-document.addEventListener('DOMContentLoaded', animateSections);
-
-// ANIMATION EFFET SCROLL
-
-document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".experience-contenaire");
-    let lastScrollY = window.scrollY;
-
-    function handleScroll() {
-        const currentScrollY = window.scrollY;
-
-        // Détecter la direction du défilement
-        if (currentScrollY > lastScrollY) {
-            // Défilement vers le bas
-            cards.forEach((card) => {
-                if (isElementInViewport(card)) {
-                    card.classList.remove("card-hidden");
-                    card.classList.add("card-visible");
-                }
-            });
-        } else {
-            // Défilement vers le haut
-            cards.forEach((card) => {
-                if (isElementInViewport(card)) {
-                    card.classList.remove("card-visible");
-                    card.classList.add("card-hidden");
-                }
-            });
-        }
-
-        lastScrollY = currentScrollY;
-    }
-
-    // Vérifier si un élément est dans la vue
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Écouter l'événement de défilement
-    window.addEventListener("scroll", handleScroll);
-
-    // Appliquer l'effet au chargement de la page
-    handleScroll();
-});
