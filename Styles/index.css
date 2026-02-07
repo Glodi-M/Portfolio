@@ -88,6 +88,167 @@ select:focus-visible {
     will-change: transform;
 }
 
+/* ========== ANIMATIONS AVANCÉES ========== */
+
+/* Fade In Up */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade In Left */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade In Right */
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale In */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger Animation pour les listes */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation delays pour stagger */
+.stagger-item:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.stagger-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.stagger-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.stagger-item:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.stagger-item:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.stagger-item:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+/* ========== HOVER EFFECTS AMÉLIORÉS ========== */
+
+/* Glow effect on hover */
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.4),
+        0 0 50px rgba(0, 212, 255, 0.2);
+}
+
+/* Lift effect */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Tilt effect */
+.hover-tilt {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.hover-tilt:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-5px);
+}
+
+/* Shine sweep effect */
+.hover-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.hover-shine:hover::after {
+    left: 100%;
+}
+
+/* Border animation */
+.hover-border {
+    position: relative;
+}
+
+.hover-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.hover-border:hover::before {
+    border-color: var(--bdrcolor);
+}
+
 :root {
     /* Couleurs principales - Thème Clair */
     --bgdcolor: #012836;
@@ -2270,22 +2431,99 @@ a:hover {
 
 #backToTop {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     display: none;
-    background-color: #007bff;
+    background: var(--accent-gradient);
     color: var(--colorwhite);
     border: none;
-    padding: 10px 15px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
     z-index: 1000;
     font-size: 20px;
-    transition: opacity 0.3s ease-in-out;
-
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #backToTop:hover {
-    background-color: #012836;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+}
+
+/* ========== AMÉLIORATIONS MOBILE GLOBALES ========== */
+
+@media screen and (max-width: 768px) {
+
+    /* Sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Titres */
+    .titre {
+        font-size: 1.8rem;
+    }
+
+    /* Grille projets */
+    .projet-contenaire {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Compétences */
+    .skill-content {
+        padding: 15px;
+    }
+
+    /* Footer form */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    /* Back to top button */
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Désactiver les effets hover sur mobile */
+    .hover-lift:hover,
+    .hover-tilt:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    .titre {
+        font-size: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+
+    /* Soft skills en colonne */
+    .solft-skill {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Cards expérience */
+    .card-experience {
+        padding: 20px;
+    }
 }
