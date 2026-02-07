@@ -7,7 +7,9 @@ html {
 
 /* Optimisations Performance */
 img {
-    content-visibility: auto;
+    /* content-visibility: auto; - Causait des problèmes d'affichage */
+    display: block;
+    /* Bonnes pratiques */
 }
 
 .projet-card,
@@ -1192,6 +1194,7 @@ button:hover {
 .formation-box img {
     width: 90px;
     height: 90px;
+    object-fit: cover;
     border-radius: 15px;
     margin-bottom: 20px;
     transition: transform var(--transition-smooth);
@@ -1305,7 +1308,10 @@ button:hover {
     background: linear-gradient(145deg, #012836 0%, #023e52 100%);
     border-radius: 20px;
     padding: 35px 25px;
-    width: 320px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    flex: 1 1 300px;
     text-align: center;
     transition: all var(--transition-smooth);
     cursor: pointer;
@@ -1413,7 +1419,7 @@ button:hover {
 
     .skill-content {
         width: 100%;
-        max-width: 300px;
+        max-width: 450px;
         margin-left: 0;
     }
 
