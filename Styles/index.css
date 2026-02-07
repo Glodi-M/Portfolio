@@ -1015,16 +1015,18 @@ header::after {
 }
 
 .about {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .about p {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    margin-right: 5px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 /* Mise en page de paragraphe */
@@ -1072,6 +1074,17 @@ button:hover {
 
 /* Responsive design */
 @media screen and (max-width: 768px) {
+    .about {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
     .about-solft {
         flex-direction: column;
         align-items: center;
