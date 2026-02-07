@@ -969,6 +969,8 @@ header::after {
 .solft-skill img {
     width: 28px;
     height: 28px;
+    margin: 0 auto;
+    /* Centrage de l'image block */
     transition: transform var(--transition-fast);
 }
 
@@ -2185,6 +2187,7 @@ input[type="submit"]:hover {
 .logo-mail {
     display: flex;
     align-items: center;
+    gap: 10px;
     justify-content: flex-start;
     margin-bottom: 20px;
     width: 100%;
@@ -2199,8 +2202,8 @@ input[type="submit"]:hover {
 /* Social icons container */
 .glo {
     margin-top: 60px;
-    justify-content: center;
     gap: 30px;
+    justify-content: center;
     margin-left: 0;
 }
 
@@ -2567,7 +2570,7 @@ a:hover {
 
     .logo-mail.glo {
         flex-direction: row !important;
-        gap: 30px;
+        gap: 10px;
         margin-top: 30px;
         margin-left: 0;
     }
