@@ -528,7 +528,16 @@ select:focus-visible {
     }
 
     .logo-nav h1 {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-nav {
+        gap: 3px;
     }
 
     .nav-burger {
@@ -593,8 +602,10 @@ select:focus-visible {
     transition: all 0.3s ease;
     padding: 8px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.08);
     z-index: 2;
+    filter: brightness(0) invert(0.3);
+    /* Darken icon for better visibility */
 }
 
 .close-icon:hover {
@@ -822,12 +833,7 @@ nav:hover {
     width: 80%;
 }
 
-.nav-burger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+/* .nav-burger styles are defined above in the MENU BURGER section */
 
 @media (max-width: 768px) {
     .onglet {
@@ -2880,15 +2886,14 @@ a:hover {
     }
 
     .header-post {
-        font-size: 1.4rem;
-        /* Reduced font size for mobile */
+        font-size: 1.2rem;
         min-height: 2.1rem;
-        /* Prevent layout shift during typing */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .profil-container {
         max-width: 300px;
-        /* Slightly smaller on mobile */
         margin: 0 auto;
     }
 
