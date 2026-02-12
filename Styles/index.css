@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Optimisations Performance */
@@ -490,7 +503,8 @@ select:focus-visible {
     display: block;
     width: 100%;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--textcolor);
+    /* Changed from primary-color to textcolor for better contrast in all themes */
     border-radius: 3px;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform-origin: center;
@@ -510,12 +524,25 @@ select:focus-visible {
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 12px 15px;
+        /* Reduced padding for mobile */
+    }
+
+    .logo-nav h1 {
+        font-size: 1.2rem;
+        /* Smaller logo text on mobile */
+    }
+
     .nav-burger {
         display: flex;
     }
 
     .theme-toggle {
         margin-right: 10px;
+        width: 60px;
+        /* Slightly smaller toggle on mobile */
+        height: 30px;
     }
 }
 
@@ -555,8 +582,9 @@ nav {
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 2px solid var(--glass-border);
     color: var(--textcolor);
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: var(--shadow-soft);
     transition: all var(--transition-smooth);
@@ -2227,7 +2255,13 @@ input[type="submit"]:hover {
 
 .glo a {
     width: auto;
-    /* Les icônes sociales ne doivent pas prendre 100% */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+}
+
+.glo a:hover {
+    transform: translateY(-5px) scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(0, 212, 255, 0.4));
 }
 
 .logo-contact .logo-mail img {
@@ -2327,10 +2361,13 @@ a:hover {
 }
 
 .menu {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.85);
+    /* Slightly transparent for glassmorphism */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 16px;
     padding: 3rem 2rem 2rem;
-    /* Plus d'espace en haut pour le bouton */
     list-style: none;
     margin: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -2660,7 +2697,8 @@ a:hover {
         flex-direction: column-reverse;
         gap: 40px;
         text-align: center;
-        padding-top: 40px;
+        padding-top: 80px;
+        /* Increased padding to clear fixed nav */
     }
 
     .header-text {
@@ -2669,8 +2707,16 @@ a:hover {
         align-items: center;
     }
 
+    .header-post {
+        font-size: 1.4rem;
+        /* Reduced font size for mobile */
+        min-height: 2.1rem;
+        /* Prevent layout shift during typing */
+    }
+
     .profil-container {
-        max-width: 350px;
+        max-width: 300px;
+        /* Slightly smaller on mobile */
         margin: 0 auto;
     }
 

@@ -42,55 +42,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-  <!-- Critical CSS inline pour LCP -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #012836;
-      color: #fff
-    }
-
-    .page-loader {
-      position: fixed;
-      inset: 0;
-      background: #012836;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999
-    }
-
-    .loader-spinner {
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(0, 212, 255, 0.2);
-      border-top-color: #00d4ff;
-      border-radius: 50%;
-      animation: spin 1s linear infinite
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg)
-      }
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(1, 40, 54, 0.95);
-      padding: 15px 5%
-    }
-  </style>
-
   <!-- CSS -->
   <link rel="stylesheet" href="Styles/index.css" />
 
@@ -214,7 +165,8 @@
             download="">Télécharger mon cv</a></p>
       </div>
       <div class="profil-container">
-        <img class="profil" src="Image_projet/glodi-pro.jpg" alt="photo de glodi" width="800" height="533" />
+        <img class="profil" src="Image_projet/glodi-pro.jpg" alt="photo de glodi" width="800" height="533"
+          fetchpriority="high" />
       </div>
     </div>
   </header>
@@ -914,11 +866,13 @@
       </div>
 
       <div class="logo-mail glo">
-        <a href="https://github.com/Glodi-M" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-github-30 (1).png" alt="icon github" />
+        <a href="https://github.com/Glodi-M" target="_blank" rel="noopener noreferrer"
+          aria-label="Voir mon profil GitHub">
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-github-30 (1).png" alt="" />
         </a>
-        <a href="https://www.linkedin.com/in/glodi-mietete-35379b245" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt="Icône LinkedIn" />
+        <a href="https://www.linkedin.com/in/glodi-mietete-35379b245" target="_blank" rel="noopener noreferrer"
+          aria-label="Voir mon profil LinkedIn">
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt="" />
         </a>
       </div>
       <p class="copyright">&copy; 2026 Glodi Mietete. Tous droits réservés.</p>
@@ -1126,8 +1080,8 @@
 
   <button id="backToTop" class="bac-boutton" title="Retour en haut">↑</button>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="Scripts/script-form.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+  <script src="Scripts/script-form.js" defer></script>
 </body>
 
 </html>
