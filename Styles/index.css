@@ -871,7 +871,7 @@ header {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    padding: 80px 60px;
+    padding: 120px 60px 80px;
     min-height: 85vh;
     display: flex;
     align-items: center;
