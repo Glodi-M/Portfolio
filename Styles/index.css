@@ -758,7 +758,7 @@ header::after {
     position: relative;
     width: 100%;
     max-width: 480px;
-    animation: fadeInRight 1s ease-out 0.3s both;
+    animation: fadeInRight 1s ease-out 0.3s both, float 6s ease-in-out 1.3s infinite;
 }
 
 .header-cv {
@@ -790,8 +790,22 @@ header::after {
 
 .profil:hover {
     transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 212, 255, 0.3);
     border-color: var(--bdrcolor);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* Button */
@@ -2638,5 +2652,30 @@ a:hover {
     /* Cards expérience */
     .card-experience {
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .header-home {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profil-container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .profil {
+        width: 100%;
+        height: auto;
     }
 }
