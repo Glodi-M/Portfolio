@@ -546,9 +546,9 @@ select:focus-visible {
     }
 
     .theme-toggle {
-        margin-right: 10px;
-        width: 60px;
-        height: 30px;
+        margin-right: 8px;
+        width: 48px;
+        height: 24px;
     }
 }
 
