@@ -502,11 +502,12 @@ select:focus-visible {
 .burger-line {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: var(--textcolor);
     border-radius: 3px;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform-origin: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav-burger.active .burger-line:nth-child(1) {
@@ -2873,10 +2874,10 @@ a:hover {
 @media screen and (max-width: 968px) {
     .header-home {
         flex-direction: column-reverse;
+        align-items: center;
         gap: 40px;
         text-align: center;
         padding-top: 80px;
-        /* Increased padding to clear fixed nav */
     }
 
     .header-text {
@@ -2900,5 +2901,21 @@ a:hover {
     .profil {
         width: 100%;
         height: auto;
+    }
+}
+
+/* Extra small screens (iPhone SE, small phones) */
+@media (max-width: 400px) {
+    .header-post {
+        font-size: 1rem;
+    }
+
+    .header-name {
+        font-size: 1.8rem;
+    }
+
+    .header-home {
+        padding: 20px 15px;
+        padding-top: 80px;
     }
 }
