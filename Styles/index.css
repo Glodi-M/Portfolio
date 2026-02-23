@@ -2007,7 +2007,11 @@ button:hover {
     font-size: 2rem;
 }
 
-/* .projet-cyber styles removed to match generic grid layout */
+.projet-cyber {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+    justify-content: center;
+}
 
 .projet-contenaire {
     display: grid;
@@ -2038,6 +2042,10 @@ button:hover {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 212, 255, 0.1);
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* S'assure que la carte prend 100% du grid item */
 }
 
 .projet-card::before {
@@ -2100,7 +2108,9 @@ button:hover {
     min-height: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    /* Pousse le reste du contenu vers le bas */
 }
 
 .projet-card:hover .projet-card-description {
