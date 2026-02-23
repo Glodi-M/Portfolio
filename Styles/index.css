@@ -1678,6 +1678,118 @@ button:hover {
     }
 }
 
+/* ========== SECTION CERTIFICATIONS ========== */
+
+.section-certifications {
+    padding: 80px 20px;
+    background-color: var(--colorwhite);
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-certifications .titre {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-certifications .titre::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #00d4ff, #012836);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.certifications-contenaire {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.certif-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.certif-card {
+    display: flex;
+    align-items: center;
+    background: rgba(1, 40, 54, 0.03);
+    /* Léger fond pour le glassmorphism */
+    border: 1px solid rgba(1, 40, 54, 0.1);
+    border-radius: 16px;
+    padding: 20px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.certif-card:hover {
+    transform: translateY(-5px);
+    background: rgba(1, 40, 54, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.certif-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.certif-info {
+    flex-grow: 1;
+}
+
+.certif-title {
+    font-size: 1.3rem;
+    color: #012836;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.certif-issuer {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* On réutilise l'effet du "go-corner" des cartes expériences */
+.certif-card .go-corner {
+    background: linear-gradient(135deg, #00d4ff, #012836);
+    border-radius: 0 16px 0 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .certif-card {
+        padding: 15px 20px;
+    }
+
+    .certif-logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .certif-title {
+        font-size: 1.1rem;
+    }
+
+    .certif-issuer {
+        font-size: 0.9rem;
+    }
+}
+
 /* Section experiences */
 .section-experiences {
     padding: 80px 20px;
