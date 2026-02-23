@@ -1634,6 +1634,8 @@ button:hover {
 }
 
 .skill-level {
+    display: none;
+    /* Masqué pour épurer le design */
     font-size: 0.7rem;
     color: #aaa;
 }
