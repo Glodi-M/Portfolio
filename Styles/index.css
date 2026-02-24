@@ -752,6 +752,7 @@ section {
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
+    scroll-margin-top: 120px;
 }
 
 /* Barre de Navigation */
@@ -1818,6 +1819,7 @@ button:hover {
 .experience-contenaire {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 40px;
     flex-wrap: wrap;
     margin-bottom: 40px;
@@ -1851,7 +1853,8 @@ button:hover {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     width: 280px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -1879,6 +1882,7 @@ button:hover {
     color: #7f8c8d;
     margin-bottom: 1.5rem;
     transition: color 0.3s ease;
+    flex-grow: 1;
 }
 
 .go-corner {

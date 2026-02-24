@@ -303,3 +303,36 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         }
     });
 }
+
+// ========== SMOOTH SCROLL WITH OFFSET ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 100;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+
+            // Close menu if it was open on mobile
+            const menu = document.getElementById("menu");
+            const menuContainer = document.getElementById("menu-burger");
+            const burgerButton = document.getElementById("nav-burger");
+            if (menu && menu.classList.contains("open")) {
+                menu.classList.remove("open");
+                menuContainer.classList.remove("open");
+                burgerButton.classList.remove("active");
+                document.body.classList.remove("no-scroll");
+                burgerButton.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
+});
