@@ -836,6 +836,15 @@ nav:hover {
     width: 80%;
 }
 
+.onglet a.active {
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.onglet a.active::after {
+    width: 80%;
+}
+
 /* .nav-burger styles are defined above in the MENU BURGER section */
 
 @media (max-width: 768px) {
@@ -2528,7 +2537,7 @@ button:hover {
 
 @media screen and (max-width: 1024px) {
     .projet-contenaire {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -2543,13 +2552,20 @@ button:hover {
     }
 
     .projet-contenaire {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .projet-card {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .projet-contenaire {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
     }
 }
 

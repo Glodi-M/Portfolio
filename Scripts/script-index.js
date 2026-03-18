@@ -382,6 +382,29 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
+// ========== SCROLL SPY — LIEN ACTIF DANS LA NAV ==========
+const spySections = ['about', 'Skills', 'Experiences', 'projet', 'contact'];
+
+function updateActiveNavLink() {
+    const navHeight = 90;
+    let current = '';
+
+    spySections.forEach(id => {
+        const section = document.getElementById(id);
+        if (!section) return;
+        if (section.getBoundingClientRect().top <= navHeight + 60) {
+            current = id;
+        }
+    });
+
+    document.querySelectorAll('.onglet a').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    });
+}
+
+window.addEventListener('scroll', throttle(updateActiveNavLink, 80), { passive: true });
+updateActiveNavLink();
+
 // ========== SMOOTH SCROLL WITH OFFSET ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
