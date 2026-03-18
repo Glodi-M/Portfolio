@@ -304,6 +304,23 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
     });
 }
 
+// ========== IMAGE OVERLAY ==========
+document.querySelectorAll('.projet-card').forEach(card => {
+    const img = card.querySelector('.projet-card-image');
+    if (!img) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'projet-image-container';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'projet-image-overlay';
+    overlay.innerHTML = '<span class="overlay-arrow">→</span>';
+
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+    wrapper.appendChild(overlay);
+});
+
 // ========== FILTRES PROJETS ==========
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
