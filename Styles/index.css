@@ -1481,6 +1481,167 @@ button:hover {
     margin-bottom: 0;
 }
 
+/* ========== TIMELINE FORMATION ========== */
+
+.formation-timeline {
+    position: relative;
+    max-width: 580px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Ligne verticale */
+.formation-timeline::before {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 212, 255, 0.9) 0%,
+        rgba(0, 212, 255, 0.4) 50%,
+        rgba(0, 212, 255, 0.08) 100%
+    );
+    border-radius: 2px;
+}
+
+.tl-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.tl-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 56px;
+    flex-shrink: 0;
+}
+
+.tl-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #00d4ff;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.2), 0 0 14px rgba(0, 212, 255, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tl-item:hover .tl-dot {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 5px rgba(0, 212, 255, 0.3), 0 0 22px rgba(0, 212, 255, 0.5);
+}
+
+.tl-year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #00d4ff;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tl-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(145deg, #012836 0%, #023e52 100%);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 16px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.tl-card:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateX(6px);
+    box-shadow: 0 8px 28px rgba(0, 212, 255, 0.15);
+}
+
+.tl-card img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.tl-card:hover img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.tl-info h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.tl-card:hover .tl-info h3 {
+    color: #00d4ff;
+}
+
+.tl-school {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tl-desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.42);
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tl-desc-encours {
+    color: rgba(255, 180, 0, 0.5);
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .formation-timeline {
+        max-width: 100%;
+    }
+
+    .tl-marker {
+        width: 44px;
+    }
+
+    .formation-timeline::before {
+        left: 21px;
+    }
+
+    .tl-card {
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .tl-card img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .tl-info h3 {
+        font-size: 0.95rem;
+    }
+}
+
 /* Responsive design */
 @media screen and (max-width: 768px) {
     .formation {
