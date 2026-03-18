@@ -321,6 +321,7 @@ const tagMap = {
     'Simulation de Ransomware':        { text: 'Simulation',  type: 'simulation' },
     'AUDIT DE SECURITE':               { text: 'Audit',       type: 'audit' },
     'Lab Active Directory':            { text: 'Lab',         type: 'lab' },
+    'Lab XSS & BeEF':                  { text: 'Lab',         type: 'lab' },
 };
 
 document.querySelectorAll('.projet-card').forEach(card => {
