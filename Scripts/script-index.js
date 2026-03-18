@@ -304,14 +304,33 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
     });
 }
 
-// ========== IMAGE OVERLAY ==========
+// ========== IMAGE OVERLAY + TAGS ==========
+const tagMap = {
+    'Hetic Collab':                    { text: 'No-Code',     type: 'nocode' },
+    'Random Start-up':                 { text: 'Intégration', type: 'integration' },
+    'Mon Portfolio':                   { text: 'Web App',     type: 'webapp' },
+    'Gestion des articles':            { text: 'CMS',         type: 'cms' },
+    'Gestion étudiant':                { text: 'Desktop',     type: 'desktop' },
+    'Plateforme Evento':               { text: 'Web App',     type: 'webapp' },
+    'API POKÉMON':                     { text: 'API',         type: 'api' },
+    'Gestion des commandes':           { text: 'Web App',     type: 'webapp' },
+    'Gestion des employés':            { text: 'Web App',     type: 'webapp' },
+    'Translate FR-ESP':                { text: 'Web App',     type: 'webapp' },
+    'SITE WEB DU GROUPE SCOUT ALPHA':  { text: 'Web App',     type: 'webapp' },
+    'Audit Web':                       { text: 'Audit',       type: 'audit' },
+    'Simulation de Ransomware':        { text: 'Simulation',  type: 'simulation' },
+    'AUDIT DE SECURITE':               { text: 'Audit',       type: 'audit' },
+};
+
 document.querySelectorAll('.projet-card').forEach(card => {
     const img = card.querySelector('.projet-card-image');
     if (!img) return;
 
+    // Wrapper image
     const wrapper = document.createElement('div');
     wrapper.className = 'projet-image-container';
 
+    // Overlay flèche
     const overlay = document.createElement('div');
     overlay.className = 'projet-image-overlay';
     overlay.innerHTML = '<span class="overlay-arrow">→</span>';
@@ -319,12 +338,28 @@ document.querySelectorAll('.projet-card').forEach(card => {
     img.parentNode.insertBefore(wrapper, img);
     wrapper.appendChild(img);
     wrapper.appendChild(overlay);
+
+    // Tag de type
+    const titleEl = card.querySelector('.projet-card-title');
+    const title = titleEl?.textContent.trim();
+    const tagInfo = tagMap[title];
+    if (tagInfo) {
+        const tag = document.createElement('span');
+        tag.className = `projet-tag tag-${tagInfo.type}`;
+        tag.textContent = tagInfo.text;
+        wrapper.appendChild(tag);
+    }
 });
 
 // ========== FILTRES PROJETS ==========
+function updateCount() {
+    const visible = document.querySelectorAll('.projet-card-link:not(.filter-hidden)').length;
+    const numEl = document.getElementById('projet-count-num');
+    if (numEl) numEl.textContent = visible;
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        // Mettre à jour le bouton actif
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -335,7 +370,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
             if (match) {
                 card.classList.remove('filter-hidden', 'filter-show');
-                // Forcer un reflow pour relancer l'animation à chaque filtrage
                 void card.offsetWidth;
                 card.classList.add('filter-show');
             } else {
@@ -343,6 +377,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
                 card.classList.add('filter-hidden');
             }
         });
+
+        updateCount();
     });
 });
 
