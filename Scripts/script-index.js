@@ -353,36 +353,80 @@ document.querySelectorAll('.projet-card').forEach(card => {
     }
 });
 
-// ========== FILTRES PROJETS ==========
+// ========== FILTRES PROJETS + PAGINATION ==========
+const CARDS_PER_PAGE = 6;
+let currentPage = 1;
+let activeFilter = 'all';
+
+function getVisibleCards() {
+    return [...document.querySelectorAll('.projet-card-link')].filter(
+        card => activeFilter === 'all' || card.dataset.category === activeFilter
+    );
+}
+
 function updateCount() {
-    const visible = document.querySelectorAll('.projet-card-link:not(.filter-hidden)').length;
     const numEl = document.getElementById('projet-count-num');
-    if (numEl) numEl.textContent = visible;
+    if (numEl) numEl.textContent = getVisibleCards().length;
+}
+
+function updatePagination() {
+    const cards = getVisibleCards();
+    const totalPages = Math.ceil(cards.length / CARDS_PER_PAGE);
+    const start = (currentPage - 1) * CARDS_PER_PAGE;
+    const end = start + CARDS_PER_PAGE;
+
+    // Masquer toutes les cartes d'abord
+    document.querySelectorAll('.projet-card-link').forEach(card => {
+        card.classList.remove('filter-show', 'filter-hidden', 'page-hidden');
+        card.classList.add('filter-hidden');
+    });
+
+    // Afficher uniquement les cartes de la page courante
+    cards.forEach((card, i) => {
+        if (i >= start && i < end) {
+            card.classList.remove('filter-hidden');
+            void card.offsetWidth;
+            card.classList.add('filter-show');
+        }
+    });
+
+    // État des boutons
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    if (prevBtn) prevBtn.disabled = currentPage === 1;
+    if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
 }
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
-        const filter = btn.dataset.filter;
-
-        document.querySelectorAll('.projet-card-link').forEach(card => {
-            const match = filter === 'all' || card.dataset.category === filter;
-
-            if (match) {
-                card.classList.remove('filter-hidden', 'filter-show');
-                void card.offsetWidth;
-                card.classList.add('filter-show');
-            } else {
-                card.classList.remove('filter-show');
-                card.classList.add('filter-hidden');
-            }
-        });
-
+        activeFilter = btn.dataset.filter;
+        currentPage = 1;
         updateCount();
+        updatePagination();
     });
 });
+
+document.getElementById('prev-page')?.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+        document.getElementById('projet')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+
+document.getElementById('next-page')?.addEventListener('click', () => {
+    const totalPages = Math.ceil(getVisibleCards().length / CARDS_PER_PAGE);
+    if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+        document.getElementById('projet')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+
+// Init
+updatePagination();
 
 // ========== SCROLL SPY — LIEN ACTIF DANS LA NAV ==========
 const spySections = ['about', 'parcours', 'Skills', 'Experiences', 'projet', 'contact'];

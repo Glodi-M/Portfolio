@@ -2602,6 +2602,50 @@ button:hover {
 .tag-simulation { background: rgba(230, 100, 20, 0.15); border: 1px solid rgba(230, 100, 20, 0.5); color: #fb923c; }
 .tag-lab        { background: rgba(100, 80, 200, 0.15); border: 1px solid rgba(100, 80, 200, 0.5); color: #a78bfa; }
 
+/* Pagination */
+.projet-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.pagination-btn {
+    background: transparent;
+    color: #012836;
+    border: 1px solid rgba(1, 40, 54, 0.25);
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: rgba(0, 212, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.5);
+    color: #00a3c4;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+[data-theme="dark"] .pagination-btn {
+    color: #ccc;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .pagination-btn:hover:not(:disabled) {
+    color: #00d4ff;
+    border-color: rgba(0, 212, 255, 0.4);
+    background: rgba(0, 212, 255, 0.08);
+}
+
 /* Animation d'apparition lors du filtrage */
 @keyframes filterFadeIn {
     from {
