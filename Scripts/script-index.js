@@ -19,19 +19,19 @@ function updateScrollProgress() {
     scrollProgress.style.width = scrollPercent + '%';
 }
 
-window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('scroll', () => requestAnimationFrame(updateScrollProgress), { passive: true });
 
 // ========== EFFET PARALLAXE ==========
+const isMobile = () => window.innerWidth <= 768;
+
 function updateParallax() {
+    // Désactiver le parallaxe sur mobile pour éviter le scroll lent
+    if (isMobile()) return;
+
     const scrollY = window.scrollY;
 
-    // Parallaxe sur le header
-    const header = document.querySelector('header');
-    if (header) {
-        header.style.backgroundPositionY = scrollY * 0.5 + 'px';
-    }
-
-    // Parallaxe sur les éléments décoratifs
+    // Parallaxe sur les éléments décoratifs uniquement
+    // (ne pas modifier backgroundPositionY du header car background-attachment:fixed gère déjà ça)
     document.querySelectorAll('.parallax-element').forEach(el => {
         const speed = el.dataset.speed || 0.3;
         const yPos = -(scrollY * speed);
@@ -43,7 +43,7 @@ function updateParallax() {
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.addEventListener('scroll', () => {
         requestAnimationFrame(updateParallax);
-    });
+    }, { passive: true });
 }
 
 // ========== DARK MODE TOGGLE ==========
@@ -225,14 +225,14 @@ const backToTopButton = document.getElementById("backToTop");
 window.addEventListener('scroll', throttle(() => {
     // Bouton retour en haut
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopButton.style.display = "block";
+        if (backToTopButton) backToTopButton.style.display = "block";
     } else {
-        backToTopButton.style.display = "none";
+        if (backToTopButton) backToTopButton.style.display = "none";
     }
 
     // Animations au scroll
     handleScrollAnimations();
-}, 100));
+}, 150), { passive: true });
 
 backToTopButton?.addEventListener('click', () => {
     window.scrollTo({

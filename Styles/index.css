@@ -16,6 +16,7 @@ html {
 body {
     overflow-x: hidden;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Optimisations Performance */
@@ -2973,6 +2974,17 @@ a:hover {
     .hover-lift:hover,
     .hover-tilt:hover {
         transform: none;
+    }
+
+    /* Désactiver background-attachment: fixed sur mobile (cause du scroll lent) */
+    header {
+        background-attachment: scroll;
+    }
+
+    .parallax-bg {
+        background-attachment: scroll;
+        top: 0;
+        height: 100%;
     }
 }
 
