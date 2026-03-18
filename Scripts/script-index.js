@@ -383,7 +383,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // ========== SCROLL SPY — LIEN ACTIF DANS LA NAV ==========
-const spySections = ['about', 'Skills', 'Experiences', 'projet', 'contact'];
+const spySections = ['about', 'parcours', 'Skills', 'Experiences', 'projet', 'contact'];
 
 function updateActiveNavLink() {
     const navHeight = 90;
@@ -404,6 +404,19 @@ function updateActiveNavLink() {
 
 window.addEventListener('scroll', throttle(updateActiveNavLink, 80), { passive: true });
 updateActiveNavLink();
+
+// ========== PARCOURS FILTERS ==========
+document.querySelectorAll('.parcours-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.parcours-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const target = btn.dataset.panel;
+        document.querySelectorAll('.parcours-panel').forEach(panel => panel.classList.remove('active'));
+        const activePanel = document.getElementById(`panel-${target}`);
+        if (activePanel) activePanel.classList.add('active');
+    });
+});
 
 // ========== SKILLS TABS ==========
 document.querySelectorAll('.skills-tab-btn').forEach(btn => {

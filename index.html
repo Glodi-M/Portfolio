@@ -129,6 +129,7 @@
 
     <div class="onglet">
       <a href="#about">À propos</a>
+      <a href="#parcours">Parcours</a>
       <a href="#Skills">Compétences</a>
       <a href="#Experiences">Expériences</a>
       <a href="#projet">Projets</a>
@@ -215,61 +216,141 @@
       </div>
     </div>
 
-    <h1 class="titre">Mes formations</h1>
+  </section>
 
-    <div class="formation-timeline">
+  <!-- Parcours & Certifications -->
+  <section id="parcours" class="section-parcours">
+    <h1 class="titre">Parcours & Certifications</h1>
 
-      <div class="tl-item">
-        <div class="tl-marker">
-          <div class="tl-dot"></div>
-          <span class="tl-year">2026</span>
-        </div>
-        <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
-          target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Svg/heticc.png" alt="logo hetic" />
-          <div class="tl-info">
-            <h3>Mastère Cybersécurité</h3>
-            <p class="tl-school">HETIC</p>
-            <p class="tl-desc">Actuellement en Mastère Cybersécurité, cette formation me permet de
-              me spécialiser dans la protection des systèmes d'information et des données.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-marker">
-          <div class="tl-dot"></div>
-          <span class="tl-year">2025</span>
-        </div>
-        <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
-          target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Svg/heticc.png" alt="logo hetic" />
-          <div class="tl-info">
-            <h3>Prépa Mastère Digital</h3>
-            <p class="tl-school">HETIC</p>
-            <p class="tl-desc">Bootcamp intensif d'un an couvrant les piliers du numérique : développement web, data,
-              webmarketing, cybersécurité et design. Préparation aux Mastères spécialisés HETIC.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-marker">
-          <div class="tl-dot"></div>
-          <span class="tl-year">2021</span>
-        </div>
-        <a href="https://www.unikin.ac.cd" class="tl-card" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Svg/unikin.jpg" alt="logo université de kinshasa" />
-          <div class="tl-info">
-            <h3>Licence Informatique</h3>
-            <p class="tl-school">Université de Kinshasa</p>
-            <p class="tl-desc">Formation de 5 ans couvrant les fondamentaux de l'informatique : réseaux, programmation,
-              algorithmique, bases de données, recherche opérationnelle et mathématiques.</p>
-          </div>
-        </a>
-      </div>
-
+    <div class="parcours-filters">
+      <button class="parcours-btn active" data-panel="formation">Parcours</button>
+      <button class="parcours-btn" data-panel="certifications">Certifications</button>
     </div>
+
+    <!-- Panel Formation -->
+    <div class="parcours-panel active" id="panel-formation">
+      <div class="formation-timeline animate-on-scroll">
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-year">2026</span>
+          </div>
+          <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
+            target="_blank" rel="noopener noreferrer">
+            <img loading="lazy" decoding="async" src="Svg/heticc.png" alt="logo hetic" />
+            <div class="tl-info">
+              <h3>Mastère Cybersécurité</h3>
+              <p class="tl-school">HETIC</p>
+              <p class="tl-desc">Actuellement en Mastère Cybersécurité, cette formation me permet de
+                me spécialiser dans la protection des systèmes d'information et des données.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-year">2025</span>
+          </div>
+          <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
+            target="_blank" rel="noopener noreferrer">
+            <img loading="lazy" decoding="async" src="Svg/heticc.png" alt="logo hetic" />
+            <div class="tl-info">
+              <h3>Prépa Mastère Digital</h3>
+              <p class="tl-school">HETIC</p>
+              <p class="tl-desc">Bootcamp intensif d'un an couvrant les piliers du numérique : développement web, data,
+                webmarketing, cybersécurité et design. Préparation aux Mastères spécialisés HETIC.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <span class="tl-year">2021</span>
+          </div>
+          <a href="https://www.unikin.ac.cd" class="tl-card" target="_blank" rel="noopener noreferrer">
+            <img loading="lazy" decoding="async" src="Svg/unikin.jpg" alt="logo université de kinshasa" />
+            <div class="tl-info">
+              <h3>Licence Informatique</h3>
+              <p class="tl-school">Université de Kinshasa</p>
+              <p class="tl-desc">Formation de 5 ans couvrant les fondamentaux de l'informatique : réseaux,
+                programmation,
+                algorithmique, bases de données, recherche opérationnelle et mathématiques.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Panel Certifications -->
+    <div class="parcours-panel" id="panel-certifications">
+      <div class="certifications-contenaire animate-on-scroll">
+
+        <a href="https://www.credly.com/badges/78f507bd-b5f2-47c1-b54f-0d539138bd82/linked_in_profile"
+          class="certif-card-link" aria-label="Voir la certification Cisco Introduction to Cybersecurity"
+          target="_blank" rel="noopener noreferrer">
+          <div class="certif-card">
+            <div class="certif-logo-wrap">
+              <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
+                class="certif-logo" />
+            </div>
+            <div class="certif-info">
+              <h3 class="certif-title">Introduction to Cybersecurity</h3>
+              <p class="certif-issuer">Cisco Networking Academy</p>
+              <span class="certif-date">2026</span>
+            </div>
+            <div class="certif-right">
+              <span class="certif-verified">✓ Vérifié</span>
+              <span class="certif-see">Voir le certificat →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.credly.com/badges/996e44f4-b2ec-4a8c-97fc-1a5c275cd590/linked_in_profile"
+          class="certif-card-link" aria-label="Voir la certification Cisco Networking Basics" target="_blank"
+          rel="noopener noreferrer">
+          <div class="certif-card">
+            <div class="certif-logo-wrap">
+              <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
+                class="certif-logo" />
+            </div>
+            <div class="certif-info">
+              <h3 class="certif-title">Networking Basics</h3>
+              <p class="certif-issuer">Cisco Networking Academy</p>
+              <span class="certif-date">2026</span>
+            </div>
+            <div class="certif-right">
+              <span class="certif-verified">✓ Vérifié</span>
+              <span class="certif-see">Voir le certificat →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_ewuhuefoNpJLSB6NN_1742226135880_completion_certificate.pdf"
+          class="certif-card-link" aria-label="Voir la certification BCG Data Science Job Simulation" target="_blank"
+          rel="noopener noreferrer">
+          <div class="certif-card">
+            <div class="certif-logo-wrap">
+              <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Logo BCG" class="certif-logo" />
+            </div>
+            <div class="certif-info">
+              <h3 class="certif-title">Data Science Job Simulation</h3>
+              <p class="certif-issuer">Boston Consulting Group (BCG) / Forage</p>
+              <span class="certif-date">2025</span>
+            </div>
+            <div class="certif-right">
+              <span class="certif-verified">✓ Vérifié</span>
+              <span class="certif-see">Voir le certificat →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
   </section>
 
   <!-- Competences  -->
@@ -281,13 +362,13 @@
 
       <!-- Nav tabs -->
       <div class="skills-tab-nav" role="tablist" aria-label="Catégories de compétences">
-        <button class="skills-tab-btn active" data-tab="dev" role="tab" aria-selected="true" aria-controls="tab-dev">💻
+        <button class="skills-tab-btn active" data-tab="dev" role="tab" aria-selected="true" aria-controls="tab-dev">
           Développement</button>
         <button class="skills-tab-btn" data-tab="frameworks" role="tab" aria-selected="false"
-          aria-controls="tab-frameworks">⚙️ Frameworks & Outils</button>
-        <button class="skills-tab-btn" data-tab="sys" role="tab" aria-selected="false" aria-controls="tab-sys">🖥
+          aria-controls="tab-frameworks"> Frameworks & Outils</button>
+        <button class="skills-tab-btn" data-tab="sys" role="tab" aria-selected="false" aria-controls="tab-sys">
           Systèmes & Réseaux</button>
-        <button class="skills-tab-btn" data-tab="cyber" role="tab" aria-selected="false" aria-controls="tab-cyber">🔐
+        <button class="skills-tab-btn" data-tab="cyber" role="tab" aria-selected="false" aria-controls="tab-cyber">
           Cybersécurité</button>
       </div>
 
@@ -455,64 +536,6 @@
     </div>
   </section>
 
-  <!-- Section Certifications -->
-  <section id="Certifications" class="section-certifications">
-    <h1 class="titre">Mes Certifications</h1>
-
-    <div class="certifications-contenaire animate-on-scroll">
-      <!-- Certification Cisco -->
-      <a href="https://www.credly.com/badges/78f507bd-b5f2-47c1-b54f-0d539138bd82/linked_in_profile"
-        class="certif-card-link" aria-label="Voir la certification Cisco Introduction to Cybersecurity" target="_blank"
-        rel="noopener noreferrer">
-        <div class="certif-card">
-          <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Certification Cisco"
-            class="certif-logo" width="50" height="50" />
-          <div class="certif-info">
-            <h3 class="certif-title">Introduction to Cybersecurity</h3>
-            <p class="certif-issuer">Cisco Networking Academy</p>
-          </div>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Certification Cisco -->
-      <a href="https://www.credly.com/badges/996e44f4-b2ec-4a8c-97fc-1a5c275cd590/linked_in_profile"
-        class=" certif-card-link" aria-label="Voir la certification Cisco Networking Basics" target="_blank"
-        rel="noopener noreferrer">
-        <div class="certif-card">
-          <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Certification Cisco"
-            class="certif-logo" width="50" height="50" />
-          <div class="certif-info">
-            <h3 class="certif-title">Networking Basics</h3>
-            <p class="certif-issuer">Cisco Networking Academy</p>
-          </div>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-      </a>
-
-      <!-- Certification BCG -->
-      <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_ewuhuefoNpJLSB6NN_1742226135880_completion_certificate.pdf"
-        class="certif-card-link" aria-label="Voir la certification BCG Data Science Job Simulation">
-        <div class="certif-card">
-          <!-- Icône placeholder pour la data science -->
-          <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Logo Certification BCG Data Science"
-            class="certif-logo" width="50" height="50" style="object-fit: contain;" />
-          <div class="certif-info">
-            <h3 class="certif-title">Data Science Job Simulation</h3>
-            <p class="certif-issuer">Boston Consulting Group (BCG) / Forage</p>
-          </div>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
   <!-- Section Experiences -->
   <section id="Experiences" class="section-experiences">
     <h1 class="titre">Mon Parcours Professionnel</h1>
@@ -557,8 +580,8 @@
     <!-- Filtres interactifs -->
     <div class="projet-filters" role="group" aria-label="Filtrer les projets">
       <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="dev"><span>💻</span> Développement</button>
-      <button class="filter-btn" data-filter="cyber"><span>🔐</span> Cybersécurité</button>
+      <button class="filter-btn" data-filter="dev">Développement</button>
+      <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
     </div>
     <p class="projet-count"><span id="projet-count-num">14</span> projets</p>
 
