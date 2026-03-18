@@ -1812,8 +1812,153 @@ button:hover {
     color: #aaa;
 }
 
+/* ========== SKILLS TABS ========== */
+.skills-tabs {
+    max-width: 950px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skills-tabs.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Tab nav buttons --- */
+.skills-tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,212,255,0.12);
+    border-radius: 60px;
+    padding: 6px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-tab-btn {
+    background: transparent;
+    color: #aaa;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.skills-tab-btn:hover {
+    color: #fff;
+    background: rgba(0, 212, 255, 0.08);
+}
+
+.skills-tab-btn.active {
+    background: linear-gradient(135deg, #00d4ff, #0066cc);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 212, 255, 0.3);
+}
+
+/* --- Panels --- */
+.skills-tab-panel {
+    display: none;
+}
+
+.skills-tab-panel.active {
+    display: block;
+    animation: tabFadeIn 0.35s ease;
+}
+
+/* Flatten .skill-box / .skill-groupe → flat icon grid */
+.skills-tab-panel .skill-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+}
+
+.skills-tab-panel .skill-groupe {
+    display: contents;
+}
+
+/* Individual skill card */
+.skills-tab-panel .skill-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 16px;
+    cursor: default;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skills-tab-panel .skill-data:hover {
+    background: rgba(0, 212, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+}
+
+.skills-tab-panel .skill-data img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+    transition: filter 0.25s ease;
+}
+
+.skills-tab-panel .skill-data:hover img {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+}
+
+.skills-tab-panel .skill-name {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #ddd;
+    text-align: center;
+}
+
+@keyframes tabFadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive design */
 @media screen and (max-width: 768px) {
+    .skills-tab-panel .skill-box {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+    }
+
+    .skills-tab-panel .skill-data {
+        padding: 14px 8px;
+    }
+
+    .skills-tab-panel .skill-data img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .skills-tab-nav {
+        padding: 4px;
+        gap: 6px;
+    }
+
+    .skills-tab-btn {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+    }
+
     .Skill-contenaire {
         flex-direction: column;
         align-items: center;

@@ -405,6 +405,26 @@ function updateActiveNavLink() {
 window.addEventListener('scroll', throttle(updateActiveNavLink, 80), { passive: true });
 updateActiveNavLink();
 
+// ========== SKILLS TABS ==========
+document.querySelectorAll('.skills-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        document.querySelectorAll('.skills-tab-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        document.querySelectorAll('.skills-tab-panel').forEach(panel => {
+            panel.classList.remove('active');
+        });
+        const activePanel = document.getElementById(`tab-${target}`);
+        if (activePanel) activePanel.classList.add('active');
+    });
+});
+
 // ========== SMOOTH SCROLL WITH OFFSET ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
