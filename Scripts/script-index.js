@@ -320,6 +320,7 @@ const tagMap = {
     'Audit Web':                       { text: 'Audit',       type: 'audit' },
     'Simulation de Ransomware':        { text: 'Simulation',  type: 'simulation' },
     'AUDIT DE SECURITE':               { text: 'Audit',       type: 'audit' },
+    'Lab Active Directory':            { text: 'Lab',         type: 'lab' },
 };
 
 document.querySelectorAll('.projet-card').forEach(card => {

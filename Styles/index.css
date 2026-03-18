@@ -2600,6 +2600,7 @@ button:hover {
 .tag-api       { background: rgba(240, 200, 0, 0.15);  border: 1px solid rgba(240, 200, 0, 0.5);  color: #fbbf24; }
 .tag-audit     { background: rgba(220, 50,  50, 0.15); border: 1px solid rgba(220, 50,  50, 0.5); color: #f87171; }
 .tag-simulation { background: rgba(230, 100, 20, 0.15); border: 1px solid rgba(230, 100, 20, 0.5); color: #fb923c; }
+.tag-lab        { background: rgba(100, 80, 200, 0.15); border: 1px solid rgba(100, 80, 200, 0.5); color: #a78bfa; }
 
 /* Animation d'apparition lors du filtrage */
 @keyframes filterFadeIn {
