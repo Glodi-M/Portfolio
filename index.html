@@ -536,33 +536,25 @@
   <section id="projet" class="Projets">
     <h1 class="titre">Mes Projets</h1>
 
-    <!-- Catégorie Développement -->
-    <div class="projet-category">
-      <h2 class="category-title">
-        <span class="category-icon">💻</span>
-        Développement
-      </h2>
+    <!-- Filtres interactifs -->
+    <div class="projet-filters" role="group" aria-label="Filtrer les projets">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="dev"><span>💻</span> Développement</button>
+      <button class="filter-btn" data-filter="cyber"><span>🔐</span> Cybersécurité</button>
     </div>
 
     <div class="projet-contenaire animate-on-scroll">
       <!-- CARDE 1 HETIC COLLAB -->
-
-      <a href="projet-hetic-collab.html" class="projet-card-link">
+      <a href="projet-hetic-collab.html" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir plus</button>
           <img loading="lazy" decoding="async" src="Image_projet/HETIC COLABO.png"
             alt="Aperçu de l'application web Hetic Collab" class="projet-card-image" width="538" height="378" />
           <h2 class="projet-card-title">Hetic Collab</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application web No code facilitant la collaboration pour la
-              réalisation des projets.
-            </p>
+            <p>Une application web No code facilitant la collaboration pour la réalisation des projets.</p>
           </div>
-
           <h2 class="projet-card-title">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Image_projet/escalidraw.png" alt="" width="502" height="157" />
             <img class="icon" src="Svg/glide.png" alt="" />
@@ -570,25 +562,17 @@
         </div>
       </a>
 
-      <!-- CARD 2 RANDOM START UP-->
-
-      <a href="projet-random-start-up.html" class="projet-card-link">
+      <!-- CARD 2 RANDOM START UP -->
+      <a href="projet-random-start-up.html" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir plus</button>
           <img loading="lazy" decoding="async" src="Image_projet/projetpmd.png"
-            alt="Aperçu de la maquette intégrée pour Random Start-up" class="projet-card-image" width="538"
-            height="378" />
+            alt="Aperçu de la maquette intégrée pour Random Start-up" class="projet-card-image" width="538" height="378" />
           <h2 class="projet-card-title">Random Start-up</h2>
-
           <div class="projet-card-description">
-            <p>
-              Intégration fidèle d'une maquette UI/UX pour créer la vitrine web d'une start-up fictive, avec une
-              approche Mobile-First et responsive.
-            </p>
+            <p>Intégration fidèle d'une maquette UI/UX pour créer la vitrine web d'une start-up fictive, avec une approche Mobile-First et responsive.</p>
           </div>
-
           <h2 class="projet-card-title">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
@@ -597,23 +581,18 @@
           </div>
         </div>
       </a>
-      <!-- CARDE 3 PORTFOLIO -->
 
-      <a href="https://github.com/Glodi-M/Portfolio.git" class="projet-card-link">
+      <!-- CARDE 3 PORTFOLIO -->
+      <a href="https://github.com/Glodi-M/Portfolio.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/gm.png"
-            alt="Page d'accueil de Mon Portfolio développé par Glodi" class="projet-card-image" width="538"
-            height="378" />
+            alt="Page d'accueil de Mon Portfolio développé par Glodi" class="projet-card-image" width="538" height="378" />
           <h2 class="projet-card-title">Mon Portfolio</h2>
-
           <div class="projet-card-description">
-            <p>Conception et développement de mon portfolio personnel avec une interface moderne, performante et 100%
-              responsive.</p>
+            <p>Conception et développement de mon portfolio personnel avec une interface moderne, performante et 100% responsive.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
@@ -623,25 +602,18 @@
           </div>
         </div>
       </a>
+
       <!-- CARDE 4 CMS -->
-
-      <a href="https://github.com/ahmvdd/CMS-Nodejs.git" class="projet-card-link">
+      <a href="https://github.com/ahmvdd/CMS-Nodejs.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
-          <button id="btn-voir-plus-cms">Voir sur GitHub</button>
+          <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/cms.png"
-            alt="Interface de l'application de gestion d'articles CMS Node.js" class="projet-card-image" width="538"
-            height="378" />
+            alt="Interface de l'application de gestion d'articles CMS Node.js" class="projet-card-image" width="538" height="378" />
           <h2 class="projet-card-title">Gestion des articles</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application CMS. Les Users se connectent pour ajouter,
-              modifier et supprimer un article.
-            </p>
+            <p>Une application CMS. Les Users se connectent pour ajouter, modifier et supprimer un article.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/react-1-logo-png-transparent.png" alt="" />
             <img class="icon" src="Svg/file_type_node_icon_130301.png" alt="" />
@@ -653,24 +625,16 @@
       </a>
 
       <!-- CARDE 5 GESTION ETUDIANT -->
-
-      <a href="https://github.com/Glodi-M/Gestion-etudiant.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/Gestion-etudiant.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/Interface_java.png"
-            alt="Interface de l'application Desktop de gestion étudiant en Java" class="projet-card-image" width="538"
-            height="380" />
+            alt="Interface de l'application Desktop de gestion étudiant en Java" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Gestion étudiant</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application Desktop développé en Java pour la gestion des
-              étudiants dans la base de données.
-            </p>
+            <p>Une application Desktop développé en Java pour la gestion des étudiants dans la base de données.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/java-original.svg" alt="" />
             <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
@@ -680,24 +644,16 @@
       </a>
 
       <!-- CARDE 6 PLATEFORME D'EVENEMENT -->
-
-      <a href="https://github.com/Glodi-M/Events-manager.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/Events-manager.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/evento.png"
-            alt="Page d'accueil de la plateforme de gestion d'événements Evento" class="projet-card-image" width="538"
-            height="380" />
+            alt="Page d'accueil de la plateforme de gestion d'événements Evento" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Plateforme Evento</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application web en Symfony permettant aux utilisateurs de
-              créer, gérer et participer à des événements.
-            </p>
+            <p>Une application web en Symfony permettant aux utilisateurs de créer, gérer et participer à des événements.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
             <img class="icon" src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png" alt="" />
@@ -708,24 +664,17 @@
         </div>
       </a>
 
-      <!-- CARDE 7 GESTION DE L'API POKEMON -->
-      <a href="https://github.com/Glodi-M/API_POKEMON.git" class="projet-card-link">
+      <!-- CARDE 7 API POKEMON -->
+      <a href="https://github.com/Glodi-M/API_POKEMON.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/Api-pokemon.png"
-            alt="Interface de l'application web affichant les données de l'API Pokémon" class="projet-card-image"
-            width="538" height="380" />
+            alt="Interface de l'application web affichant les données de l'API Pokémon" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">API POKÉMON</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une minie application interactive web qui permet de récupérer et
-              afficher les données issues de l'API Pokémon.
-            </p>
+            <p>Une mini application interactive web qui permet de récupérer et afficher les données issues de l'API Pokémon.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
@@ -736,23 +685,16 @@
       </a>
 
       <!-- CARDE 8 GESTION DES COMMANDES -->
-      <a href="https://github.com/Glodi-M/Gestion_de_commande.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/Gestion_de_commande.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/Ge-commande.png"
-            alt="Tableau de bord de l'application de gestion des commandes" class="projet-card-image" width="538"
-            height="380" />
+            alt="Tableau de bord de l'application de gestion des commandes" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Gestion des commandes</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application web interactive pour gérer les commandes
-              d'articles, offrant des fonctionnalités de gestion.
-            </p>
+            <p>Une application web interactive pour gérer les commandes d'articles, offrant des fonctionnalités de gestion.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/php-original.svg" alt="" />
             <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
@@ -763,23 +705,16 @@
       </a>
 
       <!-- CARDE 9 GESTION DES EMPLOYES -->
-      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/Ge-employe.png"
-            alt="Vue principale du système de gestion des employés" class="projet-card-image" width="538"
-            height="380" />
+            alt="Vue principale du système de gestion des employés" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Gestion des employés</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application web interactive pour la gestion des employés,
-              offrant des fonctionnalités de gestion.
-            </p>
+            <p>Une application web interactive pour la gestion des employés, offrant des fonctionnalités de gestion.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/php-original.svg" alt="" />
             <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
@@ -791,22 +726,16 @@
       </a>
 
       <!-- CARDE 10 TRANSLATE -->
-      <a href="https://github.com/Glodi-M/TRANSLATE_APP.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/TRANSLATE_APP.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/Translate.png"
-            alt="Interface de l'application de traduction web Translate FR-ESP" class="projet-card-image" width="538"
-            height="380" />
+            alt="Interface de l'application de traduction web Translate FR-ESP" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Translate FR-ESP</h2>
-
           <div class="projet-card-description">
-            <p>
-              Une application web interactive pour la traduction du français vers l'espagnol.
-            </p>
+            <p>Une application web interactive pour la traduction du français vers l'espagnol.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
             <img class="icon" src="Svg/typescript.png" alt="" />
@@ -816,22 +745,16 @@
       </a>
 
       <!-- CARDE 11 WEB SITE GS ALPHA -->
-      <a href="https://github.com/Glodi-M/Web_SIte_GsAlpha.git" class="projet-card-link">
+      <a href="https://github.com/Glodi-M/Web_SIte_GsAlpha.git" class="projet-card-link" data-category="dev">
         <div class="projet-card">
           <button>Voir sur GitHub</button>
           <img loading="lazy" decoding="async" src="Image_projet/gsalphaweb.png"
             alt="Interface de l'application web GS Alpha" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">SITE WEB DU GROUPE SCOUT ALPHA</h2>
-
           <div class="projet-card-description">
-            <p>
-              Site web moderne pour groupe scout, déployé et optimisé SEO. Back-end géré avec Firebase pour une gestion
-              dynamique et fiable.
-            </p>
+            <p>Site web moderne pour groupe scout, déployé et optimisé SEO. Back-end géré avec Firebase pour une gestion dynamique et fiable.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
@@ -840,33 +763,18 @@
           </div>
         </div>
       </a>
-    </div>
 
-    <!-- Catégorie Cybersécurité -->
-    <div class="projet-category">
-      <h2 class="category-title">
-        <span class="category-icon">🔐</span>
-        Cybersécurité
-      </h2>
-    </div>
-
-    <div class="projet-contenaire projet-cyber animate-on-scroll">
       <!-- PROJET AUDIT WEB -->
-      <a href="" class="projet-card-link">
+      <a href="" class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <button>Voir le projet</button>
           <img loading="lazy" decoding="async" src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).jpeg"
             alt="capture de la page d'accueil" class="projet-card-image" width="538" height="380" />
           <h2 class="projet-card-title">Audit Web</h2>
-
           <div class="projet-card-description">
-            <p>
-              Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.
-            </p>
+            <p>Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/icons8-linux-48.png" alt="Linux" />
             <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="Kali Linux" />
@@ -876,23 +784,17 @@
         </div>
       </a>
 
-      <!-- PROJET RANSOWARE -->
-      <a href="#" class="projet-card-link">
+      <!-- PROJET RANSOMWARE -->
+      <a href="#" class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <button>Voir le projet</button>
           <img loading="lazy" decoding="async" src="Image_projet/ransoware.png" alt="Image du nouveau projet cyber"
             class="projet-card-image" width="538" height="380" style="background-color: #2a2a35; object-fit: cover;" />
           <h2 class="projet-card-title">Simulation de Ransomware</h2>
-
           <div class="projet-card-description">
-            <p>
-              Étude approfondie et création d'un environnement de simulation permettant de comprendre et d'analyser le
-              comportement d'un malware de type Ransomware.
-            </p>
+            <p>Étude approfondie et création d'un environnement de simulation permettant de comprendre et d'analyser le comportement d'un malware de type Ransomware.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
             <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="VMware" />
             <img class="icon" src="Svg/icons8-ubuntu-48.png" alt="Ubuntu" />
@@ -903,26 +805,19 @@
       </a>
 
       <!-- PROJET AUDIT DE SECURITE -->
-      <a href="#" class="projet-card-link">
+      <a href="#" class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <button>Voir le projet</button>
           <img loading="lazy" decoding="async" src="Image_projet/audit.png" alt="Image du nouveau projet cyber"
             class="projet-card-image" width="538" height="380" style="background-color: #2a2a35; object-fit: cover;" />
           <h2 class="projet-card-title">AUDIT DE SECURITE</h2>
-
           <div class="projet-card-description">
-            <p>
-              Audit de sécurité d'un site web, identification des vulnérabilités, tests d'injection, falsification de
-              requêtes, contournement de sécurité.
-            </p>
+            <p>Audit de sécurité d'un site web, identification des vulnérabilités, tests d'injection, falsification de requêtes, contournement de sécurité.</p>
           </div>
-
           <h2 class="projet-card-title projet-tech">Technologies utilisées</h2>
-
           <div class="projet-card-icons">
-
             <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
-            <img class="icon" src="Svg/azuresqldatabase-original.svg" alt=" Azure SQL Database" />
+            <img class="icon" src="Svg/azuresqldatabase-original.svg" alt="Azure SQL Database" />
             <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
           </div>
         </div>

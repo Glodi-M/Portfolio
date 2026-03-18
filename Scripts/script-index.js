@@ -304,6 +304,31 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
     });
 }
 
+// ========== FILTRES PROJETS ==========
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Mettre à jour le bouton actif
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        document.querySelectorAll('.projet-card-link').forEach(card => {
+            const match = filter === 'all' || card.dataset.category === filter;
+
+            if (match) {
+                card.classList.remove('filter-hidden', 'filter-show');
+                // Forcer un reflow pour relancer l'animation à chaque filtrage
+                void card.offsetWidth;
+                card.classList.add('filter-show');
+            } else {
+                card.classList.remove('filter-show');
+                card.classList.add('filter-hidden');
+            }
+        });
+    });
+});
+
 // ========== SMOOTH SCROLL WITH OFFSET ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
