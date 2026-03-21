@@ -274,8 +274,9 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         link.addEventListener("click", closeMenu);
     });
 
-    document.addEventListener("click", (event) => {
-        if (!menuContainer.contains(event.target) && !burgerButton.contains(event.target)) {
+    // Fermer en cliquant sur le fond sombre (overlay) mais pas sur le drawer
+    menuContainer.addEventListener("click", (event) => {
+        if (event.target === menuContainer) {
             closeMenu();
         }
     });
@@ -286,8 +287,8 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         }
     });
 
-    // Gestion du focus pour l'accessibilité
-    const focusableElements = menu.querySelectorAll('a, img.close-icon');
+    // Gestion du focus pour l'accessibilité (inclut le bouton fermer)
+    const focusableElements = menuContainer.querySelectorAll('a, button#closeMenu');
     const firstFocusable = focusableElements[0];
     const lastFocusable = focusableElements[focusableElements.length - 1];
 
