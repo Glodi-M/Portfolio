@@ -1,0 +1,174 @@
+/* ========== AMÉLIORATIONS MOBILE GLOBALES ========== */
+
+@media screen and (max-width: 768px) {
+
+    /* Sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Titres */
+    .titre {
+        font-size: 1.8rem;
+    }
+
+    /* Grille projets */
+    .projet-contenaire {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Compétences */
+    .skill-content {
+        padding: 15px;
+    }
+
+    /* Footer form */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    /* Footer Layout Mobile */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-forme {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .logo-contact,
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo-mail {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Cible le lien à l'intérieur s'il existe (Email, Adresse) */
+    .logo-mail a {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: auto;
+    }
+
+    /* Cible directement le contenu pour le téléphone (pas de lien) */
+    .logo-mail img,
+    .logo-mail p {
+        margin: 0 5px;
+    }
+
+    .logo-mail.glo {
+        flex-direction: row !important;
+        gap: 10px;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    /* S'assurer que les icônes sociales ne prennent pas toute la largeur */
+    .glo a {
+        width: auto;
+        display: block;
+    }
+
+    /* Skills Mobile Adjustment */
+    .skill-content {
+        padding: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        flex: 0 0 auto;
+    }
+
+    .skill-box {
+        gap: 10px;
+    }
+
+
+
+    /* Back to top button */
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Désactiver les effets hover sur mobile */
+    .hover-lift:hover,
+    .hover-tilt:hover {
+        transform: none;
+    }
+
+    /* Désactiver background-attachment: fixed sur mobile (cause du scroll lent) */
+    header {
+        background-attachment: scroll;
+    }
+
+    .parallax-bg {
+        background-attachment: scroll;
+        top: 0;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    .titre {
+        font-size: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+
+    /* Soft skills en colonne */
+    .solft-skill {
+        width: 100%;
+        max-width: none;
+    }
+
+    /* Cards expérience */
+    .card-experience {
+        padding: 20px;
+    }
+}
+
+
+/* Extra small screens (iPhone SE, small phones) */
+@media (max-width: 400px) {
+    .header-post {
+        font-size: 1rem;
+    }
+
+    .header-name {
+        font-size: 1.8rem;
+    }
+
+    .header-home {
+        padding: 20px 15px;
+        padding-top: 80px;
+    }
+}

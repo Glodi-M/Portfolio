@@ -1,0 +1,67 @@
+/* BOUTTON SCROLL */
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background: var(--accent-gradient);
+    color: var(--colorwhite);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    z-index: 1000;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+}
+
+@media screen and (max-width: 968px) {
+
+    /* Fix iOS Safari: background-attachment: fixed non supporté */
+    header {
+        background-attachment: scroll;
+    }
+
+    .header-home {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-post {
+        font-size: 1.2rem;
+        min-height: 2.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .profil-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .profil {
+        width: 100%;
+        height: auto;
+    }
+}
+
