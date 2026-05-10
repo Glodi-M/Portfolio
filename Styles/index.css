@@ -553,7 +553,7 @@ select:focus-visible {
         padding: 12px 15px;
     }
 
-    .logo-nav h1 {
+    .logo-nav .nav-title {
         font-size: 0.95rem;
     }
 
