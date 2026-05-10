@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* Google Fonts are loaded via <link> in HTML for better performance */
 
 * {
     margin: 0;
@@ -733,13 +732,20 @@ header {
     background: url("../Background-web/background-blue-dark.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     position: relative;
     padding: 120px 60px 80px;
     min-height: 85vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+}
+
+/* background-attachment: fixed uniquement sur desktop (évite le bug mobile) */
+@media (min-width: 769px) {
+    header {
+        background-attachment: fixed;
+    }
 }
 
 header::before {

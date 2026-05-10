@@ -53,6 +53,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
+  <!-- Google Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" /></noscript>
+
   <!-- CSS -->
   <link rel="stylesheet" href="Styles/index.css" />
 
@@ -130,7 +135,7 @@
   <div id="scroll-progress" class="scroll-progress"></div>
 
   <!-- Skip to Content (Accessibilité) -->
-  <a href="#about" class="skip-link">Aller au contenu principal</a>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
   <nav role="navigation" aria-label="Navigation principale">
     <div class="logo-nav">
@@ -184,6 +189,8 @@
   </header>
 
   <!--  a propos -->
+
+  <main id="main-content">
 
   <section id="about" class="section-apropo animate-on-scroll">
     <h2 class="titre">Mon Profil & Ma Vision</h2>
@@ -622,8 +629,8 @@
           </div>
 
           <div class="projet-card-icons">
-            <img class="icon" src="Image_projet/escalidraw.webp" alt="" width="502" height="157" />
-            <img class="icon" src="Svg/glide.png" alt="" />
+            <img class="icon" src="Image_projet/escalidraw.webp" alt="" aria-hidden="true" width="502" height="157" />
+            <img class="icon" src="Svg/glide.png" alt="" aria-hidden="true" />
           </div>
         </div>
       </a>
@@ -641,7 +648,7 @@
               approche Mobile-First et responsive.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
             <img class="icon" src="Svg/figma-original.svg" alt="" />
@@ -663,7 +670,7 @@
               responsive.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
             <img class="icon" src="Svg/figma-original.svg" alt="" />
@@ -685,7 +692,7 @@
             <p>Une application CMS. Les Users se connectent pour ajouter, modifier et supprimer un article.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/react-1-logo-png-transparent.png" alt="" />
             <img class="icon" src="Svg/file_type_node_icon_130301.png" alt="" />
             <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
@@ -707,7 +714,7 @@
             <p>Une application Desktop développé en Java pour la gestion des étudiants dans la base de données.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/java-original.svg" alt="" />
             <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
             <img class="icon" src="Svg/netbeans_94416.png" alt="" />
@@ -728,7 +735,7 @@
               événements.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
             <img class="icon" src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png" alt="" />
             <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
@@ -751,7 +758,7 @@
               Pokémon.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/html5-original.svg" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
             <img class="icon" src="Svg/javascript-original.svg" alt="" />
@@ -773,7 +780,7 @@
               gestion.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/php-original.svg" alt="" />
             <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
             <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
@@ -794,7 +801,7 @@
             <p>Une application web interactive pour la gestion des employés, offrant des fonctionnalités de gestion.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/php-original.svg" alt="" />
             <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
             <img class="icon" src="Svg/html5-original.svg" alt="" />
@@ -816,7 +823,7 @@
             <p>Une application web interactive pour la traduction du français vers l'espagnol.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
             <img class="icon" src="Svg/typescript.png" alt="" />
             <img class="icon" src="Svg/icons8-api-48.png" alt="" />
@@ -836,7 +843,7 @@
               dynamique et fiable.</p>
           </div>
 
-          <div class="projet-card-icons">
+          <div class="projet-card-icons" aria-hidden="true">
             <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
             <img class="icon" src="Svg/css3-original.svg" alt="" />
             <img class="icon" src="Svg/icons8-firebase-24.png" alt="" />
@@ -855,11 +862,11 @@
             <p>Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.</p>
           </div>
 
-          <div class="projet-card-icons">
-            <img class="icon" src="Svg/icons8-linux-48.png" alt="Linux" />
-            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="Kali Linux" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
-            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
+          <div class="projet-card-icons" aria-hidden="true">
+            <img class="icon" src="Svg/icons8-linux-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
           </div>
         </div>
       </a>
@@ -876,11 +883,11 @@
               et déchiffrer des fichiers cibles via une clé symétrique.</p>
           </div>
 
-          <div class="projet-card-icons">
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="VMware" />
-            <img class="icon" src="Svg/icons8-ubuntu-48.png" alt="Ubuntu" />
-            <img class="icon" src="Svg/icons8-python-48.png" alt="Python" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
+          <div class="projet-card-icons" aria-hidden="true">
+            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+            <img class="icon" src="Svg/icons8-ubuntu-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-python-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
       </a>
@@ -896,10 +903,10 @@
               requêtes, contournement de sécurité.</p>
           </div>
 
-          <div class="projet-card-icons">
-            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
-            <img class="icon" src="Svg/azuresqldatabase-original.svg" alt="Azure SQL Database" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
+          <div class="projet-card-icons" aria-hidden="true">
+            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
+            <img class="icon" src="Svg/azuresqldatabase-original.svg" alt="" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
       </a>
@@ -915,11 +922,11 @@
               contrôlées — analyse de l'exécution de code malveillant côté navigateur.</p>
           </div>
 
-          <div class="projet-card-icons">
-            <img class="icon" src="Svg/beef-xss-logo.svg" alt="BeEF" />
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="VMware" />
-            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="Kali Linux" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
+          <div class="projet-card-icons" aria-hidden="true">
+            <img class="icon" src="Svg/beef-xss-logo.svg" alt="" />
+            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
+            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
       </a>
@@ -935,11 +942,11 @@
               de sécurité (GPO).</p>
           </div>
 
-          <div class="projet-card-icons">
-            <img class="icon" src="Svg/icons8-windows-11.svg" alt="Windows Server" />
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="VMware" />
-            <img class="icon" src="Svg/icons8-bouclier-48.png" alt="Sécurité" />
-            <img class="icon" src="Svg/dns-svgrepo-com.svg" alt="DNS" />
+          <div class="projet-card-icons" aria-hidden="true">
+            <img class="icon" src="Svg/icons8-windows-11.svg" alt="" />
+            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+            <img class="icon" src="Svg/icons8-bouclier-48.png" alt="" />
+            <img class="icon" src="Svg/dns-svgrepo-com.svg" alt="" />
           </div>
         </div>
       </a>
@@ -953,24 +960,26 @@
 
   </section>
 
+  </main>
+
   <!-- Footer -->
 
   <footer id="contact" class="animate-on-scroll">
     <div class="logo-contact">
-      <h1 class="title-contact">Me contacter</h1>
+      <h2 class="title-contact">Me contacter</h2>
       <div class="logo-mail">
         <a href="mailto:glodimietete@gmail.com ">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-nouveau-message-50.png" alt="" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-nouveau-message-50.png" alt="" aria-hidden="true" />
           <p>glodimietete@gmail.com</p>
         </a>
       </div>
       <div class="logo-mail">
-        <img loading="lazy" decoding="async" src="Icon_contact/icons8-téléphone-50.png" alt="" />
+        <img loading="lazy" decoding="async" src="Icon_contact/icons8-téléphone-50.png" alt="" aria-hidden="true" />
         <p>06 51 78 09 48</p>
       </div>
       <div class="logo-mail">
         <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-accueil-50.png" alt="" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-accueil-50.png" alt="" aria-hidden="true" />
           <p>75010 Paris</p>
         </a>
       </div>
@@ -978,11 +987,11 @@
       <div class="logo-mail glo">
         <a href="https://github.com/Glodi-M" target="_blank" rel="noopener noreferrer"
           aria-label="Voir mon profil GitHub">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-github-30 (1).png" alt="" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-github-30 (1).png" alt="" aria-hidden="true" />
         </a>
         <a href="https://www.linkedin.com/in/glodi-mietete-35379b245" target="_blank" rel="noopener noreferrer"
           aria-label="Voir mon profil LinkedIn">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt="" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt="" aria-hidden="true" />
         </a>
       </div>
       <p class="copyright">&copy; 2026 Glodi Mietete. Tous droits réservés.</p>
@@ -1178,7 +1187,7 @@
           <span></span>
         </button>
       </div>
-      <ul id="menu" class="menu" role="navigation" aria-label="Menu principal">
+      <ul id="menu" class="menu" aria-label="Menu principal">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="#about">À propos</a></li>
         <li><a href="#parcours">Parcours</a></li>
