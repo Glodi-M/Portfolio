@@ -106,13 +106,20 @@ function typeWriter() {
     setTimeout(typeWriter, typingSpeed);
 }
 
-// Fonction utilitaire pour vérifier si un élément est visible
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top <= window.innerHeight && rect.bottom >= 0
-    );
-}
+// General Observer pour les animations au scroll (Performance optimisée)
+const generalObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains('animate-on-scroll')) {
+                entry.target.classList.add('visible');
+            }
+            if (entry.target.classList.contains('card')) {
+                entry.target.classList.add('show');
+            }
+            // observer.unobserve(entry.target); // Optionnel : pour ne jouer l'animation qu'une fois
+        }
+    });
+}, { threshold: 0.1 });
 
 // Throttle pour optimiser les événements scroll
 function throttle(func, limit) {
@@ -126,22 +133,7 @@ function throttle(func, limit) {
     };
 }
 
-// Gestion des animations au scroll
-function handleScrollAnimations() {
-    // Animations des sections
-    document.querySelectorAll('.animate-on-scroll').forEach(section => {
-        if (isElementInViewport(section)) {
-            section.classList.add('visible');
-        }
-    });
 
-    // Animations des cartes
-    document.querySelectorAll('.card').forEach(card => {
-        if (isElementInViewport(card)) {
-            card.classList.add('show');
-        }
-    });
-}
 
 // Initialisation au chargement du DOM
 document.addEventListener('DOMContentLoaded', () => {
@@ -215,8 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Lancer les animations au scroll au chargement
-    handleScrollAnimations();
+    // Lancer les animations au scroll (IntersectionObserver)
+    document.querySelectorAll('.animate-on-scroll, .card:not(.card-experience)').forEach(el => {
+        generalObserver.observe(el);
+    });
 });
 
 // Bouton retour en haut
@@ -230,8 +224,7 @@ window.addEventListener('scroll', throttle(() => {
         if (backToTopButton) backToTopButton.style.display = "none";
     }
 
-    // Animations au scroll
-    handleScrollAnimations();
+    // Les animations au scroll sont maintenant gérées par l'IntersectionObserver
 }, 150), { passive: true });
 
 backToTopButton?.addEventListener('click', () => {
@@ -267,7 +260,15 @@ if (burgerButton && menu && closeMenuIcon && menuContainer) {
         burgerButton.focus();
     }
 
-    burgerButton.addEventListener("click", openMenu);
+    function toggleMenu() {
+        if (menu.classList.contains("open")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    burgerButton.addEventListener("click", toggleMenu);
     closeMenuIcon.addEventListener("click", closeMenu);
 
     menuLinks.forEach(link => {
