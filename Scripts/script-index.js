@@ -19,7 +19,7 @@ function updateScrollProgress() {
     scrollProgress.style.width = scrollPercent + '%';
 }
 
-window.addEventListener('scroll', () => requestAnimationFrame(updateScrollProgress), { passive: true });
+
 
 // ========== EFFET PARALLAXE ==========
 const isMobile = () => window.innerWidth <= 768;
@@ -40,11 +40,7 @@ function updateParallax() {
 }
 
 // Vérifier si l'utilisateur n'a pas désactivé les animations
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('scroll', () => {
-        requestAnimationFrame(updateParallax);
-    }, { passive: true });
-}
+
 
 // ========== DARK MODE TOGGLE ==========
 const themeToggle = document.getElementById('theme-toggle');
@@ -223,16 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Bouton retour en haut
 const backToTopButton = document.getElementById("backToTop");
 
-window.addEventListener('scroll', throttle(() => {
-    // Bouton retour en haut
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        if (backToTopButton) backToTopButton.style.display = "block";
-    } else {
-        if (backToTopButton) backToTopButton.style.display = "none";
-    }
 
-    // Les animations au scroll sont maintenant gérées par l'IntersectionObserver
-}, 150), { passive: true });
 
 backToTopButton?.addEventListener('click', () => {
     window.scrollTo({
@@ -457,8 +444,7 @@ function updateActiveNavLink() {
     });
 }
 
-window.addEventListener('scroll', throttle(updateActiveNavLink, 80), { passive: true });
-updateActiveNavLink();
+
 
 // ========== PARCOURS FILTERS ==========
 document.querySelectorAll('.parcours-btn').forEach(btn => {
@@ -525,3 +511,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// ========== GESTION CENTRALISÉE DU SCROLL ==========
+const handleScroll = () => {
+    // 1. Scroll Progress
+    updateScrollProgress();
+
+    // 2. Parallax (si autorisé)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        updateParallax();
+    }
+
+    // 3. Bouton Retour en haut
+    if (backToTopButton) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    // 4. Scroll Spy (Nav)
+    updateActiveNavLink();
+};
+
+// Un seul écouteur pour tout le site (Throttled pour la performance)
+window.addEventListener('scroll', throttle(() => {
+    requestAnimationFrame(handleScroll);
+}, 60), { passive: true });
+
+// Initialisation au chargement
+window.addEventListener('load', handleScroll);
