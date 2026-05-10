@@ -205,6 +205,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // Focus Trap pour les modales ouvertes
+        if (e.key === 'Tab') {
+            const openModal = document.querySelector('.modal.open');
+            if (openModal) {
+                const focusableElements = openModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                if (focusableElements.length > 0) {
+                    const firstFocusable = focusableElements[0];
+                    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+                    if (e.shiftKey && document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+        }
     });
 
     // Lancer les animations au scroll (IntersectionObserver)
