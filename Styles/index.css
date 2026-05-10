@@ -29,7 +29,7 @@ img {
 .projet-card,
 .skill-content,
 .formation-box,
-.solft-skill {
+.soft-skill {
     will-change: transform;
 }
 
@@ -373,7 +373,7 @@ select:focus-visible {
     color: rgba(255, 255, 255, 0.85);
 }
 
-[data-theme="dark"] .solft-skill {
+[data-theme="dark"] .soft-skill {
     background: linear-gradient(145deg, #0d2137 0%, #14304a 100%);
     border-color: rgba(0, 212, 255, 0.25);
 }
@@ -1055,7 +1055,7 @@ header::after {
     transform: translateY(0);
 }
 
-.solft-skill img {
+.soft-skill img {
     width: 28px;
     height: 28px;
     margin: 0 auto;
@@ -1063,11 +1063,11 @@ header::after {
     transition: transform var(--transition-fast);
 }
 
-.solft-skill:hover img {
+.soft-skill:hover img {
     transform: scale(1.2);
 }
 
-.solft-skill {
+.soft-skill {
     padding: 1rem 0.8rem;
     background: linear-gradient(135deg, #012836 0%, #023e52 100%);
     border-radius: 16px;
@@ -1082,7 +1082,7 @@ header::after {
     overflow: hidden;
 }
 
-.solft-skill::before {
+.soft-skill::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1093,17 +1093,17 @@ header::after {
     transition: left 0.6s ease;
 }
 
-.solft-skill:hover::before {
+.soft-skill:hover::before {
     left: 100%;
 }
 
-.solft-skill:hover {
+.soft-skill:hover {
     transform: translateY(-8px) scale(1.05);
     box-shadow: var(--shadow-accent);
     border-color: var(--bdrcolor);
 }
 
-.solft-rigth {
+.soft-right {
     margin-right: 0;
 }
 
@@ -1134,7 +1134,7 @@ header::after {
     font-weight: 600;
 }
 
-.about-solft {
+.about-soft {
     margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
@@ -1153,11 +1153,11 @@ button:hover {
     color: var(--colorwhite);
 }
 
-.solft .solft-skill:hover {
+.soft .soft-skill:hover {
     transform: scale(1.1, 1.1);
 }
 
-.solft:hover>.solft-skill:not(:hover) {
+.soft:hover>.soft-skill:not(:hover) {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     border-color: #0974f1;
@@ -1178,20 +1178,20 @@ button:hover {
         text-align: left;
     }
 
-    .about-solft {
+    .about-soft {
         flex-direction: column;
         align-items: center;
         margin-inline: 20px;
     }
 
-    .solft {
+    .soft {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    .solft-skill {
+    .soft-skill {
         width: 120px;
         padding: 0.75rem;
     }
@@ -1208,12 +1208,12 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .solft-skill {
+    .soft-skill {
         width: 100px;
         padding: 0.5rem;
     }
 
-    .solft-skill p {
+    .soft-skill p {
         font-size: 0.8rem;
     }
 
@@ -1221,7 +1221,7 @@ button:hover {
         font-size: 0.8rem;
     }
 
-    .solft {
+    .soft {
         display: flex;
     }
 }
@@ -3573,7 +3573,7 @@ a:hover {
     }
 
     /* Soft skills en colonne */
-    .solft-skill {
+    .soft-skill {
         width: 100%;
         max-width: none;
     }
