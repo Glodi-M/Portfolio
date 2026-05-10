@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Introuvable | Glodi Mietete</title>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #012836;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: clamp(100px, 20vw, 150px);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00d4ff, #0974f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    p {
+      font-size: clamp(18px, 4vw, 24px);
+      margin-bottom: 40px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: linear-gradient(135deg, #00d4ff, #0974f1);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+    }
+
+    /* Décoration d'arrière-plan */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(9, 116, 241, 0.1));
+      z-index: -1;
+      filter: blur(50px);
+    }
+
+    .circle-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: -100px;
+    }
+
+    .circle-2 {
+      width: 400px;
+      height: 400px;
+      bottom: -150px;
+      left: -150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+
+  <div class="container">
+    <h1>404</h1>
+    <p>Oups ! Cette page s'est perdue dans le cyber-espace.</p>
+    <a href="index.html" class="btn">Retour à l'accueil</a>
+  </div>
+</body>
+
+</html>
