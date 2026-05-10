@@ -48,19 +48,6 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // ========== DARK MODE TOGGLE ==========
 const themeToggle = document.getElementById('theme-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-// Charger le thème sauvegardé ou détecter la préférence système
-function loadTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (prefersDark.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-}
-
-loadTheme();
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
