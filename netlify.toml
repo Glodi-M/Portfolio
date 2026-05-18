@@ -42,3 +42,22 @@
   for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirections 301 pour la canonisation du domaine (SEO)
+[[redirects]]
+  from = "https://www.glodimietete.com/*"
+  to = "https://glodimietete.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.glodimietete.com/*"
+  to = "https://glodimietete.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://glodimietete.com/*"
+  to = "https://glodimietete.com/:splat"
+  status = 301
+  force = true
