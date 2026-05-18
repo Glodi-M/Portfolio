@@ -881,7 +881,7 @@
       </a>
 
       <!-- PROJET AUDIT WEB -->
-      <a href="" class="projet-card-link" data-category="cyber">
+      <div class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <img loading="lazy" decoding="async" src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).webp"
             alt="capture de la page d'accueil" class="projet-card-image" width="538" height="380" />
@@ -897,10 +897,10 @@
             <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- PROJET RANSOMWARE -->
-      <a href="#" class="projet-card-link" data-category="cyber">
+      <div class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <img loading="lazy" decoding="async" src="Image_projet/ransoware.webp" alt="Image du nouveau projet cyber"
             class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
@@ -918,10 +918,10 @@
             <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- PROJET AUDIT DE SECURITE -->
-      <a href="" class="projet-card-link" data-category="cyber">
+      <div class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <img loading="lazy" decoding="async" src="Image_projet/audit.webp" alt="Image du nouveau projet cyber"
             class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
@@ -937,10 +937,10 @@
             <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- PROJET LAB XSS BEEF -->
-      <a href="#" class="projet-card-link" data-category="cyber">
+      <div class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <img loading="lazy" decoding="async" src="Image_projet/beef.webp" alt="Lab XSS BeEF" class="projet-card-image"
             width="538" height="380" style="background-color: #1a1a2e;" />
@@ -957,10 +957,10 @@
             <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- PROJET LAB ACTIVE DIRECTORY -->
-      <a href="#" class="projet-card-link" data-category="cyber">
+      <div class="projet-card-link" data-category="cyber">
         <div class="projet-card">
           <img loading="lazy" decoding="async" src="Image_projet/ad-ds.webp" alt="Lab Active Directory"
             class="projet-card-image" width="538" height="380" style="background-color: #1a2a3a;" />
@@ -977,7 +977,7 @@
             <img class="icon" src="Svg/dns-svgrepo-com.svg" alt="" />
           </div>
         </div>
-      </a>
+      </div>
     </div>
 
     <!-- Pagination -->
@@ -996,7 +996,7 @@
     <div class="logo-contact">
       <h2 class="title-contact">Me contacter</h2>
       <div class="logo-mail">
-        <a href="mailto:glodimietete@gmail.com ">
+        <a href="mailto:glodimietete@gmail.com " aria-label="Envoyer un email à Glodi Mietete">
           <img loading="lazy" decoding="async" src="Icon_contact/icons8-nouveau-message-50.png" alt="" aria-hidden="true" />
           <p>glodimietete@gmail.com</p>
         </a>
@@ -1006,7 +1006,7 @@
         <p>06 51 78 09 48</p>
       </div>
       <div class="logo-mail">
-        <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer" aria-label="Voir l'adresse sur Google Maps">
           <img loading="lazy" decoding="async" src="Icon_contact/icons8-accueil-50.png" alt="" aria-hidden="true" />
           <p>75010 Paris</p>
         </a>
@@ -1026,7 +1026,9 @@
     </div>
 
     <div class="footer-forme">
-      <form method="POST" id="contact-form">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display: none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
         <div id="form-message" class="hidden"></div>
         <label for="input-name">Nom</label>
         <div>
@@ -1232,7 +1234,6 @@
 
   <button id="backToTop" class="bac-boutton" title="Retour en haut">↑</button>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
   <script src="Scripts/script-form.js" defer></script>
 </body>
 

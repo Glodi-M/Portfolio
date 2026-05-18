@@ -328,14 +328,17 @@ document.querySelectorAll('.projet-card').forEach(card => {
     const wrapper = document.createElement('div');
     wrapper.className = 'projet-image-container';
 
-    // Overlay flèche
-    const overlay = document.createElement('div');
-    overlay.className = 'projet-image-overlay';
-    overlay.innerHTML = '<span class="overlay-arrow">→</span>';
-
     img.parentNode.insertBefore(wrapper, img);
     wrapper.appendChild(img);
-    wrapper.appendChild(overlay);
+
+    // Overlay flèche
+    const isClickable = card.closest('a.projet-card-link') !== null;
+    if (isClickable) {
+        const overlay = document.createElement('div');
+        overlay.className = 'projet-image-overlay';
+        overlay.innerHTML = '<span class="overlay-arrow">→</span>';
+        wrapper.appendChild(overlay);
+    }
 
     // Tag de type
     const titleEl = card.querySelector('.projet-card-title');

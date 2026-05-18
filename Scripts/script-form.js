@@ -1,25 +1,32 @@
-(function () {
-    emailjs.init("sg0cgujDuX3m50_fg");
-})();
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
     const messageBox = document.getElementById("form-message");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        emailjs.sendForm('service_bbbxup9', 'template_cj628mr', this)
-            .then(function () {
-                // Message de succès
-                showMessage("Message envoyé avec succès !", "success");
-                form.reset();
-            }, function (error) {
-                // Message d'erreur
-                showMessage("Une erreur s’est produite. Veuillez réessayer.", "error");
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    showMessage("Message envoyé avec succès ! Je vous réponds très vite.", "success");
+                    form.reset();
+                } else {
+                    showMessage("Une erreur s’est produite. Veuillez réessayer.", "error");
+                }
+            })
+            .catch(function (error) {
+                showMessage("Une erreur s’est produite. Veuillez vérifier votre connexion.", "error");
                 console.error(error);
             });
-    });
+        });
+    }
 
     function showMessage(text, type) {
         messageBox.textContent = text;
