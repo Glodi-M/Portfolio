@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <script>
-    (function() {
+    (function () {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -54,9 +54,15 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
   <!-- Google Fonts -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" /></noscript>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" />
+  </noscript>
 
   <!-- CSS -->
   <link rel="stylesheet" href="Styles/index.css" />
@@ -182,7 +188,8 @@
             download="">Télécharger mon cv</a></p>
       </div>
       <div class="profil-container">
-        <img class="profil" src="Image_projet/glodi-pro.webp" alt="Portrait de Glodi Mietete, Analyste Cybersécurité et Développeur Web" width="800" height="533"
+        <img class="profil" src="Image_projet/glodi-pro.webp"
+          alt="Portrait de Glodi Mietete, Analyste Cybersécurité et Développeur Web" width="800" height="533"
           fetchpriority="high" />
       </div>
     </div>
@@ -192,801 +199,814 @@
 
   <main id="main-content">
 
-  <section id="about" class="section-apropo animate-on-scroll">
-    <h2 class="titre">Mon Profil & Ma Vision</h2>
+    <section id="about" class="section-apropo animate-on-scroll">
+      <h2 class="titre">Mon Profil & Ma Vision</h2>
 
-    <div class="about-soft">
-      <div class="soft">
-        <div class="soft-skill">
-          <img loading="lazy" decoding="async" src="Icon/icons8-nombreuses-batteries-30.png" alt="icone d'autonome" />
-          <p>Autonomie</p>
-        </div>
-
-        <div class="soft-skill">
-          <img loading="lazy" decoding="async" src="Icon/icons8-pensée-critique-50.png" alt="icone de créativité" />
-          <p>Créativité</p>
-        </div>
-      </div>
-
-      <div class="about">
-        <p class="about-pa">
-          Spécialisé en <span>sécurité des systèmes, réseaux et support IT</span>, j’interviens sur l’administration,
-          la sécurisation des infrastructures et l’assistance aux utilisateurs.
-        </p>
-        <p class="about-pa">
-          Formé à <a href="https://www.unikin.ac.cd" target="_blank" rel="noopener noreferrer">l’Université de
-            Kinshasa</a> et <a href="https://www.hetic.net/" target="_blank" rel="noopener noreferrer">à HETIC</a>
-          , je développe des compétences opérationnelles en environnement Windows/Linux et cybersécurité.</p>
-      </div>
-
-
-      <div class="soft soft-right">
-        <div class="soft-skill">
-          <img loading="lazy" decoding="async" src="Icon/icons8-curiosity-64.png" alt="icone de Curiosité" />
-          <p>Curiosité</p>
-        </div>
-
-        <div class="soft-skill">
-          <img loading="lazy" decoding="async" src="Icon/icons8-travail-en-équipe-50.png"
-            alt="icone du travaille en équipe" />
-          <p>Travail en équipe</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Parcours & Certifications -->
-  <section id="parcours" class="section-parcours">
-    <h2 class="titre">Parcours & Certifications</h2>
-
-    <div class="parcours-filters">
-      <button class="parcours-btn active" data-panel="formation">Parcours</button>
-      <button class="parcours-btn" data-panel="certifications">Certifications</button>
-    </div>
-
-    <!-- Panel Formation -->
-    <div class="parcours-panel active" id="panel-formation">
-      <div class="formation-timeline animate-on-scroll">
-
-        <div class="tl-item">
-          <div class="tl-marker">
-            <div class="tl-dot"></div>
-            <span class="tl-year">2026</span>
+      <div class="about-soft">
+        <div class="soft">
+          <div class="soft-skill">
+            <img loading="lazy" decoding="async" src="Icon/icons8-nombreuses-batteries-30.png" alt="icone d'autonome" />
+            <p>Autonomie</p>
           </div>
-          <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
+
+          <div class="soft-skill">
+            <img loading="lazy" decoding="async" src="Icon/icons8-pensée-critique-50.png" alt="icone de créativité" />
+            <p>Créativité</p>
+          </div>
+        </div>
+
+        <div class="about">
+          <p class="about-pa">
+            Spécialisé en <span>sécurité des systèmes, réseaux et support IT</span>, j’interviens sur l’administration,
+            la sécurisation des infrastructures et l’assistance aux utilisateurs.
+          </p>
+          <p class="about-pa">
+            Formé à <a href="https://www.unikin.ac.cd" target="_blank" rel="noopener noreferrer">l’Université de
+              Kinshasa</a> et <a href="https://www.hetic.net/" target="_blank" rel="noopener noreferrer">à HETIC</a>
+            , je développe des compétences opérationnelles en environnement Windows/Linux et cybersécurité.</p>
+        </div>
+
+
+        <div class="soft soft-right">
+          <div class="soft-skill">
+            <img loading="lazy" decoding="async" src="Icon/icons8-curiosity-64.png" alt="icone de Curiosité" />
+            <p>Curiosité</p>
+          </div>
+
+          <div class="soft-skill">
+            <img loading="lazy" decoding="async" src="Icon/icons8-travail-en-équipe-50.png"
+              alt="icone du travaille en équipe" />
+            <p>Travail en équipe</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Parcours & Certifications -->
+    <section id="parcours" class="section-parcours">
+      <h2 class="titre">Parcours & Certifications</h2>
+
+      <div class="parcours-filters">
+        <button class="parcours-btn active" data-panel="formation">Parcours</button>
+        <button class="parcours-btn" data-panel="certifications">Certifications</button>
+      </div>
+
+      <!-- Panel Formation -->
+      <div class="parcours-panel active" id="panel-formation">
+        <div class="formation-timeline animate-on-scroll">
+
+          <div class="tl-item">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+              <span class="tl-year">2026</span>
+            </div>
+            <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale"
+              class="tl-card" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" decoding="async" src="Svg/hetic.jpg" alt="logo hetic" />
+              <div class="tl-info">
+                <h3>Mastère Cybersécurité</h3>
+                <p class="tl-school">HETIC</p>
+                <p class="tl-desc">Actuellement en Mastère Cybersécurité, cette formation me permet de
+                  me spécialiser dans la protection des systèmes d'information et des données.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+              <span class="tl-year">2025</span>
+            </div>
+            <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale"
+              class="tl-card" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" decoding="async" src="Svg/hetic.jpg" alt="logo hetic" />
+              <div class="tl-info">
+                <h3>Prépa Mastère Digital</h3>
+                <p class="tl-school">HETIC</p>
+                <p class="tl-desc">Bootcamp intensif d'un an couvrant les piliers du numérique : développement web,
+                  data,
+                  webmarketing, cybersécurité et design. Préparation aux Mastères spécialisés HETIC.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+              <span class="tl-year">2021</span>
+            </div>
+            <a href="https://www.unikin.ac.cd" class="tl-card" target="_blank" rel="noopener noreferrer">
+              <img loading="lazy" decoding="async" src="Svg/unikin.jpg" alt="logo université de kinshasa" />
+              <div class="tl-info">
+                <h3>Licence Informatique</h3>
+                <p class="tl-school">Université de Kinshasa</p>
+                <p class="tl-desc">Formation de 5 ans couvrant les fondamentaux de l'informatique : réseaux,
+                  programmation,
+                  algorithmique, bases de données, recherche opérationnelle et mathématiques.</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Panel Certifications -->
+      <div class="parcours-panel" id="panel-certifications">
+        <div class="certifications-contenaire animate-on-scroll">
+
+          <a href="https://www.credly.com/badges/78f507bd-b5f2-47c1-b54f-0d539138bd82/linked_in_profile"
+            class="certif-card-link" aria-label="Voir la certification Cisco Introduction to Cybersecurity"
             target="_blank" rel="noopener noreferrer">
-            <img loading="lazy" decoding="async" src="Svg/hetic.jpg" alt="logo hetic" />
-            <div class="tl-info">
-              <h3>Mastère Cybersécurité</h3>
-              <p class="tl-school">HETIC</p>
-              <p class="tl-desc">Actuellement en Mastère Cybersécurité, cette formation me permet de
-                me spécialiser dans la protection des systèmes d'information et des données.</p>
+            <div class="certif-card">
+              <div class="certif-logo-wrap">
+                <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
+                  class="certif-logo" />
+              </div>
+              <div class="certif-info">
+                <h3 class="certif-title">Introduction to Cybersecurity</h3>
+                <p class="certif-issuer">Cisco Networking Academy</p>
+                <span class="certif-date">2026</span>
+              </div>
+              <div class="certif-right">
+                <span class="certif-verified">✓ Vérifié</span>
+                <span class="certif-see">Voir le certificat →</span>
+              </div>
             </div>
           </a>
+
+          <a href="https://www.credly.com/badges/996e44f4-b2ec-4a8c-97fc-1a5c275cd590/linked_in_profile"
+            class="certif-card-link" aria-label="Voir la certification Cisco Networking Basics" target="_blank"
+            rel="noopener noreferrer">
+            <div class="certif-card">
+              <div class="certif-logo-wrap">
+                <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
+                  class="certif-logo" />
+              </div>
+              <div class="certif-info">
+                <h3 class="certif-title">Networking Basics</h3>
+                <p class="certif-issuer">Cisco Networking Academy</p>
+                <span class="certif-date">2026</span>
+              </div>
+              <div class="certif-right">
+                <span class="certif-verified">✓ Vérifié</span>
+                <span class="certif-see">Voir le certificat →</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_ewuhuefoNpJLSB6NN_1742226135880_completion_certificate.pdf"
+            class="certif-card-link" aria-label="Voir la certification BCG Data Science Job Simulation" target="_blank"
+            rel="noopener noreferrer">
+            <div class="certif-card">
+              <div class="certif-logo-wrap">
+                <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Logo BCG"
+                  class="certif-logo" />
+              </div>
+              <div class="certif-info">
+                <h3 class="certif-title">Data Science Job Simulation</h3>
+                <p class="certif-issuer">Boston Consulting Group (BCG) / Forage</p>
+                <span class="certif-date">2025</span>
+              </div>
+              <div class="certif-right">
+                <span class="certif-verified">✓ Vérifié</span>
+                <span class="certif-see">Voir le certificat →</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Competences  -->
+
+    <section id="Skills" class="Skills">
+      <h2 class="titre">Mon Expertise Technique</h2>
+
+      <div class="skills-tabs animate-on-scroll">
+
+        <!-- Nav tabs -->
+        <div class="skills-tab-nav" role="tablist" aria-label="Catégories de compétences">
+          <button class="skills-tab-btn active" data-tab="dev" role="tab" aria-selected="true" aria-controls="tab-dev">
+            Développement</button>
+          <button class="skills-tab-btn" data-tab="frameworks" role="tab" aria-selected="false"
+            aria-controls="tab-frameworks"> Frameworks & Outils</button>
+          <button class="skills-tab-btn" data-tab="sys" role="tab" aria-selected="false" aria-controls="tab-sys">
+            Systèmes & Réseaux</button>
+          <button class="skills-tab-btn" data-tab="cyber" role="tab" aria-selected="false" aria-controls="tab-cyber">
+            Cybersécurité</button>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-marker">
-            <div class="tl-dot"></div>
-            <span class="tl-year">2025</span>
-          </div>
-          <a href="https://www.hetic.net/formations/masters-digitaux-informatique/prepa-master-digitale" class="tl-card"
-            target="_blank" rel="noopener noreferrer">
-            <img loading="lazy" decoding="async" src="Svg/hetic.jpg" alt="logo hetic" />
-            <div class="tl-info">
-              <h3>Prépa Mastère Digital</h3>
-              <p class="tl-school">HETIC</p>
-              <p class="tl-desc">Bootcamp intensif d'un an couvrant les piliers du numérique : développement web, data,
-                webmarketing, cybersécurité et design. Préparation aux Mastères spécialisés HETIC.</p>
+        <!-- Panel Développement -->
+        <div class="skills-tab-panel active" id="tab-dev" role="tabpanel">
+          <div class="skill-box">
+            <div class="skill-groupe">
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/html5-original.svg" alt="HTML" />
+                <h3 class="skill-name">HTML</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/css3-original.svg" alt="CSS" />
+                <h3 class="skill-name">CSS</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/javascript-original.svg" alt="JavaScript" />
+                <h3 class="skill-name">JavaScript</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/php-original.svg" alt="PHP" />
+                <h3 class="skill-name">PHP</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Python" />
+                <h3 class="skill-name">Python</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/java-original.svg" alt="Java" />
+                <h3 class="skill-name">Java</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/azuresqldatabase-original.svg" alt="SQL" />
+                <h3 class="skill-name">SQL</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/mysql-original-wordmark.svg" alt="MySQL" />
+                <h3 class="skill-name">MySQL</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/unifiedmodelinglanguage-original.svg" alt="UML" />
+                <h3 class="skill-name">UML</h3>
+              </div>
             </div>
-          </a>
+          </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-marker">
-            <div class="tl-dot"></div>
-            <span class="tl-year">2021</span>
-          </div>
-          <a href="https://www.unikin.ac.cd" class="tl-card" target="_blank" rel="noopener noreferrer">
-            <img loading="lazy" decoding="async" src="Svg/unikin.jpg" alt="logo université de kinshasa" />
-            <div class="tl-info">
-              <h3>Licence Informatique</h3>
-              <p class="tl-school">Université de Kinshasa</p>
-              <p class="tl-desc">Formation de 5 ans couvrant les fondamentaux de l'informatique : réseaux,
-                programmation,
-                algorithmique, bases de données, recherche opérationnelle et mathématiques.</p>
+        <!-- Panel Frameworks & Outils -->
+        <div class="skills-tab-panel" id="tab-frameworks" role="tabpanel">
+          <div class="skill-box">
+            <div class="skill-groupe">
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/react-1-logo-png-transparent.png" alt="React" />
+                <h3 class="skill-name">React</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/file_type_node_icon_130301.png" alt="Node.js" />
+                <h3 class="skill-name">Node.js</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-symfony-48.png" alt="Symfony" />
+                <h3 class="skill-name">Symfony</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/file_type_tailwind_icon_130128.png" alt="Tailwind" />
+                <h3 class="skill-name">Tailwind</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-bootstrap-48.png" alt="Bootstrap" />
+                <h3 class="skill-name">Bootstrap</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-firebase-24.png" alt="Firebase" />
+                <h3 class="skill-name">Firebase</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/file_type_git_icon_130581.png" alt="Git" />
+                <h3 class="skill-name">Git/GitHub</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-api-48.png" alt="Postman" />
+                <h3 class="skill-name">Postman</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/figma-original.svg" alt="Figma" />
+                <h3 class="skill-name">Figma</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/canva-original.svg" alt="Canva" />
+                <h3 class="skill-name">Canva</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/notion_logo_icon_145025.png" alt="Notion" />
+                <h3 class="skill-name">Notion</h3>
+              </div>
             </div>
-          </a>
+          </div>
+        </div>
+
+        <!-- Panel Systèmes & Réseaux -->
+        <div class="skills-tab-panel" id="tab-sys" role="tabpanel">
+          <div class="skill-box">
+            <div class="skill-groupe">
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-ubuntu-48.png" alt="Ubuntu" />
+                <h3 class="skill-name">Ubuntu</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-linux-48.png" alt="Linux / Bash" />
+                <h3 class="skill-name">Linux / Bash</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-windows-11.svg" alt="Windows" />
+                <h3 class="skill-name">Windows</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-windows-11.svg" alt="Active Directory" />
+                <h3 class="skill-name">Active Directory</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-proxmox-48.png" alt="Proxmox" />
+                <h3 class="skill-name">Proxmox</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-lecteur-vmware-workstation-player.svg"
+                  alt="VMware" />
+                <h3 class="skill-name">VMware</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Cisco" />
+                <h3 class="skill-name">Cisco</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/dns-svgrepo-com.svg" alt="DNS" />
+                <h3 class="skill-name">DNS</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-adresse-ip-48.png" alt="TCP/IP" />
+                <h3 class="skill-name">TCP/IP</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-office-365.svg" alt="Office 365" />
+                <h3 class="skill-name">Office 365</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-aube-48.png" alt="Zorin OS" />
+                <h3 class="skill-name">Zorin OS</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-mac-50.png" alt="Mac OS" />
+                <h3 class="skill-name">Mac OS</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-docker-48.png" alt="Docker" />
+                <h3 class="skill-name">Docker</h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel Cybersécurité -->
+        <div class="skills-tab-panel" id="tab-cyber" role="tabpanel">
+          <div class="skill-box">
+            <div class="skill-groupe">
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-kali-linux.svg" alt="Kali Linux" />
+                <h3 class="skill-name">Kali Linux</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
+                <h3 class="skill-name">Burp Suite</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-wireshark-64.png" alt="Wireshark" />
+                <h3 class="skill-name">Wireshark</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-nmap-48.png" alt="Nmap" />
+                <h3 class="skill-name">Nmap</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/beef-xss-logo.svg" alt="BeEF" />
+                <h3 class="skill-name">BeEF</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="Firewall" />
+                <h3 class="skill-name">Firewall</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
+                <h3 class="skill-name">Cryptographie</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="OWASP Top 10" />
+                <h3 class="skill-name">OWASP Top 10</h3>
+              </div>
+              <div class="skill-data">
+                <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="SIEM / EDR" />
+                <h3 class="skill-name">SIEM / EDR</h3>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
-    <!-- Panel Certifications -->
-    <div class="parcours-panel" id="panel-certifications">
-      <div class="certifications-contenaire animate-on-scroll">
+    <!-- Section Experiences -->
+    <section id="Experiences" class="section-experiences">
+      <h2 class="titre">Mon Parcours Professionnel</h2>
 
-        <a href="https://www.credly.com/badges/78f507bd-b5f2-47c1-b54f-0d539138bd82/linked_in_profile"
-          class="certif-card-link" aria-label="Voir la certification Cisco Introduction to Cybersecurity"
-          target="_blank" rel="noopener noreferrer">
-          <div class="certif-card">
-            <div class="certif-logo-wrap">
-              <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
-                class="certif-logo" />
+      <div class="experience-contenaire">
+        <!-- carte DCRYPTE -->
+        <div id="card_dcrypte" class="card-experience card slide-left" data-modal-target="#modal_dcrypte">
+          <h3 class="card-title">Développeur Full-Stack</h3>
+          <p class="small-desc">Dcrypte - Paris / France</p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+        <!-- Carte AEB TRAVEL -->
+        <div id="card_aeb_travel" class="card-experience card slide-left" data-modal-target="#modal_aeb_travel">
+          <h3 class="card-title">Chef de Projet Technique</h3>
+          <p class="small-desc">AEB Travel - Belgique/Bruxelles</p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+
+        <!-- Carte DGI -->
+        <div id="card_dgi" class="card-experience card slide-right" data-modal-target="#modal_dgi">
+          <h3 class="card-title">Assistant Système et Réseaux</h3>
+          <p class="small-desc">Direction Urbaine d'Impôt de Kinshasa</p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+
+        <!-- Carte ASK -->
+        <div id="card_ask" class="card-experience card slide-left" data-modal-target="#modal_ask">
+          <h3 class="card-title">Technicien Support Informatique</h3>
+          <p class="small-desc">
+            Association Provinciale de Scouts de Kinshasa
+          </p>
+          <div class="go-corner">
+            <div class="go-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mes projets -->
+
+    <section id="projet" class="Projets">
+      <h2 class="titre">Mes Projets</h2>
+
+      <!-- Filtres interactifs -->
+      <div class="projet-filters" role="group" aria-label="Filtrer les projets">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="dev">Développement</button>
+        <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
+      </div>
+      <p class="projet-count"><span id="projet-count-num">16</span> projets</p>
+
+      <div class="projet-contenaire animate-on-scroll">
+        <!-- CARDE 1 HETIC COLLAB -->
+        <a href="projet-hetic-collab.html" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir plus</button>
+            <img loading="lazy" decoding="async" src="Image_projet/HETIC COLABO.webp"
+              alt="Aperçu de l'application web Hetic Collab" class="projet-card-image" width="538" height="378" />
+            <h3 class="projet-card-title">Hetic Collab</h3>
+            <div class="projet-card-description">
+              <p>Une application web No code facilitant la collaboration pour la réalisation des projets.</p>
             </div>
-            <div class="certif-info">
-              <h3 class="certif-title">Introduction to Cybersecurity</h3>
-              <p class="certif-issuer">Cisco Networking Academy</p>
-              <span class="certif-date">2026</span>
-            </div>
-            <div class="certif-right">
-              <span class="certif-verified">✓ Vérifié</span>
-              <span class="certif-see">Voir le certificat →</span>
+
+            <div class="projet-card-icons">
+              <img class="icon" src="Image_projet/escalidraw.webp" alt="" aria-hidden="true" width="502" height="157" />
+              <img class="icon" src="Svg/glide.png" alt="" aria-hidden="true" />
             </div>
           </div>
         </a>
 
-        <a href="https://www.credly.com/badges/996e44f4-b2ec-4a8c-97fc-1a5c275cd590/linked_in_profile"
-          class="certif-card-link" aria-label="Voir la certification Cisco Networking Basics" target="_blank"
-          rel="noopener noreferrer">
-          <div class="certif-card">
-            <div class="certif-logo-wrap">
-              <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Logo Cisco"
-                class="certif-logo" />
+        <!-- CARD 2 RANDOM START UP -->
+        <a href="projet-random-start-up.html" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir plus</button>
+            <img loading="lazy" decoding="async" src="Image_projet/projetpmd.webp"
+              alt="Aperçu de la maquette intégrée pour Random Start-up" class="projet-card-image" width="538"
+              height="378" />
+            <h3 class="projet-card-title">Random Start-up</h3>
+            <div class="projet-card-description">
+              <p>Intégration fidèle d'une maquette UI/UX pour créer la vitrine web d'une start-up fictive, avec une
+                approche Mobile-First et responsive.</p>
             </div>
-            <div class="certif-info">
-              <h3 class="certif-title">Networking Basics</h3>
-              <p class="certif-issuer">Cisco Networking Academy</p>
-              <span class="certif-date">2026</span>
-            </div>
-            <div class="certif-right">
-              <span class="certif-verified">✓ Vérifié</span>
-              <span class="certif-see">Voir le certificat →</span>
-            </div>
-          </div>
-        </a>
 
-        <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_ewuhuefoNpJLSB6NN_1742226135880_completion_certificate.pdf"
-          class="certif-card-link" aria-label="Voir la certification BCG Data Science Job Simulation" target="_blank"
-          rel="noopener noreferrer">
-          <div class="certif-card">
-            <div class="certif-logo-wrap">
-              <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Logo BCG" class="certif-logo" />
-            </div>
-            <div class="certif-info">
-              <h3 class="certif-title">Data Science Job Simulation</h3>
-              <p class="certif-issuer">Boston Consulting Group (BCG) / Forage</p>
-              <span class="certif-date">2025</span>
-            </div>
-            <div class="certif-right">
-              <span class="certif-verified">✓ Vérifié</span>
-              <span class="certif-see">Voir le certificat →</span>
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/html5-original.svg" alt="" />
+              <img class="icon" src="Svg/css3-original.svg" alt="" />
+              <img class="icon" src="Svg/figma-original.svg" alt="" />
+              <img class="icon" src="Svg/vscode-original.svg" alt="" />
             </div>
           </div>
         </a>
 
-      </div>
-    </div>
+        <!-- CARDE 3 PORTFOLIO -->
+        <a href="https://github.com/Glodi-M/Portfolio.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/gm.webp"
+              alt="Page d'accueil de Mon Portfolio développé par Glodi" class="projet-card-image" width="538"
+              height="378" />
+            <h3 class="projet-card-title">Mon Portfolio</h3>
+            <div class="projet-card-description">
+              <p>Conception et développement de mon portfolio personnel avec une interface moderne, performante et 100%
+                responsive.</p>
+            </div>
 
-  </section>
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/html5-original.svg" alt="" />
+              <img class="icon" src="Svg/css3-original.svg" alt="" />
+              <img class="icon" src="Svg/figma-original.svg" alt="" />
+              <img class="icon" src="Svg/vscode-original.svg" alt="" />
+              <img class="icon" src="Svg/javascript-original.svg" alt="" />
+            </div>
+          </div>
+        </a>
 
-  <!-- Competences  -->
+        <!-- CARDE 4 CMS -->
+        <a href="https://github.com/ahmvdd/CMS-Nodejs.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/cms.webp"
+              alt="Interface de l'application de gestion d'articles CMS Node.js" class="projet-card-image" width="538"
+              height="378" />
+            <h3 class="projet-card-title">Gestion des articles</h3>
+            <div class="projet-card-description">
+              <p>Une application CMS. Les Users se connectent pour ajouter, modifier et supprimer un article.</p>
+            </div>
 
-  <section id="Skills" class="Skills">
-    <h2 class="titre">Mon Expertise Technique</h2>
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/react-1-logo-png-transparent.png" alt="" />
+              <img class="icon" src="Svg/file_type_node_icon_130301.png" alt="" />
+              <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
+              <img class="icon" src="Svg/vscode-original.svg" alt="" />
+              <img class="icon" src="Svg/javascript-original.svg" alt="" />
+            </div>
+          </div>
+        </a>
 
-    <div class="skills-tabs animate-on-scroll">
+        <!-- CARDE 5 GESTION ETUDIANT -->
+        <a href="https://github.com/Glodi-M/Gestion-etudiant.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/Interface_java.webp"
+              alt="Interface de l'application Desktop de gestion étudiant en Java" class="projet-card-image" width="538"
+              height="380" />
+            <h3 class="projet-card-title">Gestion étudiant</h3>
+            <div class="projet-card-description">
+              <p>Une application Desktop développé en Java pour la gestion des étudiants dans la base de données.</p>
+            </div>
 
-      <!-- Nav tabs -->
-      <div class="skills-tab-nav" role="tablist" aria-label="Catégories de compétences">
-        <button class="skills-tab-btn active" data-tab="dev" role="tab" aria-selected="true" aria-controls="tab-dev">
-          Développement</button>
-        <button class="skills-tab-btn" data-tab="frameworks" role="tab" aria-selected="false"
-          aria-controls="tab-frameworks"> Frameworks & Outils</button>
-        <button class="skills-tab-btn" data-tab="sys" role="tab" aria-selected="false" aria-controls="tab-sys">
-          Systèmes & Réseaux</button>
-        <button class="skills-tab-btn" data-tab="cyber" role="tab" aria-selected="false" aria-controls="tab-cyber">
-          Cybersécurité</button>
-      </div>
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/java-original.svg" alt="" />
+              <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
+              <img class="icon" src="Svg/netbeans_94416.png" alt="" />
+            </div>
+          </div>
+        </a>
 
-      <!-- Panel Développement -->
-      <div class="skills-tab-panel active" id="tab-dev" role="tabpanel">
-        <div class="skill-box">
-          <div class="skill-groupe">
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/html5-original.svg" alt="HTML" />
-              <h3 class="skill-name">HTML</h3>
+        <!-- CARDE 6 PLATEFORME D'EVENEMENT -->
+        <a href="https://github.com/Glodi-M/Events-manager.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/evento.webp"
+              alt="Page d'accueil de la plateforme de gestion d'événements Evento" class="projet-card-image" width="538"
+              height="380" />
+            <h3 class="projet-card-title">Plateforme Evento</h3>
+            <div class="projet-card-description">
+              <p>Une application web en Symfony permettant aux utilisateurs de créer, gérer et participer à des
+                événements.</p>
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/css3-original.svg" alt="CSS" />
-              <h3 class="skill-name">CSS</h3>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
+              <img class="icon" src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png" alt="" />
+              <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
+              <img class="icon" src="Svg/file_type_tailwind_icon_130128.png" alt="" />
+              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/javascript-original.svg" alt="JavaScript" />
-              <h3 class="skill-name">JavaScript</h3>
+          </div>
+        </a>
+
+        <!-- CARDE 7 API POKEMON -->
+        <a href="https://github.com/Glodi-M/API_POKEMON.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/Api-pokemon.webp"
+              alt="Interface de l'application web affichant les données de l'API Pokémon" class="projet-card-image"
+              width="538" height="380" />
+            <h3 class="projet-card-title">API POKÉMON</h3>
+            <div class="projet-card-description">
+              <p>Une mini application interactive web qui permet de récupérer et afficher les données issues de l'API
+                Pokémon.</p>
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/php-original.svg" alt="PHP" />
-              <h3 class="skill-name">PHP</h3>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/html5-original.svg" alt="" />
+              <img class="icon" src="Svg/css3-original.svg" alt="" />
+              <img class="icon" src="Svg/javascript-original.svg" alt="" />
+              <img class="icon" src="Svg/icons8-api-48.png" alt="" />
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-python-48.png" alt="Python" />
-              <h3 class="skill-name">Python</h3>
+          </div>
+        </a>
+
+        <!-- CARDE 8 GESTION DES COMMANDES -->
+        <a href="https://github.com/Glodi-M/Gestion_de_commande.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/Ge-commande.webp"
+              alt="Tableau de bord de l'application de gestion des commandes" class="projet-card-image" width="538"
+              height="380" />
+            <h3 class="projet-card-title">Gestion des commandes</h3>
+            <div class="projet-card-description">
+              <p>Une application web interactive pour gérer les commandes d'articles, offrant des fonctionnalités de
+                gestion.</p>
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/java-original.svg" alt="Java" />
-              <h3 class="skill-name">Java</h3>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/php-original.svg" alt="" />
+              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+              <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-jquery-50.png" alt="" />
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/azuresqldatabase-original.svg" alt="SQL" />
-              <h3 class="skill-name">SQL</h3>
+          </div>
+        </a>
+
+        <!-- CARDE 9 GESTION DES EMPLOYES -->
+        <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/Ge-employe.webp"
+              alt="Vue principale du système de gestion des employés" class="projet-card-image" width="538"
+              height="380" />
+            <h3 class="projet-card-title">Gestion des employés</h3>
+            <div class="projet-card-description">
+              <p>Une application web interactive pour la gestion des employés, offrant des fonctionnalités de gestion.
+              </p>
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/mysql-original-wordmark.svg" alt="MySQL" />
-              <h3 class="skill-name">MySQL</h3>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/php-original.svg" alt="" />
+              <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
+              <img class="icon" src="Svg/html5-original.svg" alt="" />
+              <img class="icon" src="Svg/css3-original.svg" alt="" />
+              <img class="icon" src="Svg/javascript-original.svg" alt="" />
             </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/unifiedmodelinglanguage-original.svg" alt="UML" />
-              <h3 class="skill-name">UML</h3>
+          </div>
+        </a>
+
+        <!-- CARDE 10 TRANSLATE -->
+        <a href="https://github.com/Glodi-M/TRANSLATE_APP.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/Translate.webp"
+              alt="Interface de l'application de traduction web Translate FR-ESP" class="projet-card-image" width="538"
+              height="380" />
+            <h3 class="projet-card-title">Translate FR-ESP</h3>
+            <div class="projet-card-description">
+              <p>Une application web interactive pour la traduction du français vers l'espagnol.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
+              <img class="icon" src="Svg/typescript.png" alt="" />
+              <img class="icon" src="Svg/icons8-api-48.png" alt="" />
+            </div>
+          </div>
+        </a>
+
+        <!-- CARDE 11 WEB SITE GS ALPHA -->
+        <a href="https://github.com/Glodi-M/Web_SIte_GsAlpha.git" class="projet-card-link" data-category="dev">
+          <div class="projet-card">
+            <button>Voir sur GitHub</button>
+            <img loading="lazy" decoding="async" src="Image_projet/gsalphaweb.webp"
+              alt="Interface de l'application web GS Alpha" class="projet-card-image" width="538" height="380" />
+            <h3 class="projet-card-title">SITE WEB DU GROUPE SCOUT ALPHA</h3>
+            <div class="projet-card-description">
+              <p>Site web moderne pour groupe scout, déployé et optimisé SEO. Back-end géré avec Firebase pour une
+                gestion
+                dynamique et fiable.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
+              <img class="icon" src="Svg/css3-original.svg" alt="" />
+              <img class="icon" src="Svg/icons8-firebase-24.png" alt="" />
+              <img class="icon" src="Svg/javascript-original.svg" alt="" />
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJET AUDIT WEB -->
+        <div class="projet-card-link" data-category="cyber">
+          <div class="projet-card">
+            <img loading="lazy" decoding="async" src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).webp"
+              alt="capture de la page d'accueil" class="projet-card-image" width="538" height="380" />
+            <h3 class="projet-card-title">Audit Web</h3>
+            <div class="projet-card-description">
+              <p>Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/icons8-linux-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET RANSOMWARE -->
+        <div class="projet-card-link" data-category="cyber">
+          <div class="projet-card">
+            <img loading="lazy" decoding="async" src="Image_projet/ransoware.webp" alt="Image du nouveau projet cyber"
+              class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
+            <h3 class="projet-card-title">Simulation de Ransomware</h3>
+            <div class="projet-card-description">
+              <p>Étude cryptographique appliquée : développement d'un ransomware en environnement isolé, capable de
+                chiffrer
+                et déchiffrer des fichiers cibles via une clé symétrique.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+              <img class="icon" src="Svg/icons8-ubuntu-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-python-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET AUDIT DE SECURITE -->
+        <div class="projet-card-link" data-category="cyber">
+          <div class="projet-card">
+            <img loading="lazy" decoding="async" src="Image_projet/audit.webp" alt="Image du nouveau projet cyber"
+              class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
+            <h3 class="projet-card-title">AUDIT DE SECURITE</h3>
+            <div class="projet-card-description">
+              <p>Audit de sécurité d'un site web, identification des vulnérabilités, tests d'injection, falsification de
+                requêtes, contournement de sécurité.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
+              <img class="icon" src="Svg/azuresqldatabase-original.svg" alt="" />
+              <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET LAB XSS BEEF -->
+        <div class="projet-card-link" data-category="cyber">
+          <div class="projet-card">
+            <img loading="lazy" decoding="async" src="Image_projet/beef.webp" alt="Lab XSS BeEF"
+              class="projet-card-image" width="538" height="380" style="background-color: #1a1a2e;" />
+            <h3 class="projet-card-title">Lab XSS & BeEF</h3>
+            <div class="projet-card-description">
+              <p>Environnement virtualisé pour l'étude du framework BeEF et la simulation d'attaques XSS en conditions
+                contrôlées — analyse de l'exécution de code malveillant côté navigateur.</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/beef-xss-logo.svg" alt="" />
+              <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+              <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
+              <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET LAB ACTIVE DIRECTORY -->
+        <div class="projet-card-link" data-category="cyber">
+          <div class="projet-card">
+            <img loading="lazy" decoding="async" src="Image_projet/ad-ds.webp" alt="Lab Active Directory"
+              class="projet-card-image" width="538" height="380" style="background-color: #1a2a3a;" />
+            <h3 class="projet-card-title">Lab Active Directory</h3>
+            <div class="projet-card-description">
+              <p>Déploiement d'un domaine Windows Server, gestion des utilisateurs et groupes, mise en place de
+                stratégies
+                de sécurité (GPO).</p>
+            </div>
+
+            <div class="projet-card-icons" aria-hidden="true">
+              <img class="icon" src="Svg/icons8-windows-11.svg" alt="" />
+              <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
+              <img class="icon" src="Svg/icons8-bouclier-48.png" alt="" />
+              <img class="icon" src="Svg/dns-svgrepo-com.svg" alt="" />
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Panel Frameworks & Outils -->
-      <div class="skills-tab-panel" id="tab-frameworks" role="tabpanel">
-        <div class="skill-box">
-          <div class="skill-groupe">
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/react-1-logo-png-transparent.png" alt="React" />
-              <h3 class="skill-name">React</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/file_type_node_icon_130301.png" alt="Node.js" />
-              <h3 class="skill-name">Node.js</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-symfony-48.png" alt="Symfony" />
-              <h3 class="skill-name">Symfony</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/file_type_tailwind_icon_130128.png" alt="Tailwind" />
-              <h3 class="skill-name">Tailwind</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-bootstrap-48.png" alt="Bootstrap" />
-              <h3 class="skill-name">Bootstrap</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-firebase-24.png" alt="Firebase" />
-              <h3 class="skill-name">Firebase</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/file_type_git_icon_130581.png" alt="Git" />
-              <h3 class="skill-name">Git/GitHub</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-api-48.png" alt="Postman" />
-              <h3 class="skill-name">Postman</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/figma-original.svg" alt="Figma" />
-              <h3 class="skill-name">Figma</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/canva-original.svg" alt="Canva" />
-              <h3 class="skill-name">Canva</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/notion_logo_icon_145025.png" alt="Notion" />
-              <h3 class="skill-name">Notion</h3>
-            </div>
-          </div>
-        </div>
+      <!-- Pagination -->
+      <div class="projet-pagination">
+        <button class="pagination-btn" id="prev-page" aria-label="Page précédente">← Précédent</button>
+        <button class="pagination-btn" id="next-page" aria-label="Page suivante">Suivant →</button>
       </div>
 
-      <!-- Panel Systèmes & Réseaux -->
-      <div class="skills-tab-panel" id="tab-sys" role="tabpanel">
-        <div class="skill-box">
-          <div class="skill-groupe">
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-ubuntu-48.png" alt="Ubuntu" />
-              <h3 class="skill-name">Ubuntu</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-linux-48.png" alt="Linux / Bash" />
-              <h3 class="skill-name">Linux / Bash</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-windows-11.svg" alt="Windows" />
-              <h3 class="skill-name">Windows</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-windows-11.svg" alt="Active Directory" />
-              <h3 class="skill-name">Active Directory</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-proxmox-48.png" alt="Proxmox" />
-              <h3 class="skill-name">Proxmox</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-lecteur-vmware-workstation-player.svg"
-                alt="VMware" />
-              <h3 class="skill-name">VMware</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/cisco-svgrepo-com.svg" alt="Cisco" />
-              <h3 class="skill-name">Cisco</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/dns-svgrepo-com.svg" alt="DNS" />
-              <h3 class="skill-name">DNS</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-adresse-ip-48.png" alt="TCP/IP" />
-              <h3 class="skill-name">TCP/IP</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-office-365.svg" alt="Office 365" />
-              <h3 class="skill-name">Office 365</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-aube-48.png" alt="Zorin OS" />
-              <h3 class="skill-name">Zorin OS</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-mac-50.png" alt="Mac OS" />
-              <h3 class="skill-name">Mac OS</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-docker-48.png" alt="Docker" />
-              <h3 class="skill-name">Docker</h3>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel Cybersécurité -->
-      <div class="skills-tab-panel" id="tab-cyber" role="tabpanel">
-        <div class="skill-box">
-          <div class="skill-groupe">
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-kali-linux.svg" alt="Kali Linux" />
-              <h3 class="skill-name">Kali Linux</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-burp-suite-50.png" alt="Burp Suite" />
-              <h3 class="skill-name">Burp Suite</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-wireshark-64.png" alt="Wireshark" />
-              <h3 class="skill-name">Wireshark</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-nmap-48.png" alt="Nmap" />
-              <h3 class="skill-name">Nmap</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/beef-xss-logo.svg" alt="BeEF" />
-              <h3 class="skill-name">BeEF</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="Firewall" />
-              <h3 class="skill-name">Firewall</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-cryptographie-48.png" alt="Cryptographie" />
-              <h3 class="skill-name">Cryptographie</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="OWASP Top 10" />
-              <h3 class="skill-name">OWASP Top 10</h3>
-            </div>
-            <div class="skill-data">
-              <img loading="lazy" decoding="async" src="Svg/icons8-bouclier-48.png" alt="SIEM / EDR" />
-              <h3 class="skill-name">SIEM / EDR</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Section Experiences -->
-  <section id="Experiences" class="section-experiences">
-    <h2 class="titre">Mon Parcours Professionnel</h2>
-
-    <div class="experience-contenaire">
-      <!-- Carte AET TRAVEL -->
-      <div id="card_aeb_travel" class="card-experience card slide-left" data-modal-target="#modal_aeb_travel">
-        <h3 class="card-title">Chef de Projet Technique</h3>
-        <p class="small-desc">AEB Travel - Belgique/Bruxelles</p>
-        <div class="go-corner">
-          <div class="go-arrow">→</div>
-        </div>
-      </div>
-
-      <!-- Carte DGI -->
-      <div id="card_dgi" class="card-experience card slide-right" data-modal-target="#modal_dgi">
-        <h3 class="card-title">Assistant Système et Réseaux</h3>
-        <p class="small-desc">Direction Urbaine d'Impôt de Kinshasa</p>
-        <div class="go-corner">
-          <div class="go-arrow">→</div>
-        </div>
-      </div>
-
-      <!-- Carte ASK -->
-      <div id="card_ask" class="card-experience card slide-left" data-modal-target="#modal_ask">
-        <h3 class="card-title">Technicien Support Informatique</h3>
-        <p class="small-desc">
-          Association Provinciale de Scouts de Kinshasa
-        </p>
-        <div class="go-corner">
-          <div class="go-arrow">→</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mes projets -->
-
-  <section id="projet" class="Projets">
-    <h2 class="titre">Mes Projets</h2>
-
-    <!-- Filtres interactifs -->
-    <div class="projet-filters" role="group" aria-label="Filtrer les projets">
-      <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="dev">Développement</button>
-      <button class="filter-btn" data-filter="cyber">Cybersécurité</button>
-    </div>
-    <p class="projet-count"><span id="projet-count-num">16</span> projets</p>
-
-    <div class="projet-contenaire animate-on-scroll">
-      <!-- CARDE 1 HETIC COLLAB -->
-      <a href="projet-hetic-collab.html" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir plus</button>
-          <img loading="lazy" decoding="async" src="Image_projet/HETIC COLABO.webp"
-            alt="Aperçu de l'application web Hetic Collab" class="projet-card-image" width="538" height="378" />
-          <h3 class="projet-card-title">Hetic Collab</h3>
-          <div class="projet-card-description">
-            <p>Une application web No code facilitant la collaboration pour la réalisation des projets.</p>
-          </div>
-
-          <div class="projet-card-icons">
-            <img class="icon" src="Image_projet/escalidraw.webp" alt="" aria-hidden="true" width="502" height="157" />
-            <img class="icon" src="Svg/glide.png" alt="" aria-hidden="true" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARD 2 RANDOM START UP -->
-      <a href="projet-random-start-up.html" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir plus</button>
-          <img loading="lazy" decoding="async" src="Image_projet/projetpmd.webp"
-            alt="Aperçu de la maquette intégrée pour Random Start-up" class="projet-card-image" width="538"
-            height="378" />
-          <h3 class="projet-card-title">Random Start-up</h3>
-          <div class="projet-card-description">
-            <p>Intégration fidèle d'une maquette UI/UX pour créer la vitrine web d'une start-up fictive, avec une
-              approche Mobile-First et responsive.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/html5-original.svg" alt="" />
-            <img class="icon" src="Svg/css3-original.svg" alt="" />
-            <img class="icon" src="Svg/figma-original.svg" alt="" />
-            <img class="icon" src="Svg/vscode-original.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 3 PORTFOLIO -->
-      <a href="https://github.com/Glodi-M/Portfolio.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/gm.webp"
-            alt="Page d'accueil de Mon Portfolio développé par Glodi" class="projet-card-image" width="538"
-            height="378" />
-          <h3 class="projet-card-title">Mon Portfolio</h3>
-          <div class="projet-card-description">
-            <p>Conception et développement de mon portfolio personnel avec une interface moderne, performante et 100%
-              responsive.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/html5-original.svg" alt="" />
-            <img class="icon" src="Svg/css3-original.svg" alt="" />
-            <img class="icon" src="Svg/figma-original.svg" alt="" />
-            <img class="icon" src="Svg/vscode-original.svg" alt="" />
-            <img class="icon" src="Svg/javascript-original.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 4 CMS -->
-      <a href="https://github.com/ahmvdd/CMS-Nodejs.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/cms.webp"
-            alt="Interface de l'application de gestion d'articles CMS Node.js" class="projet-card-image" width="538"
-            height="378" />
-          <h3 class="projet-card-title">Gestion des articles</h3>
-          <div class="projet-card-description">
-            <p>Une application CMS. Les Users se connectent pour ajouter, modifier et supprimer un article.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/react-1-logo-png-transparent.png" alt="" />
-            <img class="icon" src="Svg/file_type_node_icon_130301.png" alt="" />
-            <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
-            <img class="icon" src="Svg/vscode-original.svg" alt="" />
-            <img class="icon" src="Svg/javascript-original.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 5 GESTION ETUDIANT -->
-      <a href="https://github.com/Glodi-M/Gestion-etudiant.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/Interface_java.webp"
-            alt="Interface de l'application Desktop de gestion étudiant en Java" class="projet-card-image" width="538"
-            height="380" />
-          <h3 class="projet-card-title">Gestion étudiant</h3>
-          <div class="projet-card-description">
-            <p>Une application Desktop développé en Java pour la gestion des étudiants dans la base de données.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/java-original.svg" alt="" />
-            <img class="icon" src="Svg/mysql_original_wordmark_logo_icon_146417.png" alt="" />
-            <img class="icon" src="Svg/netbeans_94416.png" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 6 PLATEFORME D'EVENEMENT -->
-      <a href="https://github.com/Glodi-M/Events-manager.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/evento.webp"
-            alt="Page d'accueil de la plateforme de gestion d'événements Evento" class="projet-card-image" width="538"
-            height="380" />
-          <h3 class="projet-card-title">Plateforme Evento</h3>
-          <div class="projet-card-description">
-            <p>Une application web en Symfony permettant aux utilisateurs de créer, gérer et participer à des
-              événements.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/icons8-symfony-48.png" alt="" />
-            <img class="icon" src="Svg/29336704-ab1be05c-81dc-11e7-92e5-cf11cca7b344.png" alt="" />
-            <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
-            <img class="icon" src="Svg/file_type_tailwind_icon_130128.png" alt="" />
-            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 7 API POKEMON -->
-      <a href="https://github.com/Glodi-M/API_POKEMON.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/Api-pokemon.webp"
-            alt="Interface de l'application web affichant les données de l'API Pokémon" class="projet-card-image"
-            width="538" height="380" />
-          <h3 class="projet-card-title">API POKÉMON</h3>
-          <div class="projet-card-description">
-            <p>Une mini application interactive web qui permet de récupérer et afficher les données issues de l'API
-              Pokémon.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/html5-original.svg" alt="" />
-            <img class="icon" src="Svg/css3-original.svg" alt="" />
-            <img class="icon" src="Svg/javascript-original.svg" alt="" />
-            <img class="icon" src="Svg/icons8-api-48.png" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 8 GESTION DES COMMANDES -->
-      <a href="https://github.com/Glodi-M/Gestion_de_commande.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/Ge-commande.webp"
-            alt="Tableau de bord de l'application de gestion des commandes" class="projet-card-image" width="538"
-            height="380" />
-          <h3 class="projet-card-title">Gestion des commandes</h3>
-          <div class="projet-card-description">
-            <p>Une application web interactive pour gérer les commandes d'articles, offrant des fonctionnalités de
-              gestion.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/php-original.svg" alt="" />
-            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-            <img class="icon" src="Svg/icons8-bootstrap-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-jquery-50.png" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 9 GESTION DES EMPLOYES -->
-      <a href="https://github.com/Glodi-M/Gestion_des_employes.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/Ge-employe.webp"
-            alt="Vue principale du système de gestion des employés" class="projet-card-image" width="538"
-            height="380" />
-          <h3 class="projet-card-title">Gestion des employés</h3>
-          <div class="projet-card-description">
-            <p>Une application web interactive pour la gestion des employés, offrant des fonctionnalités de gestion.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/php-original.svg" alt="" />
-            <img class="icon" src="Svg/mysql-original-wordmark.svg" alt="" />
-            <img class="icon" src="Svg/html5-original.svg" alt="" />
-            <img class="icon" src="Svg/css3-original.svg" alt="" />
-            <img class="icon" src="Svg/javascript-original.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 10 TRANSLATE -->
-      <a href="https://github.com/Glodi-M/TRANSLATE_APP.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/Translate.webp"
-            alt="Interface de l'application de traduction web Translate FR-ESP" class="projet-card-image" width="538"
-            height="380" />
-          <h3 class="projet-card-title">Translate FR-ESP</h3>
-          <div class="projet-card-description">
-            <p>Une application web interactive pour la traduction du français vers l'espagnol.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
-            <img class="icon" src="Svg/typescript.png" alt="" />
-            <img class="icon" src="Svg/icons8-api-48.png" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- CARDE 11 WEB SITE GS ALPHA -->
-      <a href="https://github.com/Glodi-M/Web_SIte_GsAlpha.git" class="projet-card-link" data-category="dev">
-        <div class="projet-card">
-          <button>Voir sur GitHub</button>
-          <img loading="lazy" decoding="async" src="Image_projet/gsalphaweb.webp"
-            alt="Interface de l'application web GS Alpha" class="projet-card-image" width="538" height="380" />
-          <h3 class="projet-card-title">SITE WEB DU GROUPE SCOUT ALPHA</h3>
-          <div class="projet-card-description">
-            <p>Site web moderne pour groupe scout, déployé et optimisé SEO. Back-end géré avec Firebase pour une gestion
-              dynamique et fiable.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/react_original_logo_icon_146374.png" alt="" />
-            <img class="icon" src="Svg/css3-original.svg" alt="" />
-            <img class="icon" src="Svg/icons8-firebase-24.png" alt="" />
-            <img class="icon" src="Svg/javascript-original.svg" alt="" />
-          </div>
-        </div>
-      </a>
-
-      <!-- PROJET AUDIT WEB -->
-      <div class="projet-card-link" data-category="cyber">
-        <div class="projet-card">
-          <img loading="lazy" decoding="async" src="Image_projet/RAPPORT_PROJET_AUDIT_WEB_DE_MIETETE_GLODI (1).webp"
-            alt="capture de la page d'accueil" class="projet-card-image" width="538" height="380" />
-          <h3 class="projet-card-title">Audit Web</h3>
-          <div class="projet-card-description">
-            <p>Analyse de vulnérabilités, Tests d'injection, falsification de requêtes, contournement de sécurité.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/icons8-linux-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJET RANSOMWARE -->
-      <div class="projet-card-link" data-category="cyber">
-        <div class="projet-card">
-          <img loading="lazy" decoding="async" src="Image_projet/ransoware.webp" alt="Image du nouveau projet cyber"
-            class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
-          <h3 class="projet-card-title">Simulation de Ransomware</h3>
-          <div class="projet-card-description">
-            <p>Étude cryptographique appliquée : développement d'un ransomware en environnement isolé, capable de
-              chiffrer
-              et déchiffrer des fichiers cibles via une clé symétrique.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
-            <img class="icon" src="Svg/icons8-ubuntu-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-python-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJET AUDIT DE SECURITE -->
-      <div class="projet-card-link" data-category="cyber">
-        <div class="projet-card">
-          <img loading="lazy" decoding="async" src="Image_projet/audit.webp" alt="Image du nouveau projet cyber"
-            class="projet-card-image" width="538" height="380" style="background-color: #2a2a35;" />
-          <h3 class="projet-card-title">AUDIT DE SECURITE</h3>
-          <div class="projet-card-description">
-            <p>Audit de sécurité d'un site web, identification des vulnérabilités, tests d'injection, falsification de
-              requêtes, contournement de sécurité.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/icons8-burp-suite-50.png" alt="" />
-            <img class="icon" src="Svg/azuresqldatabase-original.svg" alt="" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJET LAB XSS BEEF -->
-      <div class="projet-card-link" data-category="cyber">
-        <div class="projet-card">
-          <img loading="lazy" decoding="async" src="Image_projet/beef.webp" alt="Lab XSS BeEF" class="projet-card-image"
-            width="538" height="380" style="background-color: #1a1a2e;" />
-          <h3 class="projet-card-title">Lab XSS & BeEF</h3>
-          <div class="projet-card-description">
-            <p>Environnement virtualisé pour l'étude du framework BeEF et la simulation d'attaques XSS en conditions
-              contrôlées — analyse de l'exécution de code malveillant côté navigateur.</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/beef-xss-logo.svg" alt="" />
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
-            <img class="icon" src="Svg/icons8-kali-linux-48.png" alt="" />
-            <img class="icon" src="Svg/icons8-cryptographie-48.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJET LAB ACTIVE DIRECTORY -->
-      <div class="projet-card-link" data-category="cyber">
-        <div class="projet-card">
-          <img loading="lazy" decoding="async" src="Image_projet/ad-ds.webp" alt="Lab Active Directory"
-            class="projet-card-image" width="538" height="380" style="background-color: #1a2a3a;" />
-          <h3 class="projet-card-title">Lab Active Directory</h3>
-          <div class="projet-card-description">
-            <p>Déploiement d'un domaine Windows Server, gestion des utilisateurs et groupes, mise en place de stratégies
-              de sécurité (GPO).</p>
-          </div>
-
-          <div class="projet-card-icons" aria-hidden="true">
-            <img class="icon" src="Svg/icons8-windows-11.svg" alt="" />
-            <img class="icon" src="Svg/icons8-lecteur-vmware-workstation-player.svg" alt="" />
-            <img class="icon" src="Svg/icons8-bouclier-48.png" alt="" />
-            <img class="icon" src="Svg/dns-svgrepo-com.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination -->
-    <div class="projet-pagination">
-      <button class="pagination-btn" id="prev-page" aria-label="Page précédente">← Précédent</button>
-      <button class="pagination-btn" id="next-page" aria-label="Page suivante">Suivant →</button>
-    </div>
-
-  </section>
+    </section>
 
   </main>
 
@@ -997,7 +1017,8 @@
       <h2 class="title-contact">Me contacter</h2>
       <div class="logo-mail">
         <a href="mailto:glodimietete@gmail.com " aria-label="Envoyer un email à Glodi Mietete">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-nouveau-message-50.png" alt="" aria-hidden="true" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-nouveau-message-50.png" alt=""
+            aria-hidden="true" />
           <p>glodimietete@gmail.com</p>
         </a>
       </div>
@@ -1006,7 +1027,8 @@
         <p>06 51 78 09 48</p>
       </div>
       <div class="logo-mail">
-        <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer" aria-label="Voir l'adresse sur Google Maps">
+        <a href="https://www.google.com/maps/place/75010+Paris" target="_blank" rel="noopener noreferrer"
+          aria-label="Voir l'adresse sur Google Maps">
           <img loading="lazy" decoding="async" src="Icon_contact/icons8-accueil-50.png" alt="" aria-hidden="true" />
           <p>75010 Paris</p>
         </a>
@@ -1019,7 +1041,8 @@
         </a>
         <a href="https://www.linkedin.com/in/glodi-mietete-35379b245" target="_blank" rel="noopener noreferrer"
           aria-label="Voir mon profil LinkedIn">
-          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt="" aria-hidden="true" />
+          <img loading="lazy" decoding="async" src="Icon_contact/icons8-linkedin-50 (1).png" alt=""
+            aria-hidden="true" />
         </a>
       </div>
       <p class="copyright">&copy; 2026 Glodi Mietete. Tous droits réservés.</p>
@@ -1048,6 +1071,29 @@
   </footer>
 
   <!-- Modales -->
+
+  <!-- Modale DCRYPTE -->
+  <div id="modal_dcrypte" class="modal" role="dialog" aria-labelledby="modal_dcrypte_title">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Fermer la modale">×</button>
+      <div class="modal-title-center">
+        <h2 id="modal_dcrypte_title">Développeur Full-Stack</h2>
+        <p class="modal-titre">Dcrypte - Paris/France</p>
+        <p class="modal-date">Juin 2026</p>
+      </div>
+      <ul>
+        <li><strong>Développement & maintenance : </strong> Participation au développement de nouvelles fonctionnalités,
+          à
+          la résolution de bugs et à l’amélioration continue du logiciel Dcrypte.</li>
+        <li><strong>Conception & UX : </strong> Réflexion sur la conception de nouvelles fonctionnalités et contribution
+          à
+          l’expérience utilisateur (UX).</li>
+        <li><strong>Collaboration & esprit d’équipe : </strong> Implication active dans la vie de l’équipe et les
+          échanges
+          autour des évolutions du produit.</li>
+      </ul>
+    </div>
+  </div>
   <!-- Modale AEB TRAVEL -->
   <div id="modal_aeb_travel" class="modal" role="dialog" aria-labelledby="modal_aeb_travel_title">
     <div class="modal-content">
@@ -1058,9 +1104,9 @@
         <p class="modal-date">Juillet 2025</p>
       </div>
       <ul>
-        <li><strong>Pilotage de bout en bout</strong> de projets digitaux complexes (sites de réservation, CRM)</li>
-        <li><strong>Coordination agile</strong> entre équipes techniques et métiers</li>
-        <li><strong>Rédaction rigoureuse</strong> des cahiers des charges et suivi strict des KPI de livraison</li>
+        <li><strong>Pilotage de bout en bout : </strong> de projets digitaux complexes (sites de réservation, CRM)</li>
+        <li><strong>Coordination agile : </strong> entre équipes techniques et métiers</li>
+        <li><strong>Rédaction rigoureuse : </strong> des cahiers des charges et suivi strict des KPI de livraison</li>
         <li>Gestion budgétaire et planification stratégique des livrables</li>
         <li>Garantie de la qualité technique et de l'expérience utilisateur</li>
       </ul>
